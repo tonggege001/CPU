@@ -5,7 +5,7 @@ module Alu(A,B,Aluop,Shamt,R,Equal);
     input wire[31:0]B;
     input wire[3:0]Aluop;
     input wire[4:0]Shamt;
-    output wire[31:0]R;
+    output reg[31:0]R;
     output wire Equal;
     
     wire signed[31:0] A_signed;
