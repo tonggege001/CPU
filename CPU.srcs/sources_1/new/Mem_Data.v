@@ -16,7 +16,7 @@ module Mem_Data(Clk,Addr,Datain,MemWrite,Sel,Dataout);
     output Dataout;
     
     parameter MEMLEN = 20;
-    reg[32:0]Mem[MEMLEN:0];
+    reg[31:0]Mem[MEMLEN:0];
     assign Dataout = Mem[Addr];
     
     initial begin

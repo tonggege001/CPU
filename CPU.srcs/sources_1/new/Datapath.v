@@ -78,6 +78,15 @@ module Datapath(Clk, Rst, Go, RegShowNum, MemShowNum, LedData, TotalCirc, Nobran
             Alu_InB = RegOutB;
     end
     
+	//数据存储器连接部分
+    wire[31:0]Mem_Data_In;
+    wire[3:0]Sel;    //片选信号1000 0100 0010 0001
+    wire[31:0]Mem_Data_Out;
+    
+    assign Mem_Data_In = RegOutA;
+    Mem_Data(Clk,Alu_Out[21:2],Mem_Data_In, MemWrite,Sel, Mem_Data_Out);
+    
+    
     
     
     
