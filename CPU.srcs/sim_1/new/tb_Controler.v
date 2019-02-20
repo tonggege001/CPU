@@ -16,14 +16,7 @@ module tb_Controler;
 	wire  JMP;
 	wire  JAL;
     Controller T6(OP, Func, AluOp,  MemtoReg , MemWrite, AluSrc, RegWrite, Syscall, SignedExt, RegDst , BEQ, BNE, JR, JMP, JAL);
-    //always #5 clk = ~clk; 
     initial begin
-        //∏≥≥ı÷µ
-        AluOp <= 0;
-        RegWrite <= 0;RegDst <= 0;
-        MemtoReg <= 0;MemWrite <= 0;AluSrc <= 0;Syscall <= 0;SignedExt <= 0;
-        BEQ <= 0;BNE <= 0;JR <= 0;JMP <= 0;JAL <= 0;
-        
         #10  OP = 0 ; Func=0;   //SLL
         #10  OP = 0 ; Func=3;    //SR
         #10  OP = 0 ; Func=2;    //SRL
@@ -40,8 +33,8 @@ module tb_Controler;
         #10  OP = 2 ; Func=0;       //J
         #10  OP = 3 ; Func=0;       //JAL
         #10  OP = 4 ; Func=0;      //BEQ
-        #10  OP = 5 ; Func=43;      //BNE
-        #10  OP = 8 ; Func=8;        //ADDI
+        #10  OP = 5 ; Func=0;      //BNE
+        #10  OP = 8 ; Func=0;        //ADDI
         #10  OP =12 ; Func=0;      //ANDI
         #10  OP = 9 ; Func=0;       //ANDI
         #10  OP = 10 ; Func=0;       //SLTI

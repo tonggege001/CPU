@@ -2,18 +2,23 @@
 # Vivado v2015.2 (64-bit)
 # SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
 # IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
-# Start of session at: Wed Feb 20 09:22:20 2019
-# Process ID: 11104
+# Start of session at: Wed Feb 20 19:36:48 2019
+# Process ID: 8932
 # Log file: D:/ARCHIVE/VIVADO_WORKPLACE/CPU/vivado.log
 # Journal file: D:/ARCHIVE/VIVADO_WORKPLACE/CPU\vivado.jou
-#-----------------------------------------------------------sstart_guiopen_project D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.xpr
-INFO: [Project 1-313] Project file moved from 'D:/Code/CPU' since last save.
+#-----------------------------------------------------------
+start_gui
+open_project D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.xpr
 Scanning sources...
 Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/software/VIVADO/Vivado/2015.2/data/ip'.
-open_project: Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 687.051 ; gain = 119.801
-exit
-INFO: [Common 17-206] Exiting Vivado at Wed Feb 20 09:23:35 2019...
-
+open_project: Time (s): cpu = 00:00:17 ; elapsed = 00:00:09 . Memory (MB): peak = 737.941 ; gain = 168.520
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sim_1/new/tb_datapath.v w ]
+add_files -fileset sim_1 D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sim_1/new/tb_datapath.v
+update_compile_order -fileset sim_1
+set_property is_enabled false [get_files  D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sim_1/new/tb_pc.v]
+set_property top CPU [current_fileset]
+update_compile_order -fileset sources_1

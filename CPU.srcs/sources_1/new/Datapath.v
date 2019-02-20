@@ -5,7 +5,7 @@ module Datapath(Clk_ms, Rst, Go,MemShowNum, LedData, TotalCirc, NobranchCirc, Br
 	input Clk_ms;  //原始的时钟，也即硬件分频后的时钟
     input Rst;
     input Go;     //
-    input wire[32:0]MemShowNum;   //内存显示
+    input wire[31:0]MemShowNum;   //内存显示
     output reg[31:0]LedData;
     output reg[15:0]TotalCirc;
     output reg[15:0]NobranchCirc;
@@ -21,11 +21,11 @@ module Datapath(Clk_ms, Rst, Go,MemShowNum, LedData, TotalCirc, NobranchCirc, Br
     
     
     //获取指令,并进行指令解析
-    Mem_Ins(PC[21:2],IR);
+    Mem_Ins A1(PC[11:2],IR);
     wire[5:0] OP; wire[5:0]Func; wire[4:0]rs; wire[4:0]rt; wire[4:0]rd;
     wire [4:0]Shamt; //移位寄存器的输入
     wire[31:0]Imme16; //后16位立即数
-    wire[31:0]Imme26;   //w无条件跳转指令
+    wire[31:0]Imme26;   //无条件跳转指令
     
     
     assign OP = IR[31:25];
@@ -38,21 +38,20 @@ module Datapath(Clk_ms, Rst, Go,MemShowNum, LedData, TotalCirc, NobranchCirc, Br
     assign Imme26 = {6{SignedExt & IR[25],IR[25:0]}};
     initial begin
         //TODO 初始化相关的寄存器
-        PC = 0;
-    
+        PC = 0;    
     end
 
 
     //控制器连接部分
-    Controller(OP, Func, AluOp,  MemtoReg , MemWrite, AluSrc, RegWrite, Syscall, SignedExt, RegDst , BEQ, BNE, JR, JMP, JAL);
+    Controller A2(OP, Func, AluOp,  MemtoReg , MemWrite, AluSrc, RegWrite, Syscall, SignedExt, RegDst , BEQ, BNE, JR, JMP, JAL);
     
     //寄存器端口信号声明
     reg[4:0]rA; reg[4:0]rB;reg[4:0]rW; reg[31:0]wData; //寄存器输入口
     wire[31:0] RegOutA; wire[31:0]RegOutB;  //寄存器输出口
     //寄存器文件连接
-    Reg_File(Clk,rA,rB,rW,RegWrite,wData,RegOutA,RegOutB);
+    Reg_File A3(Clk,rA,rB,rW,RegWrite,wData,RegOutA,RegOutB);
     
-    always@(Syscall,RegDst,JAL) begin
+    always@(Syscall,RegDst,JAL,Clk) begin
         //寄存器读端口
         if(!Syscall) begin
             rA = rs;
@@ -77,11 +76,12 @@ module Datapath(Clk_ms, Rst, Go,MemShowNum, LedData, TotalCirc, NobranchCirc, Br
     //运算器连接部分
     reg [31:0]Alu_InB; //寄存器的B入口来源有两个，一个是符号扩展，一个是寄存器
     wire[31:0] Alu_Out;
+    wire [31:0]Alu_Out2;
     wire Equal;
-    Alu(RegOutA,Alu_InB,AluOp,Shamt,Alu_Out,Equal);
+    Alu A4(RegOutA,Alu_InB,AluOp,Shamt,Equal,Alu_Out,Alu_Out2);
     always @(AluSrc) begin  
         if(AluSrc) 
-            Alu_InB = Imme16;
+            Alu_InB = Imme16;  //扩展后的立即数
         else
             Alu_InB = RegOutB;
     end
@@ -93,10 +93,10 @@ module Datapath(Clk_ms, Rst, Go,MemShowNum, LedData, TotalCirc, NobranchCirc, Br
     
     assign Sel = 15;    //24条指令片选是1111
     assign Mem_Data_In = RegOutA;   //24条指令
-    Mem_Data(Clk,Alu_Out[21:2],Mem_Data_In, MemWrite,Sel, Mem_Data_Out);
+    Mem_Data A5(Clk,Alu_Out[21:2],Mem_Data_In, MemWrite,Sel, Mem_Data_Out,Rst);
     
     reg[31:0] Result;  //输出结果，来源是ALU或者数据存储器
-    always@( MemtoReg) begin
+    always@( MemtoReg,Clk) begin
         if(!MemtoReg)
             Result =  Alu_Out;
         else
@@ -104,16 +104,16 @@ module Datapath(Clk_ms, Rst, Go,MemShowNum, LedData, TotalCirc, NobranchCirc, Br
     end
     
     //处理系统调用模块
-    reg [31:0]SyscallNum;
-    always@(Syscall) begin
+    reg [31:0]SyscallNum;   ///V0
+    always@(Syscall,Clk) begin
         SyscallNum = RegOutA;
     end
     reg pause;//pause系统调用
     reg showLED;
-    always@(Syscall) begin
+    always@(Syscall,Clk) begin
         if(Syscall) begin
-            if(SyscallNum == 34) begin
-                pause = 0;
+            if(SyscallNum == 34) begin   //V0等于34  则输出  不等于则停机stop
+                pause = 0;    
                 showLED = 1;
             end
             else begin
@@ -138,7 +138,7 @@ module Datapath(Clk_ms, Rst, Go,MemShowNum, LedData, TotalCirc, NobranchCirc, Br
     always@(posedge Clk) begin
         if(BEQ || BNE) begin   //跳转指令
             BranchCirc <= BranchCirc + 1;
-            PC <= Imme16<<2;
+            PC <= Imme16<<2 +PC+4;
         end
         else if(JAL || JMP) begin
             NobranchCirc <= NobranchCirc + 1;

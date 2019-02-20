@@ -1,37 +1,40 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 2019/02/19 14:14:06
-// Design Name: 
-// Module Name: tb_mem_data
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
-
 
 module tb_mem_data( );
-    reg clk;
-  wire  MemWrite;
-  wire [31:0] DAddr;
-   wire [31:0]  DataIn;
-   reg [31:0] DataOut;
-    Mem_Data T3(clk, MemWrite,DAddr,DataIn,DataOut);
-      always #10 clk = ~clk; 
-       initial begin
-       MemWrite=1;
-       DAddr = 0;
-       DataIn<=100;       
-       #50 MemWrite=0;
-      end
+    reg Clk;
+    reg Rst;
+    reg Sel;
+    reg  MemWrite;
+    reg [31:0] Addr;
+    reg [31:0]  Datain;
+    wire [31:0] Dataout;
+    Mem_Data T3(Clk,Addr,Rst, Datain,MemWrite,Sel,Dataout);
+    
+    integer i;
+    integer j;
+    
+    initial begin
+        Clk<=1;
+        MemWrite<=1;
+        Addr <= 0;
+        Datain<=0;  
+        Rst<=0;  
+        Sel<=15;
+        i <= 0;
+        j <= 0;
+    end
+    
+    always # 10 begin
+        Clk <= ~ Clk;
+        if(i == 5) begin
+            Rst <= 1;
+        end
+        else begin
+            Addr <= i;
+            Datain <= j;
+            i <= i + 1;
+            j <= j + 1;
+        end
+    end
 endmodule
+

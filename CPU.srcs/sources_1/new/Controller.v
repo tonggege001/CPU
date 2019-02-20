@@ -4,8 +4,8 @@
 module Controller(OP, Func, AluOp,  MemtoReg , MemWrite,  
 	 AluSrc, RegWrite, Syscall, SignedExt, RegDst , BEQ, BNE, JR, JMP, JAL);
 
-	input wire[5:0] OP;
-	input wire[5:0] Func;
+	input [5:0]OP;
+	input [5:0]Func;
 	output reg[3:0]AluOp;
 	output reg MemtoReg;
 	output reg MemWrite;
@@ -19,10 +19,6 @@ module Controller(OP, Func, AluOp,  MemtoReg , MemWrite,
 	output reg JR;
 	output reg JMP;
 	output reg JAL;
-
-//	initial begin
-//		//TODO 初始化内部寄存器
-//	end
 
 	always@(OP,Func) begin
 

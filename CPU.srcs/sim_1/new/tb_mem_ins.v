@@ -1,33 +1,17 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 2019/02/19 13:14:01
-// Design Name: 
-// Module Name: tb_mem_ins
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
-module tb_mem_ins(clk,Addr,Dataout);
-    reg clk;
-    wire [31:0] Addr;
-    reg [31:0] Dataout;
+
+module tb_mem_ins( );
+    reg [9:0] Addr;
+    wire [31:0] Dataout;
     Mem_Ins T1(Addr,Dataout);
-    always begin
-    #(5) clk<=~clk;
-    end
+
     initial begin
-    clk<=0;
     Addr<=0;
+    #50 Addr = 1;
+    #50 Addr = 2;
+    #50 Addr = 3;
+    #50 Addr = 4;
+    #50 Addr = 221;
+    #50 Addr = 6;
     end
 endmodule
