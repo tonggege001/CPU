@@ -38,7 +38,8 @@ module Datapath(Clk_ms, Rst, Go,MemShowNum, LedData, TotalCirc, NobranchCirc, Br
     assign Imme26 = {6{SignedExt & IR[25],IR[25:0]}};
     initial begin
         //TODO 初始化相关的寄存器
-        PC = 0;    
+        PC = 0;  
+        pause_state = 0;  
     end
 
 
@@ -51,7 +52,7 @@ module Datapath(Clk_ms, Rst, Go,MemShowNum, LedData, TotalCirc, NobranchCirc, Br
     //寄存器文件连接
     Reg_File A3(Clk,rA,rB,rW,RegWrite,wData,RegOutA,RegOutB);
     
-    always@(Syscall,RegDst,JAL,Clk) begin
+    always@(Syscall,RegDst,JAL) begin
         //寄存器读端口
         if(!Syscall) begin
             rA = rs;
@@ -96,7 +97,7 @@ module Datapath(Clk_ms, Rst, Go,MemShowNum, LedData, TotalCirc, NobranchCirc, Br
     Mem_Data A5(Clk,Alu_Out[21:2],Mem_Data_In, MemWrite,Sel, Mem_Data_Out,Rst);
     
     reg[31:0] Result;  //输出结果，来源是ALU或者数据存储器
-    always@( MemtoReg,Clk) begin
+    always@(MemtoReg) begin
         if(!MemtoReg)
             Result =  Alu_Out;
         else
@@ -110,7 +111,7 @@ module Datapath(Clk_ms, Rst, Go,MemShowNum, LedData, TotalCirc, NobranchCirc, Br
     end
     reg pause;//pause系统调用
     reg showLED;
-    always@(Syscall,Clk) begin
+    always@(Syscall) begin
         if(Syscall) begin
             if(SyscallNum == 34) begin   //V0等于34  则输出  不等于则停机stop
                 pause = 0;    
@@ -133,12 +134,12 @@ module Datapath(Clk_ms, Rst, Go,MemShowNum, LedData, TotalCirc, NobranchCirc, Br
         LedData = RegOutB;
     end
     
-    reg pause_state;    
+    reg pause_state;   // 0时程序运行， 1时程序暂停
     //PC寄存器连接模块以及数据通路的时序部分
     always@(posedge Clk) begin
         if(BEQ || BNE) begin   //跳转指令
             BranchCirc <= BranchCirc + 1;
-            PC <= Imme16<<2 +PC+4;
+            PC <= Imme16<<2 + PC + 4;
         end
         else if(JAL || JMP) begin
             NobranchCirc <= NobranchCirc + 1;
