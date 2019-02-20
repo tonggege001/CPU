@@ -53,28 +53,39 @@ module Datapath(Clk_ms, Rst, Go,MemShowNum, LedData, TotalCirc, NobranchCirc, Br
     //寄存器文件连接
     Reg_File A3(Clk,rA,rB,rW,RegWrite,wData,RegOutA,RegOutB);
 	
-	
-    always@(Syscall,RegDst,JAL,Result,rs,rt,PC) begin
-        //寄存器读端口
-        if(!Syscall) begin
-            rA = rs;
-            rB = rt;
-        end
-        else begin
-            rA = 2; //寄存器选择a0、v0寄存器
-            rB = 4;
-        end
-        //寄存器写端口
-        if(JAL) begin
-            rW = 31;
-            wData = PC + 4;
-        end
-        else begin
-            if(RegDst) rW = rd;
-            else rW = rt;
-            wData = Result;
-        end
-    end
+	//寄存器读端口
+	always@(rs,Syscall) begin
+	   if(Syscall) 
+	       rA = 2;
+	   else 
+	       rA = rs;
+	end
+	always@(rt,Syscall) begin
+	   if(Syscall) 
+	       rB = 4;
+	   else
+	       rB = rt;
+	end
+	//寄存器写端口
+	always@(RegDst,JAL,rt,rd) begin
+	   if(JAL) begin
+	       rW = 31;
+	   end
+	   else begin
+	       if(RegDst)
+	           rW = rd;
+	       else 
+	           rW = rt;
+	   end
+	end
+	//寄存器写数据
+	always@(Result,PC,JAL)begin
+	   if(JAL)
+	       wData = PC + 4;
+	   else
+	       wData = Result;
+	end
+ 
     
     //运算器连接部分
     reg [31:0]Alu_InB; //寄存器的B入口来源有两个，一个是符号扩展，一个是寄存器

@@ -3,18 +3,18 @@ INFO: [VRFC 10-311] analyzing module Reg_File
 INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Ins.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module Mem_Ins
 WARNING: [VRFC 10-756] identifier MEMLEN is used before its declaration [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Ins.v:4]
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Mem_Data
 INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Controller.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module Controller
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mem_Data
 INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Alu.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module Alu
 INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Datapath.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module Datapath
 WARNING: [VRFC 10-756] identifier pause_state is used before its declaration [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Datapath.v:42]
 WARNING: [VRFC 10-756] identifier iii is used before its declaration [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Datapath.v:43]
-WARNING: [VRFC 10-756] identifier Result is used before its declaration [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Datapath.v:56]
-WARNING: [VRFC 10-756] identifier Result is used before its declaration [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Datapath.v:74]
+WARNING: [VRFC 10-756] identifier Result is used before its declaration [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Datapath.v:82]
+WARNING: [VRFC 10-756] identifier Result is used before its declaration [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Datapath.v:86]
 INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sim_1/new/tb_datapath.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module tb_datapath
 INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.sim/sim_1/behav/glbl.v" into library xil_defaultlib

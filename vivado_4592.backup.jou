@@ -1,0 +1,77 @@
+#-----------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Wed Feb 20 19:36:48 2019
+# Process ID: 8932
+# Log file: D:/ARCHIVE/VIVADO_WORKPLACE/CPU/vivado.log
+# Journal file: D:/ARCHIVE/VIVADO_WORKPLACE/CPU\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.xpr
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sim_1/new/tb_datapath.v w ]
+add_files -fileset sim_1 D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sim_1/new/tb_datapath.v
+update_compile_order -fileset sim_1
+set_property is_enabled false [get_files  D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sim_1/new/tb_pc.v]
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top CPU [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top tb_datapath [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+launch_simulation
+source tb_datapath.tcl
+close_sim
+launch_simulation
+source tb_datapath.tcl
+close_sim
+launch_simulation
+source tb_datapath.tcl
+close_sim
+launch_simulation
+launch_simulation
+launch_simulation
+source tb_datapath.tcl
+close_sim
+launch_simulation
+source tb_datapath.tcl
+close_sim
+launch_simulation
+source tb_datapath.tcl
+clear
+close_sim
+launch_simulation
+source tb_datapath.tcl
+close_sim
+launch_simulation
+source tb_datapath.tcl
+close_sim
+launch_simulation
+source tb_datapath.tcl
+close_sim
+launch_simulation
+source tb_datapath.tcl
+close_sim
+launch_simulation
+source tb_datapath.tcl
+close_sim
+launch_simulation
+source tb_datapath.tcl
+close_sim
+launch_simulation
+source tb_datapath.tcl
+close_sim
+launch_simulation
+source tb_datapath.tcl
+close_sim

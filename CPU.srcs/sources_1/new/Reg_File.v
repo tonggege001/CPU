@@ -10,7 +10,7 @@ module Reg_File(Clk,rA,rB,rW,WE,wData,A,B);
     output wire[31:0] A;
     output wire[31:0] B;
     
-    reg[31:0]Regfile[4:0];
+    reg[31:0]Regfile[31:0];
     
     reg[5:0]count;
     
