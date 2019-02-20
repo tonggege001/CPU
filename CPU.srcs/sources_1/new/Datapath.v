@@ -1,16 +1,16 @@
 `timescale 1ns / 1ps
 
 //数据通路
-module Datapath(Clk_ms, Rst, Go, MemShowNum, LedData, TotalCirc, NobranchCirc, BranchCirc, MemShow);
-	input Clk_ms;
+module Datapath(Clk_ms, Rst, Go,MemShowNum, LedData, TotalCirc, NobranchCirc, BranchCirc, MemShow);
+	input Clk_ms;  //原始的时钟，也即硬件分频后的时钟
     input Rst;
-    //input Go;     //
-    //input wire[32:0]MemShowNum;   内存显示暂时不做
+    input Go;     //
+    input wire[32:0]MemShowNum;   //内存显示
     output reg[31:0]LedData;
     output reg[15:0]TotalCirc;
     output reg[15:0]NobranchCirc;
     output reg[15:0]BranchCirc;
-    //output reg[31:0]MemShow;      内存显示暂时不做
+    output reg[31:0]MemShow;      //内存显示
     
     reg[31:0]PC;    //PC寄存器
     wire[31:0] IR;
@@ -156,5 +156,5 @@ module Datapath(Clk_ms, Rst, Go, MemShowNum, LedData, TotalCirc, NobranchCirc, B
         pause_state <= pause | (~pause) & (~Go) & pause_state;
     end
     
-    assign Clk = (~pause) & Clk_ms;
+    assign Clk = (~pause_state) & Clk_ms;
 endmodule
