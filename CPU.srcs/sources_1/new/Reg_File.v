@@ -28,5 +28,28 @@ module Reg_File(Clk,rA,rB,rW,WE,wData,A,B);
         if(WE) begin
             Regfile[rW] <= wData;
         end
+        else ;
+        $display("____REG____\n");
+        $display("addr = %d, Data=%d\n",0,Regfile[0]);
+        $display("addr = %d, Data=%d\n",1,Regfile[1]);
+        $display("addr = %d, Data=%d\n",2,Regfile[2]);
+        $display("addr = %d, Data=%d\n",3,Regfile[3]);
+        $display("addr = %d, Data=%d\n",4,Regfile[4]);
+        $display("addr = %d, Data=%d\n",5,Regfile[5]);
+        $display("addr = %d, Data=%d\n",6,Regfile[6]);
+        $display("addr = %d, Data=%d\n",7,Regfile[7]);
+        $display("addr = %d, Data=%d\n",8,Regfile[8]);
+        $display("addr = %d, Data=%d\n",9,Regfile[9]);
+        $display("addr = %d, Data=%d\n",10,Regfile[10]);
+        $display("addr = %d, Data=%d\n",11,Regfile[11]);
+        $display("addr = %d, Data=%d\n",12,Regfile[12]);
+        $display("addr = %d, Data=%d\n",13,Regfile[13]);
+        $display("addr = %d, Data=%d\n",14,Regfile[14]);
+        $display("addr = %d, Data=%d\n",15,Regfile[15]);
+        $display("addr = %d, Data=%d\n",16,Regfile[16]);
+        $display("addr = %d, Data=%d\n",17,Regfile[17]);
+        $display("addr = %d, Data=%d\n",18,Regfile[18]);
+        $display("addr = %d, Data=%d\n",19,Regfile[19]);
+        $display("addr = %d, Data=%d\n",31,Regfile[31]);
     end
 endmodule

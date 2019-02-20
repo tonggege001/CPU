@@ -175,12 +175,13 @@ module Controller(OP, Func, AluOp,  MemtoReg , MemWrite,
 			BEQ = 0;BNE = 0;JR = 0;JMP = 0;JAL = 0;
 		end
 		else if(OP == 35) begin	//LW
-			AluOp = 0;
+			AluOp = 5;
 			MemtoReg = 1;AluSrc = 1;RegWrite = 1;SignedExt = 1;
 			RegDst = 0;Syscall = 0;MemWrite = 0;
 			BEQ = 0;BNE = 0;JR = 0;JMP = 0;JAL = 0;
 		end
 		else if(OP == 43) begin	//SW
+		    AluOp = 5;
 			MemWrite = 1;AluSrc = 1;SignedExt = 1;
 			MemtoReg = 0;RegWrite = 0;RegDst = 0;Syscall = 0;
 			BEQ = 0;BNE = 0;JR = 0;JMP = 0;JAL = 0;

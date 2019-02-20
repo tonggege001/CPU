@@ -93,7 +93,7 @@ module Datapath(Clk_ms, Rst, Go,MemShowNum, LedData, TotalCirc, NobranchCirc, Br
     wire [31:0]Alu_Out2;
     wire Equal;
     Alu A4(RegOutA,Alu_InB,AluOp,Shamt,Equal,Alu_Out,Alu_Out2);
-    always @(AluSrc) begin  
+    always @(AluSrc,Imme16, RegOutB) begin  
         if(AluSrc) 
             Alu_InB = Imme16;  //扩展后的立即数
         else
@@ -104,13 +104,15 @@ module Datapath(Clk_ms, Rst, Go,MemShowNum, LedData, TotalCirc, NobranchCirc, Br
     wire[31:0]Mem_Data_In;
     wire[3:0]Sel;    //片选信号1000 0100 0010 0001
     wire[31:0]Mem_Data_Out;
+    wire[19:0] MemAddr; //存储器地址
     
     assign Sel = 15;    //24条指令片选是1111
     assign Mem_Data_In = RegOutA;   //24条指令
-    Mem_Data A5(Clk,Alu_Out[21:2],Mem_Data_In, MemWrite,Sel, Mem_Data_Out,Rst);
+    assign MemAddr = Alu_Out[21:2];
+    Mem_Data A5(Clk,MemAddr,Mem_Data_In, MemWrite,Sel, Mem_Data_Out,Rst);
     
     reg[31:0] Result;  //输出结果，来源是ALU或者数据存储器
-    always@(MemtoReg) begin
+    always@(MemtoReg,Alu_Out,Mem_Data_Out) begin
         if(!MemtoReg)
             Result =  Alu_Out;
         else
@@ -178,24 +180,27 @@ module Datapath(Clk_ms, Rst, Go,MemShowNum, LedData, TotalCirc, NobranchCirc, Br
         $display("控制信号：\n");
         $display("AluOp = %d, MemToReg=%d, MemWrite=%d, Alu_Src=%d, RegWrite=%d, Syscall=%d, SignedExt = %d\n", AluOp,MemtoReg,MemWrite,AluSrc,RegWrite, Syscall, SignedExt);
         $display("RegDst = %d, BEQ=%d, BNE = %d, JR=%d, JMP=%d, JAL=%d\n",RegDst,BEQ,BNE,JR,JMP,JAL  );
-        $display("rs = %d：\n",rs);
-        $display("rt = %d：\n",rt);
-        $display("rd = %d：\n",rd);
-        $display("rA = %d：\n",rA);
-        $display("rB = %d：\n",rB);
-        $display("rW = %d：\n",rW);
-        $display("wData = %d：\n",wData);
-        $display("RegOutA = %d：\n",RegOutA);
-        $display("RegOutB = %d：\n",RegOutB);
-        $display("Alu_InB = %d：\n",Alu_InB);
-        $display("Alu_Out = %d：\n",Alu_Out);
-        $display("Mem_Data_In = %d：\n",Mem_Data_In);
-        $display("Mem_Data_Out = %d：\n",Mem_Data_Out);
-        $display("Result = %d：\n",Result);
-        $display("showLED = %d：\n",showLED);
-        $display("pause_state = %d：\n",pause_state);
-        $display("Go = %d：\n",Go);
-        $display("LedData = %d：\n",LedData);
+        $display("rs = %d\n",rs);
+        $display("rt = %d\n",rt);
+        $display("rd = %d\n",rd);
+        $display("rA = %d\n",rA);
+        $display("rB = %d\n",rB);
+        $display("rW = %d\n",rW);
+        $display("imme16 = %d\n",Imme16);
+        $display("imme26 = %d\n",Imme26);
+        $display("wData = %d\n",wData);
+        $display("RegOutA = %d\n",RegOutA);
+        $display("RegOutB = %d\n",RegOutB);
+        $display("Alu_InB = %d\n",Alu_InB);
+        $display("Alu_Out = %d\n",Alu_Out);
+        $display("MemAddr = %d\n",MemAddr);
+        $display("Mem_Data_In = %d\n",Mem_Data_In);
+        $display("Mem_Data_Out = %d\n",Mem_Data_Out);
+        $display("Result = %d\n",Result);
+        $display("showLED = %d\n",showLED);
+        $display("pause_state = %d\n",pause_state);
+        $display("Go = %d\n",Go);
+        $display("LedData = %d\n",LedData);
         
         iii <= iii+1;
         

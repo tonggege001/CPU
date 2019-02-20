@@ -16,19 +16,27 @@ module Mem_Data(Clk,Addr,Datain,MemWrite,Sel,Dataout,Rst);
     input Sel;
     output [31:0]Dataout;
     
-    integer count;
+    reg[20:0] count;
     parameter MEMLEN = 1023;
     reg[31:0]Mem[0:MEMLEN];
     assign Dataout = Mem[Addr];
-  
+    
+    initial begin
+        for(count = 0;count <= MEMLEN; count = count + 1) begin
+            Mem[count] = 0;
+        end
+    end
+    
     always @(posedge Clk)begin
         if(MemWrite) begin
-            Mem[Addr]=Datain;
+            Mem[Addr] <= Datain;
+            $display("____MEM____CHANGE____\n");
+            $display("Addr = %d, Data=%d\n",Addr,Mem[Addr]);
         end
         else ;
         if(Rst==1'b1)begin
             for(count=0;count<1023;count=count+1)
-                Mem[count] = 0;
+                Mem[count] <= 0;
         end
         else ;
     end
