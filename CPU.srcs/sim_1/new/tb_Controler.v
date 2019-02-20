@@ -18,7 +18,7 @@ module tb_Controler;
     Controller T6(OP, Func, AluOp,  MemtoReg , MemWrite, AluSrc, RegWrite, Syscall, SignedExt, RegDst , BEQ, BNE, JR, JMP, JAL);
     //always #5 clk = ~clk; 
     initial begin
-    //∏≥≥ı÷µ
+        //∏≥≥ı÷µ
         AluOp <= 0;
         RegWrite <= 0;RegDst <= 0;
         MemtoReg <= 0;MemWrite <= 0;AluSrc <= 0;Syscall <= 0;SignedExt <= 0;

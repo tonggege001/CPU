@@ -20,9 +20,9 @@ module Controller(OP, Func, AluOp,  MemtoReg , MemWrite,
 	output reg JMP;
 	output reg JAL;
 
-	initial begin
-		//TODO 初始化内部寄存器
-	end
+//	initial begin
+//		//TODO 初始化内部寄存器
+//	end
 
 	always@(OP,Func) begin
 
