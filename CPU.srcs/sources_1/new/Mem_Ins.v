@@ -9,7 +9,7 @@ module Mem_Ins(Addr,Dataout);
     
     initial begin
     // 载入相应的指令文件 到 Mem中
-    $readmemh("D:/Code/CPU/CPU.srcs/sources_1/new/benchmark_ccmb.hex",Mem);
+    $readmemh("D:/datarelative.hex",Mem);
     end
     
     assign Dataout = Mem[Addr];

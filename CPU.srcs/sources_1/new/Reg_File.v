@@ -16,11 +16,9 @@ module Reg_File(Clk,rA,rB,rW,WE,wData,A,B);
     
     initial begin
         //TODO 出初始化寄存器文件的值为0
-        count = 0;
-        while(count <= 31) begin
-            Regfile[count] = 0;
-            count = count + 1;
-        end
+		for(count = 0;count <= 31; count = count + 1) begin
+			Regfile[count] = 0;
+		end
     end
     
     assign A = Regfile[rA];

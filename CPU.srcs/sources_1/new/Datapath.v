@@ -28,18 +28,19 @@ module Datapath(Clk_ms, Rst, Go,MemShowNum, LedData, TotalCirc, NobranchCirc, Br
     wire[31:0]Imme26;   //无条件跳转指令
     
     
-    assign OP = IR[31:25];
+    assign OP = IR[31:26];
     assign Func = IR[5:0];
     assign rs = IR[25:21];
     assign rt = IR[20:16];
     assign rd = IR[15:11];
     assign Shamt = IR[10:6];
-    assign Imme16 = {16{SignedExt & IR[15],IR[15:0]}};    //符号数扩展
-    assign Imme26 = {6{SignedExt & IR[25],IR[25:0]}};
+	assign Imme16 = {{16{SignedExt & IR[15]}},{IR[15:0]}};    //符号数扩展
+    assign Imme26 = {{6{SignedExt & IR[25]}},{IR[25:0]}};
     initial begin
         //TODO 初始化相关的寄存器
         PC = 0;  
         pause_state = 0;  
+        iii = 0;
     end
 
 
@@ -51,8 +52,9 @@ module Datapath(Clk_ms, Rst, Go,MemShowNum, LedData, TotalCirc, NobranchCirc, Br
     wire[31:0] RegOutA; wire[31:0]RegOutB;  //寄存器输出口
     //寄存器文件连接
     Reg_File A3(Clk,rA,rB,rW,RegWrite,wData,RegOutA,RegOutB);
-    
-    always@(Syscall,RegDst,JAL) begin
+	
+	
+    always@(Syscall,RegDst,JAL,Result,rs,rt,PC) begin
         //寄存器读端口
         if(!Syscall) begin
             rA = rs;
@@ -106,7 +108,7 @@ module Datapath(Clk_ms, Rst, Go,MemShowNum, LedData, TotalCirc, NobranchCirc, Br
     
     //处理系统调用模块
     reg [31:0]SyscallNum;   ///V0
-    always@(Syscall,Clk) begin
+    always@(Syscall) begin
         SyscallNum = RegOutA;
     end
     reg pause;//pause系统调用
@@ -136,6 +138,7 @@ module Datapath(Clk_ms, Rst, Go,MemShowNum, LedData, TotalCirc, NobranchCirc, Br
     
     reg pause_state;   // 0时程序运行， 1时程序暂停
     //PC寄存器连接模块以及数据通路的时序部分
+    reg[31:0] iii;
     always@(posedge Clk) begin
         if(BEQ || BNE) begin   //跳转指令
             BranchCirc <= BranchCirc + 1;
@@ -155,6 +158,38 @@ module Datapath(Clk_ms, Rst, Go,MemShowNum, LedData, TotalCirc, NobranchCirc, Br
         TotalCirc <= TotalCirc + 1;
         
         pause_state <= pause | (~pause) & (~Go) & pause_state;
+        
+
+        $display("周期 = %d ：\n",iii);
+        $display("PC = %h：\n",PC);
+        $display("IR = %h：\n",IR);
+        $display("OP=%d, Func = %d",OP,Func);
+        $display("控制信号：\n");
+        $display("AluOp = %d, MemToReg=%d, MemWrite=%d, Alu_Src=%d, RegWrite=%d, Syscall=%d, SignedExt = %d\n", AluOp,MemtoReg,MemWrite,AluSrc,RegWrite, Syscall, SignedExt);
+        $display("RegDst = %d, BEQ=%d, BNE = %d, JR=%d, JMP=%d, JAL=%d\n",RegDst,BEQ,BNE,JR,JMP,JAL  );
+        $display("rs = %d：\n",rs);
+        $display("rt = %d：\n",rt);
+        $display("rd = %d：\n",rd);
+        $display("rA = %d：\n",rA);
+        $display("rB = %d：\n",rB);
+        $display("rW = %d：\n",rW);
+        $display("wData = %d：\n",wData);
+        $display("RegOutA = %d：\n",RegOutA);
+        $display("RegOutB = %d：\n",RegOutB);
+        $display("Alu_InB = %d：\n",Alu_InB);
+        $display("Alu_Out = %d：\n",Alu_Out);
+        $display("Mem_Data_In = %d：\n",Mem_Data_In);
+        $display("Mem_Data_Out = %d：\n",Mem_Data_Out);
+        $display("Result = %d：\n",Result);
+        $display("showLED = %d：\n",showLED);
+        $display("pause_state = %d：\n",pause_state);
+        $display("Go = %d：\n",Go);
+        $display("LedData = %d：\n",LedData);
+        
+        iii <= iii+1;
+        
+        
+        
     end
     
     assign Clk = (~pause_state) & Clk_ms;
