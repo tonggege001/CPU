@@ -90,7 +90,7 @@ module Controller(OP, Func, AluOp,  MemtoReg , MemWrite,
 			JR = 0;JMP = 0;JAL = 0;
 		end
 		else if(OP == 0 && Func == 42)begin		//SLT
-			AluOp = 12;
+			AluOp = 11;
 			RegWrite = 1;RegDst = 1;
 			MemtoReg = 0;MemWrite = 0;AluSrc = 0;Syscall = 0;
 			SignedExt = 0;BEQ = 0;BNE = 0;

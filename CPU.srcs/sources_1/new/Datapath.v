@@ -1,23 +1,20 @@
 `timescale 1ns / 1ps
 
 //数据通路
-module Datapath(Clk, Rst, Go, RegShowNum, MemShowNum, LedData, TotalCirc, NobranchCirc, BranchCirc,RegShow, MemShow, PCShow);
-	input Clk;
+module Datapath(Clk_ms, Rst, Go, MemShowNum, LedData, TotalCirc, NobranchCirc, BranchCirc, MemShow);
+	input Clk_ms;
     input Rst;
-    input Go;
-    input wire[5:0]RegShowNum;
-    input wire[32:0]MemShowNum;
+    //input Go;     //
+    //input wire[32:0]MemShowNum;   内存显示暂时不做
     output reg[31:0]LedData;
     output reg[15:0]TotalCirc;
     output reg[15:0]NobranchCirc;
     output reg[15:0]BranchCirc;
-    output reg[31:0]RegShow;
-    output reg[31:0]MemShow;
-    output reg[31:0]PCShow;
+    //output reg[31:0]MemShow;      内存显示暂时不做
     
     reg[31:0]PC;    //PC寄存器
     wire[31:0] IR;
-    
+    wire Clk;   //时钟信号，在最后有状态改变，通过G0和系统调用控制
     //控制信号声明
     wire[3:0] AluOp; wire MemtoReg; wire MemWrite; wire AluSrc; wire RegWrite; wire Syscall;
     wire SignedExt; wire RegDst; wire BEQ; wire BNE; wire JR; wire JMP; wire JAL;
@@ -28,7 +25,7 @@ module Datapath(Clk, Rst, Go, RegShowNum, MemShowNum, LedData, TotalCirc, Nobran
     wire[5:0] OP; wire[5:0]Func; wire[4:0]rs; wire[4:0]rt; wire[4:0]rd;
     wire [4:0]Shamt; //移位寄存器的输入
     wire[31:0]Imme16; //后16位立即数
-    wire[31:0]Imme26;
+    wire[31:0]Imme26;   //w无条件跳转指令
     
     
     assign OP = IR[31:25];
@@ -50,12 +47,12 @@ module Datapath(Clk, Rst, Go, RegShowNum, MemShowNum, LedData, TotalCirc, Nobran
     Controller(OP, Func, AluOp,  MemtoReg , MemWrite, AluSrc, RegWrite, Syscall, SignedExt, RegDst , BEQ, BNE, JR, JMP, JAL);
     
     //寄存器端口信号声明
-    reg[4:0]rA; reg[4:0]rB;reg[4:0]rW; wire[31:0]wData; //寄存器输入口
+    reg[4:0]rA; reg[4:0]rB;reg[4:0]rW; reg[31:0]wData; //寄存器输入口
     wire[31:0] RegOutA; wire[31:0]RegOutB;  //寄存器输出口
     //寄存器文件连接
     Reg_File(Clk,rA,rB,rW,RegWrite,wData,RegOutA,RegOutB);
     
-    always@(Syscall,RegDst) begin
+    always@(Syscall,RegDst,JAL) begin
         //寄存器读端口
         if(!Syscall) begin
             rA = rs;
@@ -66,10 +63,14 @@ module Datapath(Clk, Rst, Go, RegShowNum, MemShowNum, LedData, TotalCirc, Nobran
             rB = 4;
         end
         //寄存器写端口
-        if(JAL) rW = 31;
+        if(JAL) begin
+            rW = 31;
+            wData = PC + 4;
+        end
         else begin
             if(RegDst) rW = rd;
             else rW = rt;
+            wData = Result;
         end
     end
     
@@ -102,17 +103,46 @@ module Datapath(Clk, Rst, Go, RegShowNum, MemShowNum, LedData, TotalCirc, Nobran
             Result = Mem_Data_Out;
     end
     
+    //处理系统调用模块
+    reg [31:0]SyscallNum;
+    always@(Syscall) begin
+        SyscallNum = RegOutA;
+    end
+    reg pause;//pause系统调用
+    reg showLED;
+    always@(Syscall) begin
+        if(Syscall) begin
+            if(SyscallNum == 34) begin
+                pause = 0;
+                showLED = 1;
+            end
+            else begin
+                pause = 1;
+                showLED = 0;
+            end
+        end
+        else begin
+            pause = 0;
+            showLED = 0;
+        end
+    end
+    //TODO 暂停部分，写到CLK的时序逻辑部分
     
+    //显示数码管部分
+    always@(showLED) begin
+        LedData = RegOutB;
+    end
     
-    //PC寄存器连接模块
+    reg pause_state;    
+    //PC寄存器连接模块以及数据通路的时序部分
     always@(posedge Clk) begin
         if(BEQ || BNE) begin   //跳转指令
             BranchCirc <= BranchCirc + 1;
-            PC <= Imme16;
+            PC <= Imme16<<2;
         end
         else if(JAL || JMP) begin
             NobranchCirc <= NobranchCirc + 1;
-            PC <= Imme26;
+            PC <= Imme26 << 2;
         end
         else if(JR) begin
             NobranchCirc <= NobranchCirc + 1;
@@ -122,13 +152,9 @@ module Datapath(Clk, Rst, Go, RegShowNum, MemShowNum, LedData, TotalCirc, Nobran
             PC <= PC + 4;
         end
         TotalCirc <= TotalCirc + 1;
+        
+        pause_state <= pause | (~pause) & (~Go) & pause_state;
     end
     
-    
-    
-    
-    
-
-    
-    
+    assign Clk = (~pause) & Clk_ms;
 endmodule
