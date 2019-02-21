@@ -1,7 +1,6 @@
 `timescale 1ns / 1ps
 /*
-ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½Ä£Ê½chooseï¿½Åºï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½
-ï¿½ï¿½ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½Ê±ï¿½ï¿½Ê±ï¿½ï¿½Ö¸ï¿½ï¿½Î»ieï¿½ï¿½Ê®Î»ï¿½ï¿½ï¿½ï¿½Î»ï¿½ï¿½Ç§Î»ï¿½ï¿½dataï¿½Åºï¿½ï¿½ï¿½
+Êý¾ÝÑ¡ÔñÄ£¿é£¬µ±chooseÎªÄ³Ò»Ä£Ê½Ê±£¬Ä³Ò»Ê±¿ÌÊý¾ÝÎªÏàÓ¦Ô´Êý¾ÝµÄÄ³Ò»Î»
 */
 module FindData(clk,choose,LedData, TotalCirc, NobranchCirc, BranchCirc, MemShow,AN,data);
     input clk;
@@ -27,19 +26,19 @@ module FindData(clk,choose,LedData, TotalCirc, NobranchCirc, BranchCirc, MemShow
 
     always@(choose,LedData,TotalCirc,NobranchCirc,BranchCirc,MemShow) begin
         case(choose)
-        0:begin     //LEDï¿½ï¿½Ê¾
+        0:begin     //LEDÏÔÊ¾
             curData = LedData;
         end
-        1:begin     //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾
+        1:begin     //×ÜÖÜÆÚÊý
             curData = {{16{0}},TotalCirc};
         end
-        2:begin //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×ªÖ¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾
+        2:begin //ÎÞÌõ¼þÌø×ª
             curData = {{16{0}},NobranchCirc};
         end
-        3:begin
+        3:begin //ÓÐÌõ¼þÌø×ª
             curData = {{16{0}},BranchCirc};
         end
-        4:begin
+        4:begin //ÄÚ´æÏÔÊ¾
             curData = MemShow;
         end
         endcase
@@ -49,56 +48,56 @@ module FindData(clk,choose,LedData, TotalCirc, NobranchCirc, BranchCirc, MemShow
     always@(posedge showClk) begin
         count <= count + 1;
         if(count == 0) begin
-            if(choose == TotalCirc || choose == NobranchCirc || choose == BranchCirc)
+            if(choose == 1 || choose == 2 || choose == 3)
                 data <= curData%10;
             else
                 data <= curData %16;
             AN <= 8'b11111110;
         end
         else if(count == 1)begin
-            if(choose == TotalCirc || choose == NobranchCirc || choose == BranchCirc)
+            if(choose == 1 || choose == 2 || choose == 3)
                 data <= (curData/10) % 10;
             else
                 data <= (curData/16) %16;
             AN <= 8'b11111101;
         end
         else if(count == 2) begin
-            if(choose == TotalCirc || choose == NobranchCirc || choose == BranchCirc)
+            if(choose == 1 || choose == 2 || choose == 3)
                 data <= (curData/100) % 10;
             else
                 data <= (curData/256) %16;
             AN <= 8'b11111011;
         end
         else if(count == 3) begin
-            if(choose == TotalCirc || choose == NobranchCirc || choose == BranchCirc)
+            if(choose == 1 || choose == 2 || choose == 3)
                 data <= (curData/1000) % 10;
             else
                 data <= (curData/4096) %16;
             AN <= 8'b11110111;
         end
         else if(count == 4) begin
-            if(choose == TotalCirc || choose == NobranchCirc || choose == BranchCirc)
+            if(choose == 1 || choose == 2 || choose == 3)
                 data <= (curData/10000) % 10;
             else
                 data <= (curData/65536) %16;
             AN <= 8'b11101111;
         end
         else if(count ==5)begin
-            if(choose == TotalCirc || choose == NobranchCirc || choose == BranchCirc)
+            if(choose == 1 || choose == 2 || choose == 3)
                 data <= (curData/100000) % 10;
             else
                 data <= (curData/1048576) %16;
             AN <= 8'b11011111;
         end
         else if(count == 6)begin
-            if(choose == TotalCirc || choose == NobranchCirc || choose == BranchCirc)
+            if(choose == 1 || choose == 2 || choose == 3)
                 data <= (curData/1000000) % 10;
             else
                 data <= (curData/16777216) %16;
             AN <= 8'b10111111;
         end
         else if(count == 7)begin
-            if(choose == TotalCirc || choose == NobranchCirc || choose == BranchCirc)
+            if(choose == 1 || choose == 2 || choose == 3)
                 data <= (curData/10000000) % 10;
             else
                 data <= (curData/268435456) %16;

@@ -162,33 +162,39 @@ module Datapath(Clk_ms, Rst, Go,MemShowNum, LedData, TotalCirc, NobranchCirc, Br
     
     //reg [31:0] PC
     always@(posedge Clk) begin
-        if((BEQ && Equal) || (BNE && !Equal)) begin   //跳转指令
-            BranchCirc <= BranchCirc + 1;
-            PC <= (((Imme16<<2) + PC )+ 4);
-            $display("BEQ || BNE");
-            $display("PC next is %d",((Imme16<<2) + PC) + 4);
-        end
-        else if(JAL || JMP) begin
-            NobranchCirc <= NobranchCirc + 1;
-            PC <= Imme26 << 2;
-            $display("JAL || JMP");
-            $display("PC next is %d",Imme26 << 2);
-        end
-        else if(JR) begin
-            NobranchCirc <= NobranchCirc + 1;
-            PC <= Result;
-            $display("JR");
-            $display("PC next is %d",Result);
+        if(!Rst) begin
+            if((BEQ && Equal) || (BNE && !Equal)) begin   //跳转指令
+                BranchCirc <= BranchCirc + 1;
+                PC <= (((Imme16<<2) + PC )+ 4);
+                $display("BEQ || BNE");
+                $display("PC next is %d",((Imme16<<2) + PC) + 4);
+            end
+            else if(JAL || JMP) begin
+                NobranchCirc <= NobranchCirc + 1;
+                PC <= Imme26 << 2;
+                $display("JAL || JMP");
+                $display("PC next is %d",Imme26 << 2);
+            end
+            else if(JR) begin
+                NobranchCirc <= NobranchCirc + 1;
+                PC <= Result;
+                $display("JR");
+                $display("PC next is %d",Result);
+            end
+            else begin
+                PC <= PC + 4;
+                $display("PC + 4");
+                $display("PC next is %d",PC + 4);
+            end
+            TotalCirc <= TotalCirc + 1;
         end
         else begin
-            PC <= PC + 4;
-            $display("PC + 4");
-            $display("PC next is %d",PC + 4);
+            PC <= 0;
+            TotalCirc <= 0;
+            NobranchCirc <= 0;
+            BranchCirc <= 0;
         end
-        TotalCirc <= TotalCirc + 1;
-        
         pause_state <= pause | (~pause) & (~Go) & pause_state;
-        
 
         $display("周期 = %d ：\n",iii);
         $display("PC = %h：\n",PC);
