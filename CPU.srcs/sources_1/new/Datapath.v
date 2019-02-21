@@ -41,6 +41,9 @@ module Datapath(Clk_ms, Rst, Go,MemShowNum, LedData, TotalCirc, NobranchCirc, Br
         PC = 0;  
         pause_state = 0;  
         iii = 0;
+        TotalCirc = 0;
+        NobranchCirc = 0;
+        BranchCirc = 0;
     end
 
 
@@ -107,7 +110,7 @@ module Datapath(Clk_ms, Rst, Go,MemShowNum, LedData, TotalCirc, NobranchCirc, Br
     wire[19:0] MemAddr; //存储器地址
     
     assign Sel = 15;    //24条指令片选是1111
-    assign Mem_Data_In = RegOutA;   //24条指令
+    assign Mem_Data_In = RegOutB;   //24条指令
     assign MemAddr = Alu_Out[21:2];
     Mem_Data A5(Clk,MemAddr,Mem_Data_In, MemWrite,Sel, Mem_Data_Out,Rst);
     
@@ -152,21 +155,31 @@ module Datapath(Clk_ms, Rst, Go,MemShowNum, LedData, TotalCirc, NobranchCirc, Br
     reg pause_state;   // 0时程序运行， 1时程序暂停
     //PC寄存器连接模块以及数据通路的时序部分
     reg[31:0] iii;
+    
+    //reg [31:0] PC
     always@(posedge Clk) begin
-        if(BEQ || BNE) begin   //跳转指令
+        if((BEQ && Equal) || (BNE && !Equal)) begin   //跳转指令
             BranchCirc <= BranchCirc + 1;
-            PC <= Imme16<<2 + PC + 4;
+            PC <= (((Imme16<<2) + PC )+ 4);
+            $display("BEQ || BNE");
+            $display("PC next is %d",((Imme16<<2) + PC) + 4);
         end
         else if(JAL || JMP) begin
             NobranchCirc <= NobranchCirc + 1;
             PC <= Imme26 << 2;
+            $display("JAL || JMP");
+            $display("PC next is %d",Imme26 << 2);
         end
         else if(JR) begin
             NobranchCirc <= NobranchCirc + 1;
             PC <= Result;
+            $display("JR");
+            $display("PC next is %d",Result);
         end
         else begin
             PC <= PC + 4;
+            $display("PC + 4");
+            $display("PC next is %d",PC + 4);
         end
         TotalCirc <= TotalCirc + 1;
         
@@ -180,6 +193,7 @@ module Datapath(Clk_ms, Rst, Go,MemShowNum, LedData, TotalCirc, NobranchCirc, Br
         $display("控制信号：\n");
         $display("AluOp = %d, MemToReg=%d, MemWrite=%d, Alu_Src=%d, RegWrite=%d, Syscall=%d, SignedExt = %d\n", AluOp,MemtoReg,MemWrite,AluSrc,RegWrite, Syscall, SignedExt);
         $display("RegDst = %d, BEQ=%d, BNE = %d, JR=%d, JMP=%d, JAL=%d\n",RegDst,BEQ,BNE,JR,JMP,JAL  );
+        $display("Equal = %d\n",Equal);
         $display("rs = %d\n",rs);
         $display("rt = %d\n",rt);
         $display("rd = %d\n",rd);
@@ -201,7 +215,9 @@ module Datapath(Clk_ms, Rst, Go,MemShowNum, LedData, TotalCirc, NobranchCirc, Br
         $display("pause_state = %d\n",pause_state);
         $display("Go = %d\n",Go);
         $display("LedData = %d\n",LedData);
-        
+        $display("TotalCirc = %d\n",TotalCirc);
+        $display("NoBranchCirc = %d\n",NobranchCirc);
+        $display("BranchCirc = %d\n",BranchCirc);
         iii <= iii+1;
         
         

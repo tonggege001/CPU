@@ -13,7 +13,7 @@ module Mem_Data(Clk,Addr,Datain,MemWrite,Sel,Dataout,Rst);
     input [19:0]Addr;
     input [31:0]Datain;
     input MemWrite;
-    input Sel;
+    input [3:0]Sel;
     output [31:0]Dataout;
     
     reg[20:0] count;

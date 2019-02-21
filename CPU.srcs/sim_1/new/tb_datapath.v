@@ -11,7 +11,7 @@ module tb_datapath();
     wire [15:0]BranchCirc;
     wire [31:0]MemShow;      //ÄÚ´æÏÔÊ¾
     
-    always #5 Clk_ms = ~Clk_ms; 
+    always #1 Clk_ms = ~Clk_ms; 
     initial begin
         Clk_ms<=0;
         Rst<=0;
