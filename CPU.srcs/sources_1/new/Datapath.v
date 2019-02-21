@@ -44,6 +44,7 @@ module Datapath(Clk_ms, Rst, Go,MemShowNum, LedData, TotalCirc, NobranchCirc, Br
         TotalCirc = 0;
         NobranchCirc = 0;
         BranchCirc = 0;
+        MemShow = 0;
     end
 
 
@@ -124,12 +125,12 @@ module Datapath(Clk_ms, Rst, Go,MemShowNum, LedData, TotalCirc, NobranchCirc, Br
     
     //处理系统调用模块
     reg [31:0]SyscallNum;   ///V0
-    always@(Syscall) begin
+    always@(RegOutA) begin
         SyscallNum = RegOutA;
     end
     reg pause;//pause系统调用
     reg showLED;
-    always@(Syscall) begin
+    always@(Syscall,SyscallNum) begin
         if(Syscall) begin
             if(SyscallNum == 34) begin   //V0等于34  则输出  不等于则停机stop
                 pause = 0;    
@@ -211,7 +212,9 @@ module Datapath(Clk_ms, Rst, Go,MemShowNum, LedData, TotalCirc, NobranchCirc, Br
         $display("Mem_Data_In = %d\n",Mem_Data_In);
         $display("Mem_Data_Out = %d\n",Mem_Data_Out);
         $display("Result = %d\n",Result);
+        $display("SyscallNum = %d\n",SyscallNum);
         $display("showLED = %d\n",showLED);
+        $display("pause = %d\n",pause);
         $display("pause_state = %d\n",pause_state);
         $display("Go = %d\n",Go);
         $display("LedData = %d\n",LedData);

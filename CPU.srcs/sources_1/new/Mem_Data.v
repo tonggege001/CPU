@@ -30,8 +30,8 @@ module Mem_Data(Clk,Addr,Datain,MemWrite,Sel,Dataout,Rst);
     always @(posedge Clk)begin
         if(MemWrite) begin
             Mem[Addr] <= Datain;
-            $display("____MEM____CHANGE____\n");
-            $display("Addr = %d, Data=%d\n",Addr,Mem[Addr]);
+            //$display("____MEM____CHANGE____\n");
+            //$display("Addr = %d, Data=%d\n",Addr,Mem[Addr]);
         end
         else ;
         if(Rst==1'b1)begin

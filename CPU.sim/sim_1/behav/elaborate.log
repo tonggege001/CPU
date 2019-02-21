@@ -3,7 +3,6 @@ Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
 Running: D:/software/VIVADO/Vivado/2015.2/bin/unwrapped/win64.o/xelab.exe -wto 84249d45525347558246e7d4134ff288 --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_datapath_behav xil_defaultlib.tb_datapath xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
-WARNING: [VRFC 10-278] actual bit length 4 differs from formal bit length 1 for port Sel [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Datapath.v:115]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
