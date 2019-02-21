@@ -1,25 +1,25 @@
 `timescale 1ns / 1ps
-//ÕûÌåµÄCPU£¬°üÀ¨·ÖÆµÏÔÊ¾
+//ï¿½ï¿½ï¿½ï¿½ï¿½CPUï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æµï¿½ï¿½Ê¾
 
-//Ô­Ê¼µÄÐÅºÅÓÃÐ¡Ð´£¬ÆäÖÐÔ­Ê¼ÐÅºÅ°üÀ¨Ô­Ê¼Ê±ÖÓ¡¢Ô­Ê¼Î´¼Ó·À¶¶¶¯°´Å¥
+//Ô­Ê¼ï¿½ï¿½ï¿½Åºï¿½ï¿½ï¿½Ð¡Ð´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô­Ê¼ï¿½ÅºÅ°ï¿½ï¿½ï¿½Ô­Ê¼Ê±ï¿½Ó¡ï¿½Ô­Ê¼Î´ï¿½Ó·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å¥
 module CPU(clk, rst, go, memshownum, LedData, TotalCirc, NobranchCirc, BranchCirc, MemShow);
     input clk;
     input rst;
     input go;
-    input memshownum;
+    input [31:0]memshownum;
     output wire[31:0]LedData;
     output wire[15:0]TotalCirc;
     output wire[15:0]NobranchCirc;
     output wire[15:0]BranchCirc;
-    output wire[31:0]MemShow;      //ÄÚ´æÏÔÊ¾
+    output wire[31:0]MemShow;      //ï¿½Ú´ï¿½ï¿½ï¿½Ê¾
     
-    wire Clk_ms;    //·ÖÆµºóµÄ
-    wire Rst;       //·À¶¶¶¯ºóµÄ
+    wire Clk_ms;    //ï¿½ï¿½Æµï¿½ï¿½ï¿½
+    wire Rst;       //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     wire Go;
     wire MemShowNum;  
     
-    Divider(clk, Clk_ms);   //·ÖÆµÏÔÊ¾Ä£¿é
-    Button_Signal RSTBS(Clk_ms,rst,Rst);    //°´¼ü·À¶¶¶¯Ä£¿é
+    Divider(clk, Clk_ms);   //ï¿½ï¿½Æµï¿½ï¿½Ê¾Ä£ï¿½ï¿½
+    Button_Signal RSTBS(Clk_ms,rst,Rst);    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ï¿½
     Button_Signal GOBS(Clk_ms,go,Go);
     Button_Signal MEMSHOWNUM(Clk_ms,memshownum,MemShowNum);
     
