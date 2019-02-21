@@ -20,10 +20,10 @@ module View(clk,rst,go,choose,/*memshownum,freq ,*/SEG,AN);
     wire[7:0] data; //待显示的某位数据
 
 
-    cpu CPU(clk, rst, go, memshownum, LedData, TotalCirc, NobranchCirc, BranchCirc, MemShow);
+    CPU cpu(clk, rst, go, memshownum, LedData, TotalCirc, NobranchCirc, BranchCirc, MemShow);
 
-    num Number2Seg(data,SEG);
-    finddata FindData(clk,choose,LedData, TotalCirc, NobranchCirc, BranchCirc, MemShow,AN,data)
+    Number2Seg num(data,SEG);
+    FindData finddata(clk,choose,LedData, TotalCirc, NobranchCirc, BranchCirc, MemShow,AN,data);
 
     initial begin
         memshownum = 0;
