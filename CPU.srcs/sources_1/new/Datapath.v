@@ -45,6 +45,7 @@ module Datapath(Clk_ms, Rst, Go,MemShowNum, LedData, TotalCirc, NobranchCirc, Br
         NobranchCirc = 0;
         BranchCirc = 0;
         MemShow = 0;
+        LedData = 0;
     end
 
 
@@ -149,8 +150,10 @@ module Datapath(Clk_ms, Rst, Go,MemShowNum, LedData, TotalCirc, NobranchCirc, Br
     //TODO 暂停部分，写到CLK的时序逻辑部分
     
     //显示数码管部分
-    always@(showLED) begin
-        LedData = RegOutB;
+    always@(showLED,RegOutB) begin
+        if(showLED)
+            LedData = RegOutB;
+        else ;
     end
     
     reg pause_state;   // 0时程序运行， 1时程序暂停
@@ -214,10 +217,10 @@ module Datapath(Clk_ms, Rst, Go,MemShowNum, LedData, TotalCirc, NobranchCirc, Br
         $display("Result = %d\n",Result);
         $display("SyscallNum = %d\n",SyscallNum);
         $display("showLED = %d\n",showLED);
+        $display("LedData = %d\n",LedData);
         $display("pause = %d\n",pause);
         $display("pause_state = %d\n",pause_state);
         $display("Go = %d\n",Go);
-        $display("LedData = %d\n",LedData);
         $display("TotalCirc = %d\n",TotalCirc);
         $display("NoBranchCirc = %d\n",NobranchCirc);
         $display("BranchCirc = %d\n",BranchCirc);

@@ -9,7 +9,8 @@ module Mem_Ins(Addr,Dataout);
     
     initial begin
     // 载入相应的指令文件 到 Mem中
-    $readmemh("D:/branch.hex",Mem);
+    //$readmemh("D:/branch.hex",Mem);
+    $readmemh("D:/benchmark.hex",Mem);
     end
     
     assign Dataout = Mem[Addr];
