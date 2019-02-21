@@ -2,9 +2,9 @@
 # Vivado v2015.2 (64-bit)
 # SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
 # IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
-# Start of session at: Wed Feb 20 08:28:23 2019
-# Process ID: 26124
-# Log file: D:/Code/CPU/CPU.runs/synth_1/Controller.vds
-# Journal file: D:/Code/CPU/CPU.runs/synth_1\vivado.jou
+# Start of session at: Thu Feb 21 13:28:49 2019
+# Process ID: 5644
+# Log file: D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.runs/synth_1/CPU.vds
+# Journal file: D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
-source Controller.tcl -notrace
+source CPU.tcl -notrace

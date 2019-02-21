@@ -13,15 +13,14 @@ module CPU(clk, rst, go, memshownum, LedData, TotalCirc, NobranchCirc, BranchCir
     output wire[15:0]BranchCirc;
     output wire[31:0]MemShow;      //�ڴ���ʾ
     
-    wire Clk_ms;    //��Ƶ���
-    wire Rst;       //���������
+    wire Clk_ms;    //��Ƶ���?
+    wire Rst;       //���������?
     wire Go;
     wire MemShowNum;  
     
-    Divider(clk, Clk_ms);   //��Ƶ��ʾģ��
+    Divider divider(clk, Clk_ms);   //��Ƶ��ʾģ��
     Button_Signal RSTBS(Clk_ms,rst,Rst);    //����������ģ��
     Button_Signal GOBS(Clk_ms,go,Go);
-    Button_Signal MEMSHOWNUM(Clk_ms,memshownum,MemShowNum);
     
     Datapath(Clk_ms, Rst, Go,MemShowNum, LedData, TotalCirc, NobranchCirc, BranchCirc, MemShow);
 endmodule

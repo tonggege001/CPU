@@ -12,7 +12,7 @@ module Button_Signal(Clk,original_button,new_button);
 	end
 
 	//aaaa
-	always @(posedge clk) begin
+	always @(posedge Clk) begin
 		button_temp <= original_button;
 		new_button <= (~button_temp) & original_button;
 	end
