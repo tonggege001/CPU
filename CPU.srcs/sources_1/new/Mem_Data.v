@@ -16,7 +16,7 @@ module Mem_Data(Clk,Rst,MemShowNum,Addr,Datain,MemWrite,Sel,Dataout,MemShow);
     input MemWrite;
     input [3:0]Sel;
     output [31:0]Dataout;
-    output reg[31:0]MemShow;
+    output wire[31:0]MemShow;
     
     reg[20:0] count;
     parameter MEMLEN = 255;
@@ -28,9 +28,9 @@ module Mem_Data(Clk,Rst,MemShowNum,Addr,Datain,MemWrite,Sel,Dataout,MemShow);
             Mem[count] = 0;
         end
     end
-    
+    assign MemShow = Mem[MemShowNum];
     always @(posedge Clk)begin
-        MemShow <= Mem[MemShowNum];
+        
         if(MemWrite) begin
             Mem[Addr] <= Datain;
             //$display("____MEM____CHANGE____\n");

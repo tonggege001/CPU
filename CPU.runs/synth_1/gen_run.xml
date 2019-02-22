@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1550798774">
-  <File Type="RDS-DCP" Name="View.dcp"/>
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1550809867">
   <File Type="RUN-CONSTRS" Name="$PDATADIR/runs/synth_1/constrs_in.xml"/>
-  <File Type="RDS-UTIL-PB" Name="View_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="View.dcp"/>
   <File Type="RUN-SRCS" Name="$PDATADIR/runs/synth_1/sources.xml"/>
-  <File Type="RDS-PROPCONSTRS" Name="View_drc_synth.rpt"/>
-  <File Type="PA-TCL" Name="View.tcl"/>
+  <File Type="RDS-UTIL-PB" Name="View_utilization_synth.pb"/>
   <File Type="RUN-STRAT" Name="$PDATADIR/runs/synth_1/synth_1.psg"/>
+  <File Type="PA-TCL" Name="View.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="View_drc_synth.rpt"/>
   <File Type="RDS-RDS" Name="View.vds"/>
   <File Type="RDS-UTIL" Name="View_utilization_synth.rpt"/>
   <File Type="VDS-TIMINGSUMMARY" Name="View_timing_summary_synth.rpt"/>

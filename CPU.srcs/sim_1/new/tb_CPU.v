@@ -20,6 +20,7 @@ module tb_CPU();
         go<=0;
         MemShowNum<=0;
         Freq = 0;
+        #2004970 MemShowNum<=1;
     end 
     CPU tb_CPU(clk, rst, go, MemShowNum, Freq, LedData, TotalCirc, NobranchCirc, BranchCirc, MemShow);
     

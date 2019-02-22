@@ -1,19 +1,22 @@
 Vivado Simulator 2015.2
 Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
-Running: D:/software/VIVADO/Vivado/2015.2/bin/unwrapped/win64.o/xelab.exe -wto 84249d45525347558246e7d4134ff288 --debug typical --relax --mt 2 --maxdelay -L xil_defaultlib -L simprims_ver -L secureip --snapshot tb_datapath_time_impl -transport_int_delays -pulse_r 0 -pulse_int_r 0 xil_defaultlib.tb_datapath xil_defaultlib.glbl -log elaborate.log 
+Running: D:/software/VIVADO/Vivado/2015.2/bin/unwrapped/win64.o/xelab.exe -wto 84249d45525347558246e7d4134ff288 --debug typical --relax --mt 2 --maxdelay -L xil_defaultlib -L simprims_ver -L secureip --snapshot tb_CPU_time_impl -transport_int_delays -pulse_r 0 -pulse_int_r 0 xil_defaultlib.tb_CPU xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Divider
+Compiling module xil_defaultlib.Button_Signal
 Compiling module xil_defaultlib.Mem_Ins
 Compiling module xil_defaultlib.Controller
 Compiling module xil_defaultlib.Reg_File
 Compiling module xil_defaultlib.Alu
 Compiling module xil_defaultlib.Mem_Data
 Compiling module xil_defaultlib.Datapath
-Compiling module xil_defaultlib.tb_datapath
+Compiling module xil_defaultlib.CPU
+Compiling module xil_defaultlib.tb_CPU
 Compiling module xil_defaultlib.glbl
 Waiting for 2 sub-compilation(s) to finish...
-Built simulation snapshot tb_datapath_time_impl
+Built simulation snapshot tb_CPU_time_impl

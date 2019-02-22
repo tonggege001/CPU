@@ -12,11 +12,11 @@ module CPU(clk, rst, go, MemShowNum, Freq, LedData, TotalCirc, NobranchCirc, Bra
     output wire[15:0]BranchCirc;
     output wire[31:0]MemShow;      //ï¿½Ú´ï¿½ï¿½ï¿½Ê¾
     
-    wire Clk_ms;    //ï¿½ï¿½Æµï¿½ï¿½ï¿?
-    wire Rst;       //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
-    wire Go;
+    wire Clk_ms;    //·ÖÆµºóÊ±ÖÓ
+    wire Rst;       //·À¶¶¶¯¸´Î»
+    wire Go;        //·À¶¶¶¯Go
     
-    Divider divider(clk, Clk_ms, Freq);   //ï¿½ï¿½Æµï¿½ï¿½Ê¾Ä£ï¿½ï¿½
+    Divider divider(clk, Clk_ms, Freq);   //Êý¾ÝÍ¨Â··ÖÆµ
     
     Button_Signal RSTBS(Clk_ms,rst,Rst);    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ï¿½
     Button_Signal GOBS(Clk_ms,go,Go);
@@ -25,6 +25,5 @@ module CPU(clk, rst, go, MemShowNum, Freq, LedData, TotalCirc, NobranchCirc, Bra
     
     always@(posedge Clk_ms) begin
         $display("CPU module, MemShow is %d",MemShow);
-    
     end
 endmodule
