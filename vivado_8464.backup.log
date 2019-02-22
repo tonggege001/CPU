@@ -1,0 +1,344 @@
+#-----------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Fri Feb 22 19:37:56 2019
+# Process ID: 11104
+# Log file: D:/ARCHIVE/VIVADO_WORKPLACE/CPU/vivado.log
+# Journal file: D:/ARCHIVE/VIVADO_WORKPLACE/CPU\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.xpr
+Scanning sources...
+Finished scanning sources
+WARNING: [Project 1-509] GeneratedRun file for 'synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'impl_1' not found
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/software/VIVADO/Vivado/2015.2/data/ip'.
+open_project: Time (s): cpu = 00:00:16 ; elapsed = 00:00:08 . Memory (MB): peak = 747.941 ; gain = 178.152
+launch_runs synth_1
+INFO: [HDL 9-2216] Analyzing Verilog file "D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Alu.v" into library work [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Alu.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Button_Signal.v" into library work [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Button_Signal.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/CPU.v" into library work [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/CPU.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Controller.v" into library work [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Controller.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Datapath.v" into library work [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Datapath.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Divider.v" into library work [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Divider.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/FindData.v" into library work [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/FindData.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v" into library work [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Ins.v" into library work [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Ins.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Number2Seg.v" into library work [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Number2Seg.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Reg_File.v" into library work [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Reg_File.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/View.v" into library work [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/View.v:1]
+[Fri Feb 22 19:38:40 2019] Launched synth_1...
+Run output will be captured here: D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.runs/synth_1/runme.log
+reset_run synth_1 -noclean_dir 
+WARNING: [Vivado 12-1017] Problems encountered:
+1. PID not specified
+
+launch_runs synth_1
+INFO: [HDL 9-2216] Analyzing Verilog file "D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Alu.v" into library work [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Alu.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Button_Signal.v" into library work [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Button_Signal.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/CPU.v" into library work [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/CPU.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Controller.v" into library work [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Controller.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Datapath.v" into library work [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Datapath.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Divider.v" into library work [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Divider.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/FindData.v" into library work [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/FindData.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v" into library work [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Ins.v" into library work [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Ins.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Number2Seg.v" into library work [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Number2Seg.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Reg_File.v" into library work [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Reg_File.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/View.v" into library work [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/View.v:1]
+[Fri Feb 22 19:41:05 2019] Launched synth_1...
+Run output will be captured here: D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.runs/synth_1/runme.log
+launch_simulation -mode post-synthesis -type timing
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a100tcsg324-1
+INFO: [Netlist 29-17] Analyzing 1061 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2015.2
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/constrs_1/new/cstr.xdc]
+Finished Parsing XDC File [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/constrs_1/new/cstr.xdc]
+INFO: [Opt 31-140] Inserted 2 IBUFs to IO ports without IO buffers.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 12 instances were transformed.
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 12 instances
+
+open_run: Time (s): cpu = 00:00:23 ; elapsed = 00:00:17 . Memory (MB): peak = 1131.715 ; gain = 363.031
+INFO: [USF-XSim-29] Writing simulation netlist file for design 'synth_1'...
+INFO: [USF-XSim-90] write_verilog -mode timesim -nolib -sdf_anno true -force -file "D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.sim/sim_1/synth/timing/tb_View_time_synth.v"
+write_verilog: Time (s): cpu = 00:00:38 ; elapsed = 00:00:20 . Memory (MB): peak = 1555.699 ; gain = 419.285
+INFO: [USF-XSim-30] Writing SDF file...
+INFO: [USF-XSim-91] write_sdf -mode timesim -process_corner slow -force -file "D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.sim/sim_1/synth/timing/tb_View_time_synth.sdf"
+write_sdf: Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 1589.887 ; gain = 34.188
+INFO: [USF-XSim-34] Netlist generated:D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.sim/sim_1/synth/timing/tb_View_time_synth.v
+INFO: [USF-XSim-35] SDF generated:D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.sim/sim_1/synth/timing/tb_View_time_synth.sdf
+INFO: [USF-XSim-37] Inspecting design source files for 'tb_View' in fileset 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE' step in 'D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.sim/sim_1/synth/timing'
+"xvlog -m64 --relax -prj tb_View_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.sim/sim_1/synth/timing/tb_View_time_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Alu
+INFO: [VRFC 10-311] analyzing module Button_Signal
+INFO: [VRFC 10-311] analyzing module Button_Signal_0
+INFO: [VRFC 10-311] analyzing module CPU
+INFO: [VRFC 10-311] analyzing module Controller
+INFO: [VRFC 10-311] analyzing module Datapath
+INFO: [VRFC 10-311] analyzing module Divider
+INFO: [VRFC 10-311] analyzing module Divider_1
+INFO: [VRFC 10-311] analyzing module FindData
+INFO: [VRFC 10-311] analyzing module Mem_Data
+INFO: [VRFC 10-311] analyzing module RAM32M_UNIQ_BASE_
+INFO: [VRFC 10-311] analyzing module RAM32M_HD1
+INFO: [VRFC 10-311] analyzing module RAM32M_HD10
+INFO: [VRFC 10-311] analyzing module RAM32M_HD11
+INFO: [VRFC 10-311] analyzing module RAM32M_HD2
+INFO: [VRFC 10-311] analyzing module RAM32M_HD3
+INFO: [VRFC 10-311] analyzing module RAM32M_HD4
+INFO: [VRFC 10-311] analyzing module RAM32M_HD5
+INFO: [VRFC 10-311] analyzing module RAM32M_HD6
+INFO: [VRFC 10-311] analyzing module RAM32M_HD7
+INFO: [VRFC 10-311] analyzing module RAM32M_HD8
+INFO: [VRFC 10-311] analyzing module RAM32M_HD9
+INFO: [VRFC 10-311] analyzing module Reg_File
+INFO: [VRFC 10-311] analyzing module View
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sim_1/new/tb_View.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_View
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.sim/sim_1/synth/timing/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+WARNING: [VRFC 10-1195] overwriting previous definition of module glbl [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.sim/sim_1/synth/timing/glbl.v:6]
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.sim/sim_1/synth/timing'
+Vivado Simulator 2015.2
+Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
+Running: D:/software/VIVADO/Vivado/2015.2/bin/unwrapped/win64.o/xelab.exe -wto 84249d45525347558246e7d4134ff288 --debug typical --relax --mt 2 --maxdelay -L xil_defaultlib -L simprims_ver -L secureip --snapshot tb_View_time_synth -transport_int_delays -pulse_r 0 -pulse_int_r 0 xil_defaultlib.tb_View xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+run_program: Time (s): cpu = 00:00:33 ; elapsed = 00:10:15 . Memory (MB): peak = 1591.270 ; gain = 1.383
+INFO: [Common 17-344] 'run_program' was cancelled
+1
+    while executing
+"catch {rdi::run_program $scr_file} error_log"
+    (procedure "::tclapp::xilinx::xsim::usf_launch_script" line 35)
+    invoked from within
+"::tclapp::xilinx::xsim::usf_launch_script "xsim" $step"
+    (procedure "tclapp::xilinx::xsim::elaborate" line 13)
+    invoked from within
+"tclapp::xilinx::xsim::elaborate { -simset sim_1 -mode post-synthesis -type timing -run_dir D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.sim/sim_1/synth/timing ..."
+launch_simulation: Time (s): cpu = 00:02:03 ; elapsed = 00:11:20 . Memory (MB): peak = 1591.270 ; gain = 822.586
+INFO: [Common 17-344] 'launch_simulation' was cancelled
+launch_simulation -mode post-synthesis -type functional
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-29] Writing simulation netlist file for design 'synth_1'...
+INFO: [USF-XSim-90] write_verilog -mode funcsim -nolib -force -file "D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.sim/sim_1/synth/func/tb_View_func_synth.v"
+write_verilog: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1591.270 ; gain = 0.000
+INFO: [USF-XSim-34] Netlist generated:D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.sim/sim_1/synth/func/tb_View_func_synth.v
+INFO: [USF-XSim-37] Inspecting design source files for 'tb_View' in fileset 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE' step in 'D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.sim/sim_1/synth/func'
+"xvlog -m64 --relax -prj tb_View_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.sim/sim_1/synth/func/tb_View_func_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Alu
+INFO: [VRFC 10-311] analyzing module Button_Signal
+INFO: [VRFC 10-311] analyzing module Button_Signal_0
+INFO: [VRFC 10-311] analyzing module CPU
+INFO: [VRFC 10-311] analyzing module Controller
+INFO: [VRFC 10-311] analyzing module Datapath
+INFO: [VRFC 10-311] analyzing module Divider
+INFO: [VRFC 10-311] analyzing module Divider_1
+INFO: [VRFC 10-311] analyzing module FindData
+INFO: [VRFC 10-311] analyzing module Mem_Data
+INFO: [VRFC 10-311] analyzing module Reg_File
+INFO: [VRFC 10-311] analyzing module View
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sim_1/new/tb_View.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_View
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.sim/sim_1/synth/func/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+WARNING: [VRFC 10-1195] overwriting previous definition of module glbl [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.sim/sim_1/synth/func/glbl.v:6]
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.sim/sim_1/synth/func'
+Vivado Simulator 2015.2
+Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
+Running: D:/software/VIVADO/Vivado/2015.2/bin/unwrapped/win64.o/xelab.exe -wto 84249d45525347558246e7d4134ff288 --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L secureip --snapshot tb_View_func_synth xil_defaultlib.tb_View xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.OBUF
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.BUFG
+Compiling module unisims_ver.x_lut2_mux4
+Compiling module unisims_ver.LUT2
+Compiling module unisims_ver.sffsrce_fdre
+Compiling module unisims_ver.FDRE
+Compiling module xil_defaultlib.Button_Signal
+Compiling module xil_defaultlib.Button_Signal_0
+Compiling module unisims_ver.latchsre_ldce
+Compiling module unisims_ver.LDCE
+Compiling module unisims_ver.LUT5
+Compiling module unisims_ver.LUT6
+Compiling module unisims_ver.LUT4
+Compiling module unisims_ver.x_lut3_mux4
+Compiling module unisims_ver.x_lut3_mux4_reduced_0
+Compiling module unisims_ver.LUT3
+Compiling module unisims_ver.MUXF7
+Compiling module unisims_ver.MUXF8
+Compiling module xil_defaultlib.Controller
+Compiling module unisims_ver.CARRY4
+Compiling module unisims_ver.x_lut1_mux2
+Compiling module unisims_ver.LUT1
+Compiling module unisims_ver.RAM32M
+Compiling module xil_defaultlib.Reg_File
+Compiling module unisims_ver.DSP48E1(ACASCREG=0,ALUMODEREG=0,...
+Compiling module unisims_ver.DSP48E1(ACASCREG=0,ALUMODEREG=0,...
+Compiling module xil_defaultlib.Alu
+Compiling module xil_defaultlib.Mem_Data
+Compiling module xil_defaultlib.Datapath
+Compiling module xil_defaultlib.Divider_1
+Compiling module xil_defaultlib.CPU
+Compiling module unisims_ver.sffsrce_fdse
+Compiling module unisims_ver.FDSE
+Compiling module xil_defaultlib.Divider
+Compiling module xil_defaultlib.FindData
+Compiling module xil_defaultlib.View
+Compiling module xil_defaultlib.tb_View
+Compiling module xil_defaultlib.glbl
+Waiting for 13 sub-compilation(s) to finish...
+Built simulation snapshot tb_View_func_synth
+
+****** Webtalk v2015.2 (64-bit)
+  **** SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+  **** IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+
+source D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.sim/sim_1/synth/func/xsim.dir/tb_View_func_synth/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.sim/sim_1/synth/func/xsim.dir/tb_View_func_synth/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Fri Feb 22 19:54:52 2019. For additional details about this file, please refer to the WebTalk help file at D:/software/VIVADO/Vivado/2015.2/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Fri Feb 22 19:54:52 2019...
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:01:48 . Memory (MB): peak = 1599.031 ; gain = 7.762
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.sim/sim_1/synth/func'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_View_func_synth -key {Post-Synthesis:sim_1:Functional:tb_View} -tclbatch {tb_View.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2015.2
+Time resolution is 1 ps
+source tb_View.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 5000ns
+run: Time (s): cpu = 00:00:29 ; elapsed = 00:05:19 . Memory (MB): peak = 1622.773 ; gain = 23.742
+xsim: Time (s): cpu = 00:00:31 ; elapsed = 00:05:21 . Memory (MB): peak = 1622.773 ; gain = 23.742
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_View_func_synth' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 5000ns
+launch_simulation: Time (s): cpu = 00:00:40 ; elapsed = 00:07:20 . Memory (MB): peak = 1622.773 ; gain = 31.504
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 1622.773 ; gain = 0.000
+close_design
+close [ open D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/DividerShow.v w ]
+add_files D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/DividerShow.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1
+INFO: [HDL 9-2216] Analyzing Verilog file "D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Alu.v" into library work [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Alu.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Button_Signal.v" into library work [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Button_Signal.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/CPU.v" into library work [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/CPU.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Controller.v" into library work [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Controller.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Datapath.v" into library work [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Datapath.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Divider.v" into library work [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Divider.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/DividerShow.v" into library work [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/DividerShow.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/FindData.v" into library work [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/FindData.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v" into library work [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Ins.v" into library work [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Ins.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Number2Seg.v" into library work [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Number2Seg.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Reg_File.v" into library work [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Reg_File.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/View.v" into library work [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/View.v:1]
+[Fri Feb 22 20:13:10 2019] Launched synth_1...
+Run output will be captured here: D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.runs/synth_1/runme.log
+launch_runs impl_1
+[Fri Feb 22 20:15:54 2019] Launched impl_1...
+Run output will be captured here: D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream
+[Fri Feb 22 20:19:16 2019] Launched impl_1...
+Run output will be captured here: D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2015.2
+  **** Build date : Jun 26 2015-16:56:39
+    ** Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target [lindex [get_hw_targets -of_objects [get_hw_servers localhost]] 0]
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292746685A
+set_property PROGRAM.FILE {D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.runs/impl_1/View.bit} [lindex [get_hw_devices] 0]
+current_hw_device [lindex [get_hw_devices] 0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.runs/impl_1/View.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.runs/impl_1/View.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+close_hw
+reset_run synth_1
+launch_runs synth_1
+INFO: [HDL 9-2216] Analyzing Verilog file "D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Alu.v" into library work [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Alu.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Button_Signal.v" into library work [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Button_Signal.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/CPU.v" into library work [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/CPU.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Controller.v" into library work [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Controller.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Datapath.v" into library work [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Datapath.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Divider.v" into library work [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Divider.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/DividerShow.v" into library work [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/DividerShow.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/FindData.v" into library work [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/FindData.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v" into library work [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Ins.v" into library work [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Ins.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Number2Seg.v" into library work [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Number2Seg.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Reg_File.v" into library work [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Reg_File.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/View.v" into library work [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/View.v:1]
+[Fri Feb 22 20:31:12 2019] Launched synth_1...
+Run output will be captured here: D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.runs/synth_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. PID not specified
+

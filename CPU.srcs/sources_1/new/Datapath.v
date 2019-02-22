@@ -57,7 +57,7 @@ module Datapath(Clk_ms, Rst, Go,MemShowNum, LedData, TotalCirc, NobranchCirc, Br
     reg[4:0]rA; reg[4:0]rB;reg[4:0]rW; reg[31:0]wData; //寄存器输入口
     wire[31:0] RegOutA; wire[31:0]RegOutB;  //寄存器输出口
     //寄存器文件连接
-    Reg_File A3(Clk,rA,rB,rW,RegWrite,wData,RegOutA,RegOutB);
+    Reg_File A3(Clk_ms,rA,rB,rW,RegWrite,wData,RegOutA,RegOutB);
 	
 	//寄存器读端口
 	always@(rs,Syscall) begin
@@ -154,8 +154,8 @@ module Datapath(Clk_ms, Rst, Go,MemShowNum, LedData, TotalCirc, NobranchCirc, Br
 
     
     //reg [31:0] PC
-    always@(posedge Clk) begin
-        if(!Rst) begin
+    always@(posedge Clk_ms) begin
+        if(!Rst && !pause_state) begin
             if((BEQ && Equal) || (BNE && !Equal)) begin   //跳转指令
                 BranchCirc <= BranchCirc + 1;
                 PC <= (((Imme16<<2) + PC )+ 4);
@@ -185,12 +185,13 @@ module Datapath(Clk_ms, Rst, Go,MemShowNum, LedData, TotalCirc, NobranchCirc, Br
             else 
                 LedData <= LedData;
         end
-        else begin
+        else if(Rst)begin
             PC <= 0;
             TotalCirc <= 0;
             NobranchCirc <= 0;
             BranchCirc <= 0;
         end
+        else ;
         pause_state <= pause | (~pause) & (~Go) & pause_state;
 
         $display("周期 = %d ：\n",iii);
