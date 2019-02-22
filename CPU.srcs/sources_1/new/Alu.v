@@ -60,6 +60,8 @@ module Alu(A,B,Aluop,Shamt,Equal,result1,result2);
             4'b1100:begin  //12.无符号数比较
                     result1 <= $unsigned(A) < $unsigned(B) ? 1 : 0; 
                     end
+            default:
+                    result1 <= 0;
         endcase
     end
 endmodule

@@ -10,7 +10,7 @@ module Datapath(Clk_ms, Rst, Go,MemShowNum, LedData, TotalCirc, NobranchCirc, Br
     output reg[15:0]TotalCirc;
     output reg[15:0]NobranchCirc;
     output reg[15:0]BranchCirc;
-    output reg[31:0]MemShow;      //内存显示
+    output wire[31:0]MemShow;      //内存显示
     
     reg[31:0]PC;    //PC寄存器
     wire[31:0] IR;
@@ -27,7 +27,9 @@ module Datapath(Clk_ms, Rst, Go,MemShowNum, LedData, TotalCirc, NobranchCirc, Br
     wire[31:0]Imme16; //后16位立即数
     wire[31:0]Imme26;   //无条件跳转指令
     
-    
+    reg pause_state;   // 0时程序运行， 1时程序暂停
+    reg[31:0] iii;  //统计周期数
+        
     assign OP = IR[31:26];
     assign Func = IR[5:0];
     assign rs = IR[25:21];
@@ -44,7 +46,6 @@ module Datapath(Clk_ms, Rst, Go,MemShowNum, LedData, TotalCirc, NobranchCirc, Br
         TotalCirc = 0;
         NobranchCirc = 0;
         BranchCirc = 0;
-        MemShow = 0;
         LedData = 0;
     end
 
@@ -114,8 +115,7 @@ module Datapath(Clk_ms, Rst, Go,MemShowNum, LedData, TotalCirc, NobranchCirc, Br
     assign Sel = 15;    //24条指令片选是1111
     assign Mem_Data_In = RegOutB;   //24条指令
     assign MemAddr = Alu_Out[21:2];
-    Mem_Data A5(Clk,MemAddr,Mem_Data_In, MemWrite,Sel, Mem_Data_Out,Rst);
-    
+    Mem_Data A5(Clk,Rst,MemShowNum,MemAddr,Mem_Data_In, MemWrite,Sel, Mem_Data_Out, MemShow);
     reg[31:0] Result;  //输出结果，来源是ALU或者数据存储器
     always@(MemtoReg,Alu_Out,Mem_Data_Out) begin
         if(!MemtoReg)
@@ -156,9 +156,9 @@ module Datapath(Clk_ms, Rst, Go,MemShowNum, LedData, TotalCirc, NobranchCirc, Br
         else ;
     end
     
-    reg pause_state;   // 0时程序运行， 1时程序暂停
+
     //PC寄存器连接模块以及数据通路的时序部分
-    reg[31:0] iii;
+
     
     //reg [31:0] PC
     always@(posedge Clk) begin

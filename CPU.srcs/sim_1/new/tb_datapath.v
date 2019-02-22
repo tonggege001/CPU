@@ -19,5 +19,4 @@ module tb_datapath();
         MemShowNum<=0;
     end 
     Datapath MM(Clk_ms, Rst, Go,MemShowNum, LedData, TotalCirc, NobranchCirc, BranchCirc, MemShow);
-    
 endmodule

@@ -1,12 +1,11 @@
 `timescale 1ns / 1ps
-//�����CPU��������Ƶ��ʾ
 
-//ԭʼ���ź���Сд������ԭʼ�źŰ���ԭʼʱ�ӡ�ԭʼδ�ӷ�������ť
-module CPU(clk, rst, go, memshownum, LedData, TotalCirc, NobranchCirc, BranchCirc, MemShow);
+module CPU(clk, rst, go, MemShowNum, Freq, LedData, TotalCirc, NobranchCirc, BranchCirc, MemShow);
     input clk;
     input rst;
     input go;
-    input [31:0]memshownum;
+    input [31:0]MemShowNum;
+    input [1:0] Freq;
     output wire[31:0]LedData;
     output wire[15:0]TotalCirc;
     output wire[15:0]NobranchCirc;
@@ -16,11 +15,16 @@ module CPU(clk, rst, go, memshownum, LedData, TotalCirc, NobranchCirc, BranchCir
     wire Clk_ms;    //��Ƶ���?
     wire Rst;       //���������?
     wire Go;
-    wire MemShowNum;  
     
-    Divider divider(clk, Clk_ms);   //��Ƶ��ʾģ��
+    Divider divider(clk, Clk_ms, Freq);   //��Ƶ��ʾģ��
+    
     Button_Signal RSTBS(Clk_ms,rst,Rst);    //����������ģ��
     Button_Signal GOBS(Clk_ms,go,Go);
     
-    Datapath(Clk_ms, Rst, Go,MemShowNum, LedData, TotalCirc, NobranchCirc, BranchCirc, MemShow);
+    Datapath datapath(Clk_ms, Rst, Go,MemShowNum, LedData, TotalCirc, NobranchCirc, BranchCirc, MemShow);
+    
+    always@(posedge Clk_ms) begin
+        $display("CPU module, MemShow is %d",MemShow);
+    
+    end
 endmodule

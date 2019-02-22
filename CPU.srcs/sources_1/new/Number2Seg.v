@@ -1,12 +1,12 @@
 `timescale 1ns / 1ps
 
 
-//根据data的值(0-9)确定显示数码管相应的段数
+//根据data的�??(0-9)确定显示数码管相应的段数
 module Number2Seg(data,SEG);
-    input [31:0] data;
+    input [7:0] data;
     output reg[7:0]SEG;
     
-    always begin
+    always @(data)begin
      case(data)
          0:SEG <= 'b11000000;
          1:SEG <= 'b11111001;
