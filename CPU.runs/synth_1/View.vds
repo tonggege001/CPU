@@ -2,161 +2,156 @@
 # Vivado v2015.2 (64-bit)
 # SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
 # IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
-# Start of session at: Fri Feb 22 21:17:15 2019
-# Process ID: 8236
-# Log file: D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.runs/synth_1/View.vds
-# Journal file: D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.runs/synth_1\vivado.jou
+# Start of session at: Fri Feb 22 22:39:12 2019
+# Process ID: 13156
+# Log file: D:/ARCHIVE/CPU/CPU.runs/synth_1/View.vds
+# Journal file: D:/ARCHIVE/CPU/CPU.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
 source View.tcl -notrace
 Command: synth_design -top View -part xc7a100tcsg324-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
-WARNING: [Synth 8-1849] concatenation with unsized literal; will interpret as 32 bits [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/FindData.v:33]
-WARNING: [Synth 8-1849] concatenation with unsized literal; will interpret as 32 bits [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/FindData.v:36]
-WARNING: [Synth 8-1849] concatenation with unsized literal; will interpret as 32 bits [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/FindData.v:39]
-WARNING: [Synth 8-1849] concatenation with unsized literal; will interpret as 32 bits [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/View.v:23]
+WARNING: [Synth 8-1849] concatenation with unsized literal; will interpret as 32 bits [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/FindData.v:33]
+WARNING: [Synth 8-1849] concatenation with unsized literal; will interpret as 32 bits [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/FindData.v:36]
+WARNING: [Synth 8-1849] concatenation with unsized literal; will interpret as 32 bits [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/FindData.v:39]
+WARNING: [Synth 8-1849] concatenation with unsized literal; will interpret as 32 bits [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/View.v:23]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 273.531 ; gain = 101.910
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 273.719 ; gain = 102.773
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'View' [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/View.v:3]
-INFO: [Synth 8-638] synthesizing module 'CPU' [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/CPU.v:3]
-INFO: [Synth 8-638] synthesizing module 'Divider' [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Divider.v:3]
-INFO: [Synth 8-256] done synthesizing module 'Divider' (1#1) [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Divider.v:3]
-INFO: [Synth 8-638] synthesizing module 'Button_Signal' [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Button_Signal.v:3]
-INFO: [Synth 8-256] done synthesizing module 'Button_Signal' (2#1) [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Button_Signal.v:3]
-INFO: [Synth 8-638] synthesizing module 'Datapath' [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Datapath.v:4]
-INFO: [Synth 8-638] synthesizing module 'Mem_Ins' [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Ins.v:3]
+INFO: [Synth 8-638] synthesizing module 'View' [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/View.v:3]
+INFO: [Synth 8-638] synthesizing module 'CPU' [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/CPU.v:3]
+INFO: [Synth 8-638] synthesizing module 'Divider' [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Divider.v:3]
+INFO: [Synth 8-256] done synthesizing module 'Divider' (1#1) [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Divider.v:3]
+INFO: [Synth 8-638] synthesizing module 'Button_Signal' [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Button_Signal.v:3]
+INFO: [Synth 8-256] done synthesizing module 'Button_Signal' (2#1) [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Button_Signal.v:3]
+INFO: [Synth 8-638] synthesizing module 'Datapath' [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Datapath.v:4]
+INFO: [Synth 8-638] synthesizing module 'Mem_Ins' [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Ins.v:3]
 	Parameter MEMLEN bound to: 9 - type: integer 
-INFO: [Synth 8-3876] $readmem data file 'D:/benchmark.hex' is read successfully [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Ins.v:13]
-INFO: [Synth 8-256] done synthesizing module 'Mem_Ins' (3#1) [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Ins.v:3]
-INFO: [Synth 8-638] synthesizing module 'Controller' [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Controller.v:4]
-INFO: [Synth 8-256] done synthesizing module 'Controller' (4#1) [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Controller.v:4]
-INFO: [Synth 8-638] synthesizing module 'Reg_File' [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Reg_File.v:3]
-INFO: [Synth 8-256] done synthesizing module 'Reg_File' (5#1) [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Reg_File.v:3]
-WARNING: [Synth 8-689] width (5) of port connection 'Rst' does not match port width (1) of module 'Reg_File' [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Datapath.v:60]
-WARNING: [Synth 8-689] width (1) of port connection 'rW' does not match port width (5) of module 'Reg_File' [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Datapath.v:60]
-WARNING: [Synth 8-689] width (32) of port connection 'WE' does not match port width (1) of module 'Reg_File' [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Datapath.v:60]
-WARNING: [Synth 8-350] instance 'A3' of module 'Reg_File' requires 9 connections, but only 8 given [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Datapath.v:60]
-INFO: [Synth 8-638] synthesizing module 'Alu' [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Alu.v:3]
-INFO: [Synth 8-256] done synthesizing module 'Alu' (6#1) [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Alu.v:3]
-INFO: [Synth 8-638] synthesizing module 'Mem_Data' [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:10]
+INFO: [Synth 8-3876] $readmem data file 'D:/benchmark.hex' is read successfully [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Ins.v:13]
+INFO: [Synth 8-256] done synthesizing module 'Mem_Ins' (3#1) [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Ins.v:3]
+INFO: [Synth 8-638] synthesizing module 'Controller' [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Controller.v:4]
+INFO: [Synth 8-256] done synthesizing module 'Controller' (4#1) [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Controller.v:4]
+INFO: [Synth 8-638] synthesizing module 'Reg_File' [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Reg_File.v:3]
+INFO: [Synth 8-256] done synthesizing module 'Reg_File' (5#1) [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Reg_File.v:3]
+INFO: [Synth 8-638] synthesizing module 'Alu' [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Alu.v:3]
+INFO: [Synth 8-256] done synthesizing module 'Alu' (6#1) [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Alu.v:3]
+INFO: [Synth 8-638] synthesizing module 'Mem_Data' [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:10]
 	Parameter MEMLEN bound to: 255 - type: integer 
-WARNING: [Synth 8-324] index 256 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 257 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 258 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 259 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 260 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 261 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 262 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 263 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 264 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 265 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 266 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 267 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 268 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 269 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 270 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 271 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 272 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 273 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 274 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 275 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 276 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 277 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 278 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 279 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 280 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 281 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 282 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 283 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 284 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 285 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 286 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 287 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 288 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 289 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 290 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 291 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 292 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 293 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 294 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 295 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 296 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 297 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 298 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 299 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 300 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 301 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 302 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 303 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 304 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 305 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 306 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 307 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 308 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 309 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 310 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 311 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 312 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 313 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 314 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 315 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 316 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 317 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 318 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 319 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 320 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 321 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 322 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 323 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 324 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 325 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 326 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 327 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 328 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 329 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 330 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 331 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 332 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 333 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 334 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 335 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 336 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 337 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 338 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 339 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 340 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 341 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 342 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 343 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 344 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 345 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 346 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 347 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 348 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 349 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 350 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 351 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 352 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 353 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 354 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 355 out of range [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 256 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 257 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 258 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 259 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 260 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 261 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 262 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 263 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 264 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 265 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 266 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 267 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 268 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 269 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 270 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 271 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 272 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 273 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 274 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 275 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 276 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 277 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 278 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 279 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 280 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 281 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 282 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 283 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 284 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 285 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 286 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 287 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 288 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 289 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 290 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 291 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 292 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 293 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 294 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 295 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 296 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 297 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 298 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 299 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 300 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 301 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 302 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 303 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 304 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 305 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 306 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 307 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 308 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 309 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 310 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 311 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 312 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 313 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 314 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 315 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 316 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 317 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 318 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 319 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 320 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 321 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 322 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 323 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 324 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 325 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 326 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 327 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 328 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 329 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 330 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 331 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 332 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 333 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 334 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 335 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 336 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 337 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 338 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 339 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 340 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 341 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 342 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 343 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 344 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 345 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 346 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 347 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 348 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 349 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 350 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 351 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 352 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 353 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 354 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
+WARNING: [Synth 8-324] index 355 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
 INFO: [Common 17-14] Message 'Synth 8-324' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-256] done synthesizing module 'Mem_Data' (7#1) [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:10]
-WARNING: [Synth 8-3848] Net RegOutA in module/entity Datapath does not have driver. [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Datapath.v:58]
-INFO: [Synth 8-256] done synthesizing module 'Datapath' (8#1) [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Datapath.v:4]
-INFO: [Synth 8-256] done synthesizing module 'CPU' (9#1) [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/CPU.v:3]
-INFO: [Synth 8-638] synthesizing module 'Number2Seg' [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Number2Seg.v:5]
-INFO: [Synth 8-256] done synthesizing module 'Number2Seg' (10#1) [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Number2Seg.v:5]
-INFO: [Synth 8-638] synthesizing module 'FindData' [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/FindData.v:5]
-INFO: [Synth 8-638] synthesizing module 'DividerShow' [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/DividerShow.v:3]
-INFO: [Synth 8-256] done synthesizing module 'DividerShow' (11#1) [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/DividerShow.v:3]
-INFO: [Synth 8-155] case statement is not full and has no default [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/FindData.v:28]
-INFO: [Synth 8-256] done synthesizing module 'FindData' (12#1) [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/FindData.v:5]
-INFO: [Synth 8-256] done synthesizing module 'View' (13#1) [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/View.v:3]
+INFO: [Synth 8-256] done synthesizing module 'Mem_Data' (7#1) [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:10]
+INFO: [Synth 8-256] done synthesizing module 'Datapath' (8#1) [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Datapath.v:4]
+INFO: [Synth 8-256] done synthesizing module 'CPU' (9#1) [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/CPU.v:3]
+INFO: [Synth 8-638] synthesizing module 'Number2Seg' [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Number2Seg.v:5]
+INFO: [Synth 8-256] done synthesizing module 'Number2Seg' (10#1) [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Number2Seg.v:5]
+INFO: [Synth 8-638] synthesizing module 'FindData' [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/FindData.v:5]
+INFO: [Synth 8-638] synthesizing module 'DividerShow' [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/DividerShow.v:3]
+INFO: [Synth 8-256] done synthesizing module 'DividerShow' (11#1) [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/DividerShow.v:3]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/FindData.v:28]
+INFO: [Synth 8-256] done synthesizing module 'FindData' (12#1) [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/FindData.v:5]
+INFO: [Synth 8-256] done synthesizing module 'View' (13#1) [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/View.v:3]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 324.188 ; gain = 152.566
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 324.355 ; gain = 153.410
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -165,101 +160,37 @@ Report Check Netlist:
 +------+------------------+-------+---------+-------+------------------+
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
-WARNING: [Synth 8-3295] tying undriven pin A3:wData[31] to constant 0 [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Datapath.v:60]
-WARNING: [Synth 8-3295] tying undriven pin A3:wData[30] to constant 0 [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Datapath.v:60]
-WARNING: [Synth 8-3295] tying undriven pin A3:wData[29] to constant 0 [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Datapath.v:60]
-WARNING: [Synth 8-3295] tying undriven pin A3:wData[28] to constant 0 [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Datapath.v:60]
-WARNING: [Synth 8-3295] tying undriven pin A3:wData[27] to constant 0 [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Datapath.v:60]
-WARNING: [Synth 8-3295] tying undriven pin A3:wData[26] to constant 0 [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Datapath.v:60]
-WARNING: [Synth 8-3295] tying undriven pin A3:wData[25] to constant 0 [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Datapath.v:60]
-WARNING: [Synth 8-3295] tying undriven pin A3:wData[24] to constant 0 [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Datapath.v:60]
-WARNING: [Synth 8-3295] tying undriven pin A3:wData[23] to constant 0 [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Datapath.v:60]
-WARNING: [Synth 8-3295] tying undriven pin A3:wData[22] to constant 0 [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Datapath.v:60]
-WARNING: [Synth 8-3295] tying undriven pin A3:wData[21] to constant 0 [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Datapath.v:60]
-WARNING: [Synth 8-3295] tying undriven pin A3:wData[20] to constant 0 [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Datapath.v:60]
-WARNING: [Synth 8-3295] tying undriven pin A3:wData[19] to constant 0 [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Datapath.v:60]
-WARNING: [Synth 8-3295] tying undriven pin A3:wData[18] to constant 0 [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Datapath.v:60]
-WARNING: [Synth 8-3295] tying undriven pin A3:wData[17] to constant 0 [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Datapath.v:60]
-WARNING: [Synth 8-3295] tying undriven pin A3:wData[16] to constant 0 [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Datapath.v:60]
-WARNING: [Synth 8-3295] tying undriven pin A3:wData[15] to constant 0 [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Datapath.v:60]
-WARNING: [Synth 8-3295] tying undriven pin A3:wData[14] to constant 0 [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Datapath.v:60]
-WARNING: [Synth 8-3295] tying undriven pin A3:wData[13] to constant 0 [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Datapath.v:60]
-WARNING: [Synth 8-3295] tying undriven pin A3:wData[12] to constant 0 [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Datapath.v:60]
-WARNING: [Synth 8-3295] tying undriven pin A3:wData[11] to constant 0 [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Datapath.v:60]
-WARNING: [Synth 8-3295] tying undriven pin A3:wData[10] to constant 0 [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Datapath.v:60]
-WARNING: [Synth 8-3295] tying undriven pin A3:wData[9] to constant 0 [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Datapath.v:60]
-WARNING: [Synth 8-3295] tying undriven pin A3:wData[8] to constant 0 [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Datapath.v:60]
-WARNING: [Synth 8-3295] tying undriven pin A3:wData[7] to constant 0 [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Datapath.v:60]
-WARNING: [Synth 8-3295] tying undriven pin A3:wData[6] to constant 0 [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Datapath.v:60]
-WARNING: [Synth 8-3295] tying undriven pin A3:wData[5] to constant 0 [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Datapath.v:60]
-WARNING: [Synth 8-3295] tying undriven pin A3:wData[4] to constant 0 [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Datapath.v:60]
-WARNING: [Synth 8-3295] tying undriven pin A3:wData[3] to constant 0 [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Datapath.v:60]
-WARNING: [Synth 8-3295] tying undriven pin A3:wData[2] to constant 0 [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Datapath.v:60]
-WARNING: [Synth 8-3295] tying undriven pin A3:wData[1] to constant 0 [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Datapath.v:60]
-WARNING: [Synth 8-3295] tying undriven pin A3:wData[0] to constant 0 [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Datapath.v:60]
-WARNING: [Synth 8-3295] tying undriven pin A4:A[31] to constant 0 [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Datapath.v:101]
-WARNING: [Synth 8-3295] tying undriven pin A4:A[30] to constant 0 [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Datapath.v:101]
-WARNING: [Synth 8-3295] tying undriven pin A4:A[29] to constant 0 [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Datapath.v:101]
-WARNING: [Synth 8-3295] tying undriven pin A4:A[28] to constant 0 [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Datapath.v:101]
-WARNING: [Synth 8-3295] tying undriven pin A4:A[27] to constant 0 [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Datapath.v:101]
-WARNING: [Synth 8-3295] tying undriven pin A4:A[26] to constant 0 [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Datapath.v:101]
-WARNING: [Synth 8-3295] tying undriven pin A4:A[25] to constant 0 [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Datapath.v:101]
-WARNING: [Synth 8-3295] tying undriven pin A4:A[24] to constant 0 [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Datapath.v:101]
-WARNING: [Synth 8-3295] tying undriven pin A4:A[23] to constant 0 [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Datapath.v:101]
-WARNING: [Synth 8-3295] tying undriven pin A4:A[22] to constant 0 [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Datapath.v:101]
-WARNING: [Synth 8-3295] tying undriven pin A4:A[21] to constant 0 [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Datapath.v:101]
-WARNING: [Synth 8-3295] tying undriven pin A4:A[20] to constant 0 [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Datapath.v:101]
-WARNING: [Synth 8-3295] tying undriven pin A4:A[19] to constant 0 [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Datapath.v:101]
-WARNING: [Synth 8-3295] tying undriven pin A4:A[18] to constant 0 [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Datapath.v:101]
-WARNING: [Synth 8-3295] tying undriven pin A4:A[17] to constant 0 [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Datapath.v:101]
-WARNING: [Synth 8-3295] tying undriven pin A4:A[16] to constant 0 [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Datapath.v:101]
-WARNING: [Synth 8-3295] tying undriven pin A4:A[15] to constant 0 [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Datapath.v:101]
-WARNING: [Synth 8-3295] tying undriven pin A4:A[14] to constant 0 [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Datapath.v:101]
-WARNING: [Synth 8-3295] tying undriven pin A4:A[13] to constant 0 [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Datapath.v:101]
-WARNING: [Synth 8-3295] tying undriven pin A4:A[12] to constant 0 [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Datapath.v:101]
-WARNING: [Synth 8-3295] tying undriven pin A4:A[11] to constant 0 [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Datapath.v:101]
-WARNING: [Synth 8-3295] tying undriven pin A4:A[10] to constant 0 [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Datapath.v:101]
-WARNING: [Synth 8-3295] tying undriven pin A4:A[9] to constant 0 [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Datapath.v:101]
-WARNING: [Synth 8-3295] tying undriven pin A4:A[8] to constant 0 [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Datapath.v:101]
-WARNING: [Synth 8-3295] tying undriven pin A4:A[7] to constant 0 [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Datapath.v:101]
-WARNING: [Synth 8-3295] tying undriven pin A4:A[6] to constant 0 [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Datapath.v:101]
-WARNING: [Synth 8-3295] tying undriven pin A4:A[5] to constant 0 [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Datapath.v:101]
-WARNING: [Synth 8-3295] tying undriven pin A4:A[4] to constant 0 [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Datapath.v:101]
-WARNING: [Synth 8-3295] tying undriven pin A4:A[3] to constant 0 [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Datapath.v:101]
-WARNING: [Synth 8-3295] tying undriven pin A4:A[2] to constant 0 [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Datapath.v:101]
-WARNING: [Synth 8-3295] tying undriven pin A4:A[1] to constant 0 [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Datapath.v:101]
-WARNING: [Synth 8-3295] tying undriven pin A4:A[0] to constant 0 [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Datapath.v:101]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 324.188 ; gain = 152.566
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 324.355 ; gain = 153.410
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/constrs_1/new/cstr.xdc]
-Finished Parsing XDC File [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/constrs_1/new/cstr.xdc]
+Parsing XDC File [D:/ARCHIVE/CPU/CPU.srcs/constrs_1/new/cstr.xdc]
+Finished Parsing XDC File [D:/ARCHIVE/CPU/CPU.srcs/constrs_1/new/cstr.xdc]
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 647.582 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 647.785 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 647.582 ; gain = 475.961
+Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 647.785 ; gain = 476.840
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 647.582 ; gain = 475.961
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 647.785 ; gain = 476.840
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 53 of file D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
-incorrect set of required parameters for "set_property" at line 53 of file D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
+incorrect argument "-dict" for "set_property" at line 53 of file D:/ARCHIVE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
+incorrect set of required parameters for "set_property" at line 53 of file D:/ARCHIVE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -270,8 +201,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 54 of file D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
-incorrect set of required parameters for "set_property" at line 54 of file D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
+incorrect argument "-dict" for "set_property" at line 54 of file D:/ARCHIVE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
+incorrect set of required parameters for "set_property" at line 54 of file D:/ARCHIVE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -282,8 +213,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 55 of file D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
-incorrect set of required parameters for "set_property" at line 55 of file D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
+incorrect argument "-dict" for "set_property" at line 55 of file D:/ARCHIVE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
+incorrect set of required parameters for "set_property" at line 55 of file D:/ARCHIVE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -294,8 +225,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 56 of file D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
-incorrect set of required parameters for "set_property" at line 56 of file D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
+incorrect argument "-dict" for "set_property" at line 56 of file D:/ARCHIVE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
+incorrect set of required parameters for "set_property" at line 56 of file D:/ARCHIVE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -306,8 +237,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 57 of file D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
-incorrect set of required parameters for "set_property" at line 57 of file D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
+incorrect argument "-dict" for "set_property" at line 57 of file D:/ARCHIVE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
+incorrect set of required parameters for "set_property" at line 57 of file D:/ARCHIVE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -318,8 +249,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 58 of file D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
-incorrect set of required parameters for "set_property" at line 58 of file D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
+incorrect argument "-dict" for "set_property" at line 58 of file D:/ARCHIVE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
+incorrect set of required parameters for "set_property" at line 58 of file D:/ARCHIVE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -330,8 +261,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 59 of file D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
-incorrect set of required parameters for "set_property" at line 59 of file D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
+incorrect argument "-dict" for "set_property" at line 59 of file D:/ARCHIVE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
+incorrect set of required parameters for "set_property" at line 59 of file D:/ARCHIVE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -342,8 +273,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 60 of file D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
-incorrect set of required parameters for "set_property" at line 60 of file D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
+incorrect argument "-dict" for "set_property" at line 60 of file D:/ARCHIVE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
+incorrect set of required parameters for "set_property" at line 60 of file D:/ARCHIVE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -354,8 +285,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 62 of file D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
-incorrect set of required parameters for "set_property" at line 62 of file D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
+incorrect argument "-dict" for "set_property" at line 62 of file D:/ARCHIVE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
+incorrect set of required parameters for "set_property" at line 62 of file D:/ARCHIVE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -366,8 +297,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 63 of file D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
-incorrect set of required parameters for "set_property" at line 63 of file D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
+incorrect argument "-dict" for "set_property" at line 63 of file D:/ARCHIVE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
+incorrect set of required parameters for "set_property" at line 63 of file D:/ARCHIVE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -378,8 +309,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 64 of file D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
-incorrect set of required parameters for "set_property" at line 64 of file D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
+incorrect argument "-dict" for "set_property" at line 64 of file D:/ARCHIVE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
+incorrect set of required parameters for "set_property" at line 64 of file D:/ARCHIVE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -390,8 +321,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 65 of file D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
-incorrect set of required parameters for "set_property" at line 65 of file D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
+incorrect argument "-dict" for "set_property" at line 65 of file D:/ARCHIVE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
+incorrect set of required parameters for "set_property" at line 65 of file D:/ARCHIVE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -402,8 +333,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 66 of file D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
-incorrect set of required parameters for "set_property" at line 66 of file D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
+incorrect argument "-dict" for "set_property" at line 66 of file D:/ARCHIVE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
+incorrect set of required parameters for "set_property" at line 66 of file D:/ARCHIVE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -414,8 +345,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 67 of file D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
-incorrect set of required parameters for "set_property" at line 67 of file D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
+incorrect argument "-dict" for "set_property" at line 67 of file D:/ARCHIVE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
+incorrect set of required parameters for "set_property" at line 67 of file D:/ARCHIVE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -426,8 +357,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 68 of file D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
-incorrect set of required parameters for "set_property" at line 68 of file D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
+incorrect argument "-dict" for "set_property" at line 68 of file D:/ARCHIVE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
+incorrect set of required parameters for "set_property" at line 68 of file D:/ARCHIVE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -438,8 +369,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 69 of file D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
-incorrect set of required parameters for "set_property" at line 69 of file D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
+incorrect argument "-dict" for "set_property" at line 69 of file D:/ARCHIVE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
+incorrect set of required parameters for "set_property" at line 69 of file D:/ARCHIVE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -451,10 +382,10 @@ Usage:
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 647.582 ; gain = 475.961
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 647.785 ; gain = 476.840
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "Mem" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-3537] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the inputs of the operator [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Alu.v:20]
+INFO: [Synth 8-3537] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the inputs of the operator [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Alu.v:20]
 INFO: [Synth 8-5545] ROM "Mem_reg[0]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
 INFO: [Synth 8-5545] ROM "Mem_reg[1]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
 INFO: [Synth 8-5545] ROM "Mem_reg[2]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
@@ -557,21 +488,21 @@ INFO: [Synth 8-5545] ROM "Mem_reg[98]" won't be mapped to RAM because address si
 INFO: [Synth 8-5545] ROM "Mem_reg[99]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
 INFO: [Common 17-14] Message 'Synth 8-5545' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ROM size is below threshold of ROM address width. It will be mapped to LUTs
-WARNING: [Synth 8-327] inferring latch for variable 'AluOp_reg' [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Controller.v:27]
-WARNING: [Synth 8-327] inferring latch for variable 'result2_reg' [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Alu.v:31]
-WARNING: [Synth 8-327] inferring latch for variable 'SEG_reg' [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Number2Seg.v:11]
-WARNING: [Synth 8-327] inferring latch for variable 'curData_reg' [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/FindData.v:30]
+WARNING: [Synth 8-327] inferring latch for variable 'AluOp_reg' [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Controller.v:27]
+WARNING: [Synth 8-327] inferring latch for variable 'result2_reg' [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Alu.v:31]
+WARNING: [Synth 8-327] inferring latch for variable 'SEG_reg' [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Number2Seg.v:11]
+WARNING: [Synth 8-327] inferring latch for variable 'curData_reg' [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/FindData.v:30]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 647.582 ; gain = 475.961
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 647.785 ; gain = 476.840
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
 +------+--------------+------------+----------+
 |      |RTL Partition |Replication |Instances |
 +------+--------------+------------+----------+
-|1     |Mem_Data      |           1|     36032|
-|2     |Datapath__GB1 |           1|      2671|
-|3     |Datapath__GB2 |           1|     21749|
+|1     |Datapath__GB0 |           1|     36064|
+|2     |Datapath__GB1 |           1|     24415|
+|3     |Datapath__GB2 |           1|       194|
 |4     |CPU__GC0      |           1|       423|
 |5     |View__GC0     |           1|     14645|
 +------+--------------+------------+----------+
@@ -581,8 +512,8 @@ Start RTL Component Statistics
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     64 Bit       Adders := 1     
-	   2 Input     32 Bit       Adders := 2     
 	   3 Input     32 Bit       Adders := 2     
+	   2 Input     32 Bit       Adders := 2     
 	   2 Input     28 Bit       Adders := 1     
 	   2 Input      4 Bit       Adders := 1     
 +---XORs : 
@@ -594,19 +525,19 @@ Detailed RTL Component Info :
 	                1 Bit    Registers := 7     
 +---Muxes : 
 	   2 Input     32 Bit        Muxes := 72    
-	 223 Input     32 Bit        Muxes := 1     
 	  14 Input     32 Bit        Muxes := 2     
+	 237 Input     32 Bit        Muxes := 1     
 	   2 Input     26 Bit        Muxes := 1     
 	   2 Input      8 Bit        Muxes := 13    
 	  16 Input      8 Bit        Muxes := 1     
 	   8 Input      8 Bit        Muxes := 2     
 	   2 Input      5 Bit        Muxes := 4     
 	  23 Input      4 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 77    
+	   2 Input      1 Bit        Muxes := 75    
+	  14 Input      1 Bit        Muxes := 1     
 	   6 Input      1 Bit        Muxes := 3     
 	   4 Input      1 Bit        Muxes := 1     
 	  24 Input      1 Bit        Muxes := 1     
-	  14 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -618,18 +549,13 @@ Module Mem_Data
 Detailed RTL Component Info : 
 +---Registers : 
 	               32 Bit    Registers := 256   
-Module Controller 
+Module Reg_File 
 Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 32    
 +---Muxes : 
-	  23 Input      4 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 9     
-	   6 Input      1 Bit        Muxes := 2     
-	   4 Input      1 Bit        Muxes := 1     
-	  24 Input      1 Bit        Muxes := 1     
-Module Mem_Ins 
-Detailed RTL Component Info : 
-+---Muxes : 
-	 223 Input     32 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 64    
+	   2 Input      1 Bit        Muxes := 64    
 Module Alu 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -641,13 +567,18 @@ Detailed RTL Component Info :
 	   2 Input     32 Bit        Muxes := 4     
 	  14 Input     32 Bit        Muxes := 2     
 	  14 Input      1 Bit        Muxes := 1     
-Module Reg_File 
+Module Controller 
 Detailed RTL Component Info : 
-+---Registers : 
-	               32 Bit    Registers := 32    
 +---Muxes : 
-	   2 Input     32 Bit        Muxes := 64    
-	   2 Input      1 Bit        Muxes := 64    
+	  23 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 9     
+	   6 Input      1 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 1     
+	  24 Input      1 Bit        Muxes := 1     
+Module Mem_Ins 
+Detailed RTL Component Info : 
++---Muxes : 
+	 237 Input     32 Bit        Muxes := 1     
 Module Datapath 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -659,7 +590,7 @@ Detailed RTL Component Info :
 +---Muxes : 
 	   2 Input     32 Bit        Muxes := 4     
 	   2 Input      5 Bit        Muxes := 4     
-	   2 Input      1 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 2     
 Module Divider 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -711,7 +642,7 @@ BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 647.582 ; gain = 475.961
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 647.785 ; gain = 476.840
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
@@ -728,17 +659,17 @@ DSP Report: Generating DSP result20, operation Mode is: (PCIN>>17)+A*B.
 DSP Report: operator result20 is absorbed into DSP result20.
 DSP Report: operator result20 is absorbed into DSP result20.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:39 . Memory (MB): peak = 647.582 ; gain = 475.961
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 647.785 ; gain = 476.840
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:00:33 ; elapsed = 00:00:39 . Memory (MB): peak = 647.582 ; gain = 475.961
+Finished Parallel Reinference  : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 647.785 ; gain = 476.840
 
 Report RTL Partitions: 
 +------+--------------+------------+----------+
 |      |RTL Partition |Replication |Instances |
 +------+--------------+------------+----------+
-|1     |Mem_Data      |           1|     36032|
-|2     |Datapath__GB1 |           1|      2733|
-|3     |Datapath__GB2 |           1|     21650|
+|1     |Datapath__GB0 |           1|     36064|
+|2     |Datapath__GB1 |           1|     24471|
+|3     |Datapath__GB2 |           1|       194|
 |4     |CPU__GC0      |           1|       746|
 |5     |View__GC0     |           1|     30877|
 +------+--------------+------------+----------+
@@ -763,8 +694,8 @@ Finished ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
 Start Area Optimization
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/finddata/\data_reg[5] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (i_3/\num/SEG_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_4/finddata/\data_reg[5] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (i_4/\num/SEG_reg[7] )
 WARNING: [Synth 8-3332] Sequential element (\data_reg[7] ) is unused and will be removed from module FindData.
 WARNING: [Synth 8-3332] Sequential element (\data_reg[6] ) is unused and will be removed from module FindData.
 WARNING: [Synth 8-3332] Sequential element (\data_reg[5] ) is unused and will be removed from module FindData.
@@ -801,96 +732,30 @@ WARNING: [Synth 8-3332] Sequential element (\result2_reg[3] ) is unused and will
 WARNING: [Synth 8-3332] Sequential element (\result2_reg[2] ) is unused and will be removed from module Alu.
 WARNING: [Synth 8-3332] Sequential element (\result2_reg[1] ) is unused and will be removed from module Alu.
 WARNING: [Synth 8-3332] Sequential element (\result2_reg[0] ) is unused and will be removed from module Alu.
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (datapathi_1/A3/\Regfile_reg[2][31] )
-WARNING: [Synth 8-3332] Sequential element (\Regfile_reg[31][0] ) is unused and will be removed from module Reg_File.
-WARNING: [Synth 8-3332] Sequential element (\Regfile_reg[31][1] ) is unused and will be removed from module Reg_File.
-WARNING: [Synth 8-3332] Sequential element (\Regfile_reg[30][0] ) is unused and will be removed from module Reg_File.
-WARNING: [Synth 8-3332] Sequential element (\Regfile_reg[29][0] ) is unused and will be removed from module Reg_File.
-WARNING: [Synth 8-3332] Sequential element (\Regfile_reg[28][0] ) is unused and will be removed from module Reg_File.
-WARNING: [Synth 8-3332] Sequential element (\Regfile_reg[27][0] ) is unused and will be removed from module Reg_File.
-WARNING: [Synth 8-3332] Sequential element (\Regfile_reg[26][0] ) is unused and will be removed from module Reg_File.
-WARNING: [Synth 8-3332] Sequential element (\Regfile_reg[25][0] ) is unused and will be removed from module Reg_File.
-WARNING: [Synth 8-3332] Sequential element (\Regfile_reg[24][0] ) is unused and will be removed from module Reg_File.
-WARNING: [Synth 8-3332] Sequential element (\Regfile_reg[23][0] ) is unused and will be removed from module Reg_File.
-WARNING: [Synth 8-3332] Sequential element (\Regfile_reg[22][0] ) is unused and will be removed from module Reg_File.
-WARNING: [Synth 8-3332] Sequential element (\Regfile_reg[21][0] ) is unused and will be removed from module Reg_File.
-WARNING: [Synth 8-3332] Sequential element (\Regfile_reg[20][0] ) is unused and will be removed from module Reg_File.
-WARNING: [Synth 8-3332] Sequential element (\Regfile_reg[19][0] ) is unused and will be removed from module Reg_File.
-WARNING: [Synth 8-3332] Sequential element (\Regfile_reg[18][0] ) is unused and will be removed from module Reg_File.
-WARNING: [Synth 8-3332] Sequential element (\Regfile_reg[17][0] ) is unused and will be removed from module Reg_File.
-WARNING: [Synth 8-3332] Sequential element (\Regfile_reg[16][0] ) is unused and will be removed from module Reg_File.
-WARNING: [Synth 8-3332] Sequential element (\Regfile_reg[15][0] ) is unused and will be removed from module Reg_File.
-WARNING: [Synth 8-3332] Sequential element (\Regfile_reg[14][0] ) is unused and will be removed from module Reg_File.
-WARNING: [Synth 8-3332] Sequential element (\Regfile_reg[13][0] ) is unused and will be removed from module Reg_File.
-WARNING: [Synth 8-3332] Sequential element (\Regfile_reg[12][0] ) is unused and will be removed from module Reg_File.
-WARNING: [Synth 8-3332] Sequential element (\Regfile_reg[11][0] ) is unused and will be removed from module Reg_File.
-WARNING: [Synth 8-3332] Sequential element (\Regfile_reg[10][0] ) is unused and will be removed from module Reg_File.
-WARNING: [Synth 8-3332] Sequential element (\Regfile_reg[9][0] ) is unused and will be removed from module Reg_File.
-WARNING: [Synth 8-3332] Sequential element (\Regfile_reg[8][0] ) is unused and will be removed from module Reg_File.
-WARNING: [Synth 8-3332] Sequential element (\Regfile_reg[7][0] ) is unused and will be removed from module Reg_File.
-WARNING: [Synth 8-3332] Sequential element (\Regfile_reg[6][0] ) is unused and will be removed from module Reg_File.
-WARNING: [Synth 8-3332] Sequential element (\Regfile_reg[5][0] ) is unused and will be removed from module Reg_File.
-WARNING: [Synth 8-3332] Sequential element (\Regfile_reg[4][0] ) is unused and will be removed from module Reg_File.
-WARNING: [Synth 8-3332] Sequential element (\Regfile_reg[3][0] ) is unused and will be removed from module Reg_File.
-WARNING: [Synth 8-3332] Sequential element (\Regfile_reg[2][0] ) is unused and will be removed from module Reg_File.
-WARNING: [Synth 8-3332] Sequential element (\Regfile_reg[31][16] ) is unused and will be removed from module Reg_File.
-WARNING: [Synth 8-3332] Sequential element (\Regfile_reg[30][16] ) is unused and will be removed from module Reg_File.
-WARNING: [Synth 8-3332] Sequential element (\Regfile_reg[29][16] ) is unused and will be removed from module Reg_File.
-WARNING: [Synth 8-3332] Sequential element (\Regfile_reg[28][16] ) is unused and will be removed from module Reg_File.
-WARNING: [Synth 8-3332] Sequential element (\Regfile_reg[27][16] ) is unused and will be removed from module Reg_File.
-WARNING: [Synth 8-3332] Sequential element (\Regfile_reg[26][16] ) is unused and will be removed from module Reg_File.
-WARNING: [Synth 8-3332] Sequential element (\Regfile_reg[25][16] ) is unused and will be removed from module Reg_File.
-WARNING: [Synth 8-3332] Sequential element (\Regfile_reg[24][16] ) is unused and will be removed from module Reg_File.
-WARNING: [Synth 8-3332] Sequential element (\Regfile_reg[23][16] ) is unused and will be removed from module Reg_File.
-WARNING: [Synth 8-3332] Sequential element (\Regfile_reg[22][16] ) is unused and will be removed from module Reg_File.
-WARNING: [Synth 8-3332] Sequential element (\Regfile_reg[21][16] ) is unused and will be removed from module Reg_File.
-WARNING: [Synth 8-3332] Sequential element (\Regfile_reg[20][16] ) is unused and will be removed from module Reg_File.
-WARNING: [Synth 8-3332] Sequential element (\Regfile_reg[19][16] ) is unused and will be removed from module Reg_File.
-WARNING: [Synth 8-3332] Sequential element (\Regfile_reg[18][16] ) is unused and will be removed from module Reg_File.
-WARNING: [Synth 8-3332] Sequential element (\Regfile_reg[17][16] ) is unused and will be removed from module Reg_File.
-WARNING: [Synth 8-3332] Sequential element (\Regfile_reg[16][16] ) is unused and will be removed from module Reg_File.
-WARNING: [Synth 8-3332] Sequential element (\Regfile_reg[15][16] ) is unused and will be removed from module Reg_File.
-WARNING: [Synth 8-3332] Sequential element (\Regfile_reg[14][16] ) is unused and will be removed from module Reg_File.
-WARNING: [Synth 8-3332] Sequential element (\Regfile_reg[13][16] ) is unused and will be removed from module Reg_File.
-WARNING: [Synth 8-3332] Sequential element (\Regfile_reg[12][16] ) is unused and will be removed from module Reg_File.
-WARNING: [Synth 8-3332] Sequential element (\Regfile_reg[11][16] ) is unused and will be removed from module Reg_File.
-WARNING: [Synth 8-3332] Sequential element (\Regfile_reg[10][16] ) is unused and will be removed from module Reg_File.
-WARNING: [Synth 8-3332] Sequential element (\Regfile_reg[9][16] ) is unused and will be removed from module Reg_File.
-WARNING: [Synth 8-3332] Sequential element (\Regfile_reg[8][16] ) is unused and will be removed from module Reg_File.
-WARNING: [Synth 8-3332] Sequential element (\Regfile_reg[7][16] ) is unused and will be removed from module Reg_File.
-WARNING: [Synth 8-3332] Sequential element (\Regfile_reg[6][16] ) is unused and will be removed from module Reg_File.
-WARNING: [Synth 8-3332] Sequential element (\Regfile_reg[5][16] ) is unused and will be removed from module Reg_File.
-WARNING: [Synth 8-3332] Sequential element (\Regfile_reg[4][16] ) is unused and will be removed from module Reg_File.
-WARNING: [Synth 8-3332] Sequential element (\Regfile_reg[3][16] ) is unused and will be removed from module Reg_File.
-WARNING: [Synth 8-3332] Sequential element (\Regfile_reg[2][16] ) is unused and will be removed from module Reg_File.
-WARNING: [Synth 8-3332] Sequential element (\Regfile_reg[31][8] ) is unused and will be removed from module Reg_File.
-WARNING: [Synth 8-3332] Sequential element (\Regfile_reg[30][8] ) is unused and will be removed from module Reg_File.
-WARNING: [Synth 8-3332] Sequential element (\Regfile_reg[29][8] ) is unused and will be removed from module Reg_File.
-INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:01:21 ; elapsed = 00:01:31 . Memory (MB): peak = 801.793 ; gain = 630.172
+Finished Area Optimization : Time (s): cpu = 00:01:19 ; elapsed = 00:01:30 . Memory (MB): peak = 801.766 ; gain = 630.820
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:01:21 ; elapsed = 00:01:31 . Memory (MB): peak = 801.793 ; gain = 630.172
+Finished Parallel Area Optimization  : Time (s): cpu = 00:01:19 ; elapsed = 00:01:30 . Memory (MB): peak = 801.766 ; gain = 630.820
 
 Report RTL Partitions: 
 +------+--------------+------------+----------+
 |      |RTL Partition |Replication |Instances |
 +------+--------------+------------+----------+
-|1     |Mem_Data      |           1|     24896|
-|2     |Datapath__GB1 |           1|      1294|
-|3     |Datapath__GB2 |           1|      4436|
+|1     |Datapath__GB0 |           1|     24928|
+|2     |Datapath__GB1 |           1|      9636|
+|3     |Datapath__GB2 |           1|       146|
 |4     |CPU__GC0      |           1|       360|
 |5     |View__GC0     |           1|     14452|
 +------+--------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:01:21 ; elapsed = 00:01:31 . Memory (MB): peak = 801.793 ; gain = 630.172
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:01:19 ; elapsed = 00:01:30 . Memory (MB): peak = 801.766 ; gain = 630.820
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 53 of file D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
-incorrect set of required parameters for "set_property" at line 53 of file D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
+incorrect argument "-dict" for "set_property" at line 53 of file D:/ARCHIVE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
+incorrect set of required parameters for "set_property" at line 53 of file D:/ARCHIVE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -901,8 +766,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 54 of file D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
-incorrect set of required parameters for "set_property" at line 54 of file D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
+incorrect argument "-dict" for "set_property" at line 54 of file D:/ARCHIVE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
+incorrect set of required parameters for "set_property" at line 54 of file D:/ARCHIVE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -913,8 +778,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 55 of file D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
-incorrect set of required parameters for "set_property" at line 55 of file D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
+incorrect argument "-dict" for "set_property" at line 55 of file D:/ARCHIVE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
+incorrect set of required parameters for "set_property" at line 55 of file D:/ARCHIVE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -925,8 +790,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 56 of file D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
-incorrect set of required parameters for "set_property" at line 56 of file D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
+incorrect argument "-dict" for "set_property" at line 56 of file D:/ARCHIVE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
+incorrect set of required parameters for "set_property" at line 56 of file D:/ARCHIVE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -937,8 +802,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 57 of file D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
-incorrect set of required parameters for "set_property" at line 57 of file D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
+incorrect argument "-dict" for "set_property" at line 57 of file D:/ARCHIVE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
+incorrect set of required parameters for "set_property" at line 57 of file D:/ARCHIVE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -949,8 +814,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 58 of file D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
-incorrect set of required parameters for "set_property" at line 58 of file D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
+incorrect argument "-dict" for "set_property" at line 58 of file D:/ARCHIVE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
+incorrect set of required parameters for "set_property" at line 58 of file D:/ARCHIVE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -961,8 +826,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 59 of file D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
-incorrect set of required parameters for "set_property" at line 59 of file D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
+incorrect argument "-dict" for "set_property" at line 59 of file D:/ARCHIVE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
+incorrect set of required parameters for "set_property" at line 59 of file D:/ARCHIVE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -973,8 +838,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 60 of file D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
-incorrect set of required parameters for "set_property" at line 60 of file D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
+incorrect argument "-dict" for "set_property" at line 60 of file D:/ARCHIVE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
+incorrect set of required parameters for "set_property" at line 60 of file D:/ARCHIVE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -985,8 +850,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 62 of file D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
-incorrect set of required parameters for "set_property" at line 62 of file D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
+incorrect argument "-dict" for "set_property" at line 62 of file D:/ARCHIVE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
+incorrect set of required parameters for "set_property" at line 62 of file D:/ARCHIVE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -997,8 +862,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 63 of file D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
-incorrect set of required parameters for "set_property" at line 63 of file D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
+incorrect argument "-dict" for "set_property" at line 63 of file D:/ARCHIVE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
+incorrect set of required parameters for "set_property" at line 63 of file D:/ARCHIVE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -1009,8 +874,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 64 of file D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
-incorrect set of required parameters for "set_property" at line 64 of file D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
+incorrect argument "-dict" for "set_property" at line 64 of file D:/ARCHIVE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
+incorrect set of required parameters for "set_property" at line 64 of file D:/ARCHIVE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -1021,8 +886,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 65 of file D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
-incorrect set of required parameters for "set_property" at line 65 of file D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
+incorrect argument "-dict" for "set_property" at line 65 of file D:/ARCHIVE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
+incorrect set of required parameters for "set_property" at line 65 of file D:/ARCHIVE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -1033,8 +898,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 66 of file D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
-incorrect set of required parameters for "set_property" at line 66 of file D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
+incorrect argument "-dict" for "set_property" at line 66 of file D:/ARCHIVE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
+incorrect set of required parameters for "set_property" at line 66 of file D:/ARCHIVE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -1045,8 +910,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 67 of file D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
-incorrect set of required parameters for "set_property" at line 67 of file D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
+incorrect argument "-dict" for "set_property" at line 67 of file D:/ARCHIVE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
+incorrect set of required parameters for "set_property" at line 67 of file D:/ARCHIVE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -1057,8 +922,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 68 of file D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
-incorrect set of required parameters for "set_property" at line 68 of file D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
+incorrect argument "-dict" for "set_property" at line 68 of file D:/ARCHIVE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
+incorrect set of required parameters for "set_property" at line 68 of file D:/ARCHIVE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -1069,8 +934,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 69 of file D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
-incorrect set of required parameters for "set_property" at line 69 of file D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
+incorrect argument "-dict" for "set_property" at line 69 of file D:/ARCHIVE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
+incorrect set of required parameters for "set_property" at line 69 of file D:/ARCHIVE/CPU/CPU.srcs/constrs_1/new/cstr.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -1082,19 +947,19 @@ Usage:
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:43 ; elapsed = 00:01:55 . Memory (MB): peak = 801.793 ; gain = 630.172
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:38 ; elapsed = 00:01:49 . Memory (MB): peak = 809.336 ; gain = 638.391
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:43 ; elapsed = 00:01:55 . Memory (MB): peak = 801.793 ; gain = 630.172
+Finished Timing Optimization : Time (s): cpu = 00:01:38 ; elapsed = 00:01:49 . Memory (MB): peak = 809.336 ; gain = 638.391
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
 +------+--------------+------------+----------+
 |      |RTL Partition |Replication |Instances |
 +------+--------------+------------+----------+
-|1     |Mem_Data      |           1|     24896|
-|2     |Datapath__GB1 |           1|      1294|
-|3     |Datapath__GB2 |           1|      4436|
+|1     |Datapath__GB0 |           1|     24928|
+|2     |Datapath__GB1 |           1|      9636|
+|3     |Datapath__GB2 |           1|       146|
 |4     |CPU__GC0      |           1|       360|
 |5     |View__GC0     |           1|     14452|
 +------+--------------+------------+----------+
@@ -1102,7 +967,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:58 ; elapsed = 00:02:11 . Memory (MB): peak = 823.438 ; gain = 651.816
+Finished Technology Mapping : Time (s): cpu = 00:02:25 ; elapsed = 00:02:48 . Memory (MB): peak = 1090.559 ; gain = 919.613
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1120,7 +985,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:59 ; elapsed = 00:02:12 . Memory (MB): peak = 823.438 ; gain = 651.816
+Finished IO Insertion : Time (s): cpu = 00:02:29 ; elapsed = 00:02:51 . Memory (MB): peak = 1090.559 ; gain = 919.613
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1133,7 +998,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:02:00 ; elapsed = 00:02:12 . Memory (MB): peak = 823.438 ; gain = 651.816
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:29 ; elapsed = 00:02:51 . Memory (MB): peak = 1090.559 ; gain = 919.613
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1145,16 +1010,14 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:00 ; elapsed = 00:02:12 . Memory (MB): peak = 823.438 ; gain = 651.816
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:30 ; elapsed = 00:02:53 . Memory (MB): peak = 1090.559 ; gain = 919.613
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Start Renaming Generated Ports : Time (s): cpu = 00:02:00 ; elapsed = 00:02:12 . Memory (MB): peak = 823.438 ; gain = 651.816
+Start Renaming Generated Ports : Time (s): cpu = 00:02:30 ; elapsed = 00:02:53 . Memory (MB): peak = 1090.559 ; gain = 919.613
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:02:00 ; elapsed = 00:02:12 . Memory (MB): peak = 823.438 ; gain = 651.816
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:31 ; elapsed = 00:02:54 . Memory (MB): peak = 1090.559 ; gain = 919.613
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-3295] tying undriven pin A2:A[0] to constant 0 [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Datapath.v:54]
-WARNING: [Synth 8-3295] tying undriven pin A4:A[0] to constant 0 [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.srcs/sources_1/new/Datapath.v:101]
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
 ---------------------------------------------------------------------------------
@@ -1169,23 +1032,23 @@ Report Cell Usage:
 +------+--------+------+
 |      |Cell    |Count |
 +------+--------+------+
-|1     |BUFG    |     2|
-|2     |CARRY4  |   998|
+|1     |BUFG    |     4|
+|2     |CARRY4  |  1025|
 |3     |DSP48E1 |     3|
-|4     |LUT1    |   525|
-|5     |LUT2    |   917|
-|6     |LUT3    |   895|
-|7     |LUT4    |   749|
-|8     |LUT5    |  1423|
-|9     |LUT6    |  1323|
+|4     |LUT1    |   489|
+|5     |LUT2    |   934|
+|6     |LUT3    |  1199|
+|7     |LUT4    |   919|
+|8     |LUT5    |  5945|
+|9     |LUT6    |  5827|
 |10    |MUXCY_L |    76|
-|11    |MUXF7   |    62|
-|12    |MUXF8   |    12|
+|11    |MUXF7   |  1857|
+|12    |MUXF8   |   786|
 |13    |XORCY   |    80|
-|14    |FDRE    |   162|
+|14    |FDRE    |  9411|
 |15    |FDSE    |     4|
-|16    |LD      |    34|
-|17    |IBUF    |     8|
+|16    |LD      |    47|
+|17    |IBUF    |    16|
 |18    |OBUF    |    16|
 +------+--------+------+
 
@@ -1193,36 +1056,38 @@ Report Instance Areas:
 +------+----------------+----------------+------+
 |      |Instance        |Module          |Cells |
 +------+----------------+----------------+------+
-|1     |top             |                |  7289|
-|2     |  cpu           |CPU             |  2650|
+|1     |top             |                | 28638|
+|2     |  cpu           |CPU             | 23345|
 |3     |    GOBS        |Button_Signal   |     3|
 |4     |    RSTBS       |Button_Signal_0 |     4|
-|5     |    datapath    |Datapath        |  2509|
-|6     |      A2        |Controller      |   419|
-|7     |      A4        |Alu             |   130|
-|8     |    divider     |Divider         |   134|
-|9     |  finddata      |FindData        |  4257|
-|10    |    showDivider |DividerShow     |    82|
+|5     |    datapath    |Datapath        | 23203|
+|6     |      A2        |Controller      |  6533|
+|7     |      A3        |Reg_File        |  4299|
+|8     |      A4        |Alu             |    23|
+|9     |      A5        |Mem_Data        | 12034|
+|10    |    divider     |Divider         |   135|
+|11    |  finddata      |FindData        |  4900|
+|12    |    showDivider |DividerShow     |    82|
 +------+----------------+----------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:02:00 ; elapsed = 00:02:13 . Memory (MB): peak = 823.438 ; gain = 651.816
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:38 ; elapsed = 00:03:00 . Memory (MB): peak = 1090.559 ; gain = 919.613
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 9307 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:45 ; elapsed = 00:02:02 . Memory (MB): peak = 823.438 ; gain = 290.727
-Synthesis Optimization Complete : Time (s): cpu = 00:02:01 ; elapsed = 00:02:13 . Memory (MB): peak = 823.438 ; gain = 651.816
+Synthesis finished with 0 errors, 0 critical warnings and 40 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:02:23 ; elapsed = 00:02:50 . Memory (MB): peak = 1090.559 ; gain = 557.531
+Synthesis Optimization Complete : Time (s): cpu = 00:02:38 ; elapsed = 00:03:00 . Memory (MB): peak = 1090.559 ; gain = 919.613
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 1199 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Netlist 29-17] Analyzing 1247 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 54 instances were transformed.
+  A total of 67 instances were transformed.
   (MUXCY,XORCY) => CARRY4: 20 instances
-  LD => LDCE: 34 instances
+  LD => LDCE: 47 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-147 Infos, 279 Warnings, 0 Critical Warnings and 0 Errors encountered.
+145 Infos, 144 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:02:02 ; elapsed = 00:02:13 . Memory (MB): peak = 823.438 ; gain = 614.246
-ERROR: [Common 17-176] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.runs/synth_1/View.dcp]
-INFO: [Common 17-206] Exiting Vivado at Fri Feb 22 21:19:32 2019...
+synth_design: Time (s): cpu = 00:02:43 ; elapsed = 00:03:04 . Memory (MB): peak = 1090.559 ; gain = 881.137
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.406 . Memory (MB): peak = 1090.559 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri Feb 22 22:42:25 2019...

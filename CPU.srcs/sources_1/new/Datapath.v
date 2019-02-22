@@ -57,7 +57,7 @@ module Datapath(Clk_ms, Rst, Go,MemShowNum, LedData, TotalCirc, NobranchCirc, Br
     reg[4:0]rA; reg[4:0]rB;reg[4:0]rW; reg[31:0]wData; //寄存器输入口
     wire[31:0] RegOutA; wire[31:0]RegOutB;  //寄存器输出口
     //寄存器文件连接
-    Reg_File A3(Clk_ms,rA,rB,rW,RegWrite,wData,RegOutA,RegOutB);
+    Reg_File A3(Clk_ms,Rst,rA,rB,rW,RegWrite,wData,RegOutA,RegOutB);
 	
 	//寄存器读端口
 	always@(rs,Syscall) begin
@@ -190,6 +190,7 @@ module Datapath(Clk_ms, Rst, Go,MemShowNum, LedData, TotalCirc, NobranchCirc, Br
             TotalCirc <= 0;
             NobranchCirc <= 0;
             BranchCirc <= 0;
+            pause_state <= 0;
         end
         else ;
         pause_state <= pause | (~pause) & (~Go) & pause_state;
