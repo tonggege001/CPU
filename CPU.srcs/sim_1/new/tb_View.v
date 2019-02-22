@@ -13,9 +13,8 @@ module tb_View();
     initial begin
         clk <= 0;
         rst <= 0;
-        choose <= 4;
+        choose <= 0;
         go <= 0;
-        choose <= 4;
         memshownum<= 0;
         Freq <= 0;
         #2452090 memshownum <= 1;

@@ -1,0 +1,42 @@
+#-----------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Fri Feb 22 16:06:52 2019
+# Process ID: 12816
+# Log file: D:/ARCHIVE/VIVADO_WORKPLACE/CPU/vivado.log
+# Journal file: D:/ARCHIVE/VIVADO_WORKPLACE/CPU\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.xpr
+open_hw
+connect_hw_server
+open_hw_target [lindex [get_hw_targets -of_objects [get_hw_servers localhost]] 0]
+set_property PROGRAM.FILE {D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.runs/impl_1/View.bit} [lindex [get_hw_devices] 0]
+current_hw_device [lindex [get_hw_devices] 0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices] 0]
+set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {D:/ARCHIVE/VIVADO_WORKPLACE/CPU/CPU.runs/impl_1/View.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+refresh_hw_device [lindex [get_hw_devices] 0]
+close_hw_target
+close_hw_target
+close_hw_target
+close_hw
+launch_simulation
+source tb_View.tcl
+close_sim
+launch_simulation
+source tb_View.tcl
+close_sim
+launch_simulation
+source tb_View.tcl
+run 2000 us
+run 2000 us
+run 2000 us
+launch_simulation -mode post-implementation -type timing
+launch_simulation -mode post-implementation -type functional
+source tb_View.tcl
+launch_simulation -mode post-synthesis -type timing
+close_sim
+close_sim

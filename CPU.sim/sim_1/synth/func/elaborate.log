@@ -1,19 +1,50 @@
 Vivado Simulator 2015.2
 Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
-Running: D:/software/VIVADO/Vivado/2015.2/bin/unwrapped/win64.o/xelab.exe -wto 84249d45525347558246e7d4134ff288 --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L secureip --snapshot tb_datapath_func_synth xil_defaultlib.tb_datapath xil_defaultlib.glbl -log elaborate.log 
+Running: D:/software/VIVADO/Vivado/2015.2/bin/unwrapped/win64.o/xelab.exe -wto 84249d45525347558246e7d4134ff288 --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L secureip --snapshot tb_View_func_synth xil_defaultlib.tb_View xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.Mem_Ins
+Compiling module unisims_ver.OBUF
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.BUFG
+Compiling module unisims_ver.x_lut2_mux4
+Compiling module unisims_ver.LUT2
+Compiling module unisims_ver.sffsrce_fdre
+Compiling module unisims_ver.FDRE
+Compiling module xil_defaultlib.Button_Signal
+Compiling module xil_defaultlib.Button_Signal_0
+Compiling module unisims_ver.latchsre_ldce
+Compiling module unisims_ver.LDCE
+Compiling module unisims_ver.LUT5
+Compiling module unisims_ver.LUT6
+Compiling module unisims_ver.LUT4
+Compiling module unisims_ver.x_lut3_mux4
+Compiling module unisims_ver.x_lut3_mux4_reduced_0
+Compiling module unisims_ver.LUT3
+Compiling module unisims_ver.MUXF7
+Compiling module unisims_ver.MUXF8
 Compiling module xil_defaultlib.Controller
+Compiling module unisims_ver.CARRY4
+Compiling module unisims_ver.x_lut1_mux2
+Compiling module unisims_ver.LUT1
+Compiling module unisims_ver.RAM32M
 Compiling module xil_defaultlib.Reg_File
+Compiling module unisims_ver.DSP48E1(ACASCREG=0,ALUMODEREG=0,...
+Compiling module unisims_ver.DSP48E1(ACASCREG=0,ALUMODEREG=0,...
 Compiling module xil_defaultlib.Alu
 Compiling module xil_defaultlib.Mem_Data
 Compiling module xil_defaultlib.Datapath
-Compiling module xil_defaultlib.tb_datapath
+Compiling module xil_defaultlib.Divider_1
+Compiling module xil_defaultlib.CPU
+Compiling module unisims_ver.sffsrce_fdse
+Compiling module unisims_ver.FDSE
+Compiling module xil_defaultlib.Divider
+Compiling module xil_defaultlib.FindData
+Compiling module xil_defaultlib.View
+Compiling module xil_defaultlib.tb_View
 Compiling module xil_defaultlib.glbl
-Waiting for 2 sub-compilation(s) to finish...
-Built simulation snapshot tb_datapath_func_synth
+Waiting for 13 sub-compilation(s) to finish...
+Built simulation snapshot tb_View_func_synth

@@ -18,7 +18,7 @@ module FindData(clk,choose,LedData, TotalCirc, NobranchCirc, BranchCirc, MemShow
     wire showClk;   //��ʾ���ٶ�
     reg [31:0] curData; //����ģʽѡ��LedDara\TotalCirc\NobranchCirc\BranchCirc�е�һ������
     
-    Divider showDivider(clk,showClk,0);
+    DividerShow showDivider(clk,showClk);
     
     initial begin
         count <= 0;

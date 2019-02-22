@@ -1,7 +1,8 @@
 `timescale 1ns / 1ps
 
-module Reg_File(Clk,rA,rB,rW,WE,wData,A,B);
+module Reg_File(Clk,Rst,rA,rB,rW,WE,wData,A,B);
     input Clk;
+    input Rst;
     input [4:0]rA;
     input [4:0]rB;
     input [4:0]rW;//Ð´Èë¼Ä´æÆ÷±àºÅ
@@ -29,6 +30,11 @@ module Reg_File(Clk,rA,rB,rW,WE,wData,A,B);
             Regfile[rW] <= wData;
         end
         else ;
+        if(Rst) begin
+            for(count = 0;count <= 31; count = count + 1) begin
+                Regfile[count] = 0;
+            end
+        end
         $display("____REG____\n");
         $display("addr = %d, Data=%d\n",0,Regfile[0]);
         $display("addr = %d, Data=%d\n",1,Regfile[1]);

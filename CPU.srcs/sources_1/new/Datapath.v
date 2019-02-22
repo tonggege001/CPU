@@ -149,13 +149,6 @@ module Datapath(Clk_ms, Rst, Go,MemShowNum, LedData, TotalCirc, NobranchCirc, Br
     end
     //TODO 暂停部分，写到CLK的时序逻辑部分
     
-    //显示数码管部分
-    always@(showLED,RegOutB) begin
-        if(showLED)
-            LedData = RegOutB;
-        else ;
-    end
-    
 
     //PC寄存器连接模块以及数据通路的时序部分
 
@@ -187,6 +180,10 @@ module Datapath(Clk_ms, Rst, Go,MemShowNum, LedData, TotalCirc, NobranchCirc, Br
                 $display("PC next is %d",PC + 4);
             end
             TotalCirc <= TotalCirc + 1;
+            if(showLED)
+                LedData <= RegOutB;
+            else 
+                LedData <= LedData;
         end
         else begin
             PC <= 0;
