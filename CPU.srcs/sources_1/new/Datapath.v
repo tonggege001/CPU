@@ -17,7 +17,7 @@ module Datapath(Clk_ms, Rst, Go,MemShowNum, LedData, TotalCirc, NobranchCirc, Br
     wire Clk;   //时钟信号，在最后有状态改变，通过G0和系统调用控制
     //控制信号声明
     wire[3:0] AluOp; wire MemtoReg; wire MemWrite; wire AluSrc; wire RegWrite; wire Syscall;
-    wire SignedExt; wire RegDst; wire BEQ; wire BNE; wire JR; wire JMP; wire JAL;
+    wire SignedExt; wire RegDst; wire BEQ; wire BNE; wire JR; wire JMP; wire JAL;wire BGEZ;
     
     
     //获取指令,并进行指令解析
@@ -51,7 +51,7 @@ module Datapath(Clk_ms, Rst, Go,MemShowNum, LedData, TotalCirc, NobranchCirc, Br
 
 
     //控制器连接部分
-    Controller A2(OP, Func, AluOp,  MemtoReg , MemWrite, AluSrc, RegWrite, Syscall, SignedExt, RegDst , BEQ, BNE, JR, JMP, JAL);
+    Controller A2(OP, Func, AluOp,  MemtoReg , MemWrite, AluSrc, RegWrite, Syscall, SignedExt, RegDst , BEQ, BNE, JR, JMP, JAL, BGEZ);
     
     //寄存器端口信号声明
     reg[4:0]rA; reg[4:0]rB;reg[4:0]rW; reg[31:0]wData; //寄存器输入口
@@ -98,6 +98,8 @@ module Datapath(Clk_ms, Rst, Go,MemShowNum, LedData, TotalCirc, NobranchCirc, Br
     wire[31:0] Alu_Out;
     wire [31:0]Alu_Out2;
     wire Equal;
+    wire Big;
+    assign Big = ($signed(RegOutA) >= 0);
     Alu A4(RegOutA,Alu_InB,AluOp,Shamt,Equal,Alu_Out,Alu_Out2);
     always @(AluSrc,Imme16, RegOutB) begin  
         if(AluSrc) 
@@ -156,7 +158,7 @@ module Datapath(Clk_ms, Rst, Go,MemShowNum, LedData, TotalCirc, NobranchCirc, Br
     //reg [31:0] PC
     always@(posedge Clk_ms) begin
         if(!Rst && !pause_state) begin
-            if((BEQ && Equal) || (BNE && !Equal)) begin   //跳转指令
+            if((BEQ && Equal) || (BNE && !Equal) ||(BGEZ && Big)) begin   //跳转指令
                 BranchCirc <= BranchCirc + 1;
                 PC <= (((Imme16<<2) + PC )+ 4);
                 $display("BEQ || BNE");

@@ -2,7 +2,7 @@
 
 //当完成自己的指令的时候需要在入口处扩展自己的信号
 module Controller(OP, Func, AluOp,  MemtoReg , MemWrite,  
-	 AluSrc, RegWrite, Syscall, SignedExt, RegDst , BEQ, BNE, JR, JMP, JAL);
+	 AluSrc, RegWrite, Syscall, SignedExt, RegDst , BEQ, BNE, JR, JMP, JAL, BGEZ);
 
 	input [5:0]OP;
 	input [5:0]Func;
@@ -19,7 +19,7 @@ module Controller(OP, Func, AluOp,  MemtoReg , MemWrite,
 	output reg JR;
 	output reg JMP;
 	output reg JAL;
-
+    output reg BGEZ;
 	always@(OP,Func) begin
 
 		/** R型指令**/
@@ -199,10 +199,23 @@ module Controller(OP, Func, AluOp,  MemtoReg , MemWrite,
             BEQ = 0;BNE = 0;JR = 0;JMP = 0;JAL = 0;
 		
 		end
+		else if(OP == 1) begin
+		    SignedExt = 1;
+			MemWrite = 0; AluSrc =0; 
+            MemtoReg = 0;RegWrite = 0;RegDst = 0;Syscall = 0;
+            BEQ = 0;BNE = 0;JR = 0;JMP = 0;JAL = 0;
+		end
 		else begin	//空状态
 			MemWrite = 0; AluSrc =0; SignedExt = 0;
 			MemtoReg = 0;RegWrite = 0;RegDst = 0;Syscall = 0;
 			BEQ = 0;BNE = 0;JR = 0;JMP = 0;JAL = 0;
+		end
+		
+		if(OP == 1) begin
+		    BGEZ = 1;
+		end
+		else begin
+		    BGEZ = 0;
 		end
 		
 	end
