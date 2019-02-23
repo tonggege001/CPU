@@ -124,19 +124,19 @@ module Datapath(Clk_ms, Rst, Go,MemShowNum, LedData, TotalCirc, NobranchCirc, Br
         end
         else begin  // «SB÷∏¡Ó
             if(Alu_Out[1:0] == 0) begin
-                Mem_Data_In = {{16{0}},RegOutB[7:0]};
+                Mem_Data_In = {{24{0}},RegOutB[7:0]};
                 Sel = 1;
             end
             else if(Alu_Out[1:0] == 1) begin
-                Mem_Data_In = {{16{0}},RegOutB[15:8]};
+                Mem_Data_In = {{24{0}},RegOutB[7:0]};
                 Sel = 2;
             end
             else if(Alu_Out[1:0]==2) begin
-                Mem_Data_In = {{16{0}},RegOutB[23:16]};
+                Mem_Data_In = {{24{0}},RegOutB[7:0]};
                 Sel = 4;
             end
             else begin
-                Mem_Data_In = {{16{0}},RegOutB[31:24]};
+                Mem_Data_In = {{24{0}},RegOutB[7:0]};
                 Sel = 8;
             end
         end
