@@ -14,12 +14,16 @@ Command: synth_design -top View -part xc7a100tcsg324-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+WARNING: [Synth 8-1849] concatenation with unsized literal; will interpret as 32 bits [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Datapath.v:127]
+WARNING: [Synth 8-1849] concatenation with unsized literal; will interpret as 32 bits [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Datapath.v:131]
+WARNING: [Synth 8-1849] concatenation with unsized literal; will interpret as 32 bits [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Datapath.v:135]
+WARNING: [Synth 8-1849] concatenation with unsized literal; will interpret as 32 bits [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Datapath.v:139]
 WARNING: [Synth 8-1849] concatenation with unsized literal; will interpret as 32 bits [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/FindData.v:33]
 WARNING: [Synth 8-1849] concatenation with unsized literal; will interpret as 32 bits [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/FindData.v:36]
 WARNING: [Synth 8-1849] concatenation with unsized literal; will interpret as 32 bits [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/FindData.v:39]
 WARNING: [Synth 8-1849] concatenation with unsized literal; will interpret as 32 bits [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/View.v:23]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 273.445 ; gain = 102.703
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 273.398 ; gain = 101.906
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'View' [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/View.v:3]
 INFO: [Synth 8-638] synthesizing module 'CPU' [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/CPU.v:3]
@@ -30,7 +34,7 @@ INFO: [Synth 8-256] done synthesizing module 'Button_Signal' (2#1) [D:/ARCHIVE/C
 INFO: [Synth 8-638] synthesizing module 'Datapath' [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Datapath.v:4]
 INFO: [Synth 8-638] synthesizing module 'Mem_Ins' [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Ins.v:3]
 	Parameter MEMLEN bound to: 9 - type: integer 
-INFO: [Synth 8-3876] $readmem data file 'D:/CC.hex' is read successfully [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Ins.v:13]
+INFO: [Synth 8-3876] $readmem data file 'D:/benchmark_ccmb.hex' is read successfully [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Ins.v:13]
 INFO: [Synth 8-256] done synthesizing module 'Mem_Ins' (3#1) [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Ins.v:3]
 INFO: [Synth 8-638] synthesizing module 'Controller' [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Controller.v:4]
 INFO: [Synth 8-256] done synthesizing module 'Controller' (4#1) [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Controller.v:4]
@@ -39,108 +43,7 @@ INFO: [Synth 8-256] done synthesizing module 'Reg_File' (5#1) [D:/ARCHIVE/CPU/CP
 INFO: [Synth 8-638] synthesizing module 'Alu' [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Alu.v:3]
 INFO: [Synth 8-256] done synthesizing module 'Alu' (6#1) [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Alu.v:3]
 INFO: [Synth 8-638] synthesizing module 'Mem_Data' [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:10]
-	Parameter MEMLEN bound to: 255 - type: integer 
-WARNING: [Synth 8-324] index 256 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 257 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 258 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 259 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 260 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 261 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 262 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 263 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 264 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 265 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 266 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 267 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 268 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 269 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 270 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 271 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 272 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 273 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 274 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 275 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 276 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 277 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 278 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 279 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 280 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 281 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 282 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 283 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 284 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 285 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 286 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 287 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 288 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 289 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 290 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 291 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 292 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 293 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 294 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 295 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 296 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 297 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 298 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 299 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 300 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 301 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 302 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 303 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 304 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 305 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 306 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 307 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 308 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 309 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 310 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 311 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 312 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 313 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 314 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 315 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 316 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 317 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 318 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 319 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 320 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 321 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 322 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 323 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 324 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 325 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 326 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 327 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 328 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 329 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 330 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 331 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 332 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 333 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 334 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 335 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 336 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 337 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 338 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 339 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 340 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 341 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 342 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 343 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 344 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 345 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 346 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 347 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 348 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 349 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 350 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 351 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 352 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 353 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 354 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-WARNING: [Synth 8-324] index 355 out of range [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:42]
-INFO: [Common 17-14] Message 'Synth 8-324' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+	Parameter MEMLEN bound to: 256 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'Mem_Data' (7#1) [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v:10]
 INFO: [Synth 8-256] done synthesizing module 'Datapath' (8#1) [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Datapath.v:4]
 INFO: [Synth 8-256] done synthesizing module 'CPU' (9#1) [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/CPU.v:3]
@@ -153,7 +56,7 @@ INFO: [Synth 8-155] case statement is not full and has no default [D:/ARCHIVE/CP
 INFO: [Synth 8-256] done synthesizing module 'FindData' (12#1) [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/FindData.v:5]
 INFO: [Synth 8-256] done synthesizing module 'View' (13#1) [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/View.v:3]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 329.258 ; gain = 158.516
+Finished RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 434.059 ; gain = 262.566
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -163,7 +66,7 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 329.258 ; gain = 158.516
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 434.059 ; gain = 262.566
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -177,16 +80,16 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 654.469 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 789.371 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 654.469 ; gain = 483.727
+Finished Constraint Validation : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 789.371 ; gain = 617.879
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 654.469 ; gain = 483.727
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 789.371 ; gain = 617.879
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -384,145 +287,151 @@ Usage:
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 654.469 ; gain = 483.727
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 789.371 ; gain = 617.879
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "Mem" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MemWrite" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "RegWrite" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "SignedExt" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "JMP" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "BGEZ" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "p_17_in" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "p_16_in" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_28_in" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_31_in" won't be mapped to RAM because it is too sparse
 ROM size is below threshold of ROM address width. It will be mapped to LUTs
-INFO: [Synth 8-5546] ROM "p_27_in" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MemWrite" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "RegWrite" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "SignedExt" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "JMP" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "BGEZ" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "p_17_in" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "p_16_in" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_28_in" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_31_in" won't be mapped to RAM because it is too sparse
 ROM size is below threshold of ROM address width. It will be mapped to LUTs
-INFO: [Synth 8-5546] ROM "p_27_in" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-3537] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the inputs of the operator [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Alu.v:20]
 INFO: [Synth 8-5545] ROM "Mem_reg[0]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "Mem_reg[0]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "Mem_reg[1]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
 INFO: [Synth 8-5545] ROM "Mem_reg[1]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
 INFO: [Synth 8-5545] ROM "Mem_reg[2]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "Mem_reg[2]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "Mem_reg[3]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
 INFO: [Synth 8-5545] ROM "Mem_reg[3]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
 INFO: [Synth 8-5545] ROM "Mem_reg[4]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "Mem_reg[4]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "Mem_reg[5]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
 INFO: [Synth 8-5545] ROM "Mem_reg[5]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
 INFO: [Synth 8-5545] ROM "Mem_reg[6]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "Mem_reg[6]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "Mem_reg[7]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
 INFO: [Synth 8-5545] ROM "Mem_reg[7]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
 INFO: [Synth 8-5545] ROM "Mem_reg[8]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "Mem_reg[8]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "Mem_reg[9]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
 INFO: [Synth 8-5545] ROM "Mem_reg[9]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
 INFO: [Synth 8-5545] ROM "Mem_reg[10]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "Mem_reg[10]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "Mem_reg[11]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
 INFO: [Synth 8-5545] ROM "Mem_reg[11]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
 INFO: [Synth 8-5545] ROM "Mem_reg[12]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "Mem_reg[12]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "Mem_reg[13]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
 INFO: [Synth 8-5545] ROM "Mem_reg[13]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
 INFO: [Synth 8-5545] ROM "Mem_reg[14]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "Mem_reg[14]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "Mem_reg[15]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
 INFO: [Synth 8-5545] ROM "Mem_reg[15]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
 INFO: [Synth 8-5545] ROM "Mem_reg[16]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "Mem_reg[16]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "Mem_reg[17]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
 INFO: [Synth 8-5545] ROM "Mem_reg[17]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
 INFO: [Synth 8-5545] ROM "Mem_reg[18]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "Mem_reg[18]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "Mem_reg[19]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
 INFO: [Synth 8-5545] ROM "Mem_reg[19]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
 INFO: [Synth 8-5545] ROM "Mem_reg[20]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "Mem_reg[20]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "Mem_reg[21]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
 INFO: [Synth 8-5545] ROM "Mem_reg[21]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
 INFO: [Synth 8-5545] ROM "Mem_reg[22]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "Mem_reg[22]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "Mem_reg[23]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
 INFO: [Synth 8-5545] ROM "Mem_reg[23]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
 INFO: [Synth 8-5545] ROM "Mem_reg[24]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "Mem_reg[24]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "Mem_reg[25]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
 INFO: [Synth 8-5545] ROM "Mem_reg[25]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
 INFO: [Synth 8-5545] ROM "Mem_reg[26]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "Mem_reg[26]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "Mem_reg[27]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
 INFO: [Synth 8-5545] ROM "Mem_reg[27]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
 INFO: [Synth 8-5545] ROM "Mem_reg[28]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "Mem_reg[28]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "Mem_reg[29]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
 INFO: [Synth 8-5545] ROM "Mem_reg[29]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
 INFO: [Synth 8-5545] ROM "Mem_reg[30]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "Mem_reg[30]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "Mem_reg[31]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
 INFO: [Synth 8-5545] ROM "Mem_reg[31]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
 INFO: [Synth 8-5545] ROM "Mem_reg[32]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "Mem_reg[32]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "Mem_reg[33]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
 INFO: [Synth 8-5545] ROM "Mem_reg[33]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
 INFO: [Synth 8-5545] ROM "Mem_reg[34]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "Mem_reg[34]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "Mem_reg[35]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
 INFO: [Synth 8-5545] ROM "Mem_reg[35]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
 INFO: [Synth 8-5545] ROM "Mem_reg[36]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "Mem_reg[36]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "Mem_reg[37]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
 INFO: [Synth 8-5545] ROM "Mem_reg[37]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
 INFO: [Synth 8-5545] ROM "Mem_reg[38]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "Mem_reg[38]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "Mem_reg[39]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
 INFO: [Synth 8-5545] ROM "Mem_reg[39]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
 INFO: [Synth 8-5545] ROM "Mem_reg[40]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "Mem_reg[40]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "Mem_reg[41]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
 INFO: [Synth 8-5545] ROM "Mem_reg[41]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
 INFO: [Synth 8-5545] ROM "Mem_reg[42]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "Mem_reg[42]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "Mem_reg[43]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
 INFO: [Synth 8-5545] ROM "Mem_reg[43]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
 INFO: [Synth 8-5545] ROM "Mem_reg[44]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "Mem_reg[44]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "Mem_reg[45]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
 INFO: [Synth 8-5545] ROM "Mem_reg[45]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
 INFO: [Synth 8-5545] ROM "Mem_reg[46]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "Mem_reg[46]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "Mem_reg[47]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
 INFO: [Synth 8-5545] ROM "Mem_reg[47]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
 INFO: [Synth 8-5545] ROM "Mem_reg[48]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "Mem_reg[48]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
 INFO: [Synth 8-5545] ROM "Mem_reg[49]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
-INFO: [Synth 8-5545] ROM "Mem_reg[50]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
-INFO: [Synth 8-5545] ROM "Mem_reg[51]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
-INFO: [Synth 8-5545] ROM "Mem_reg[52]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
-INFO: [Synth 8-5545] ROM "Mem_reg[53]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
-INFO: [Synth 8-5545] ROM "Mem_reg[54]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
-INFO: [Synth 8-5545] ROM "Mem_reg[55]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
-INFO: [Synth 8-5545] ROM "Mem_reg[56]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
-INFO: [Synth 8-5545] ROM "Mem_reg[57]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
-INFO: [Synth 8-5545] ROM "Mem_reg[58]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
-INFO: [Synth 8-5545] ROM "Mem_reg[59]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
-INFO: [Synth 8-5545] ROM "Mem_reg[60]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
-INFO: [Synth 8-5545] ROM "Mem_reg[61]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
-INFO: [Synth 8-5545] ROM "Mem_reg[62]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
-INFO: [Synth 8-5545] ROM "Mem_reg[63]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
-INFO: [Synth 8-5545] ROM "Mem_reg[64]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
-INFO: [Synth 8-5545] ROM "Mem_reg[65]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
-INFO: [Synth 8-5545] ROM "Mem_reg[66]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
-INFO: [Synth 8-5545] ROM "Mem_reg[67]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
-INFO: [Synth 8-5545] ROM "Mem_reg[68]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
-INFO: [Synth 8-5545] ROM "Mem_reg[69]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
-INFO: [Synth 8-5545] ROM "Mem_reg[70]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
-INFO: [Synth 8-5545] ROM "Mem_reg[71]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
-INFO: [Synth 8-5545] ROM "Mem_reg[72]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
-INFO: [Synth 8-5545] ROM "Mem_reg[73]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
-INFO: [Synth 8-5545] ROM "Mem_reg[74]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
-INFO: [Synth 8-5545] ROM "Mem_reg[75]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
-INFO: [Synth 8-5545] ROM "Mem_reg[76]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
-INFO: [Synth 8-5545] ROM "Mem_reg[77]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
-INFO: [Synth 8-5545] ROM "Mem_reg[78]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
-INFO: [Synth 8-5545] ROM "Mem_reg[79]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
-INFO: [Synth 8-5545] ROM "Mem_reg[80]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
-INFO: [Synth 8-5545] ROM "Mem_reg[81]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
-INFO: [Synth 8-5545] ROM "Mem_reg[82]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
-INFO: [Synth 8-5545] ROM "Mem_reg[83]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
-INFO: [Synth 8-5545] ROM "Mem_reg[84]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
-INFO: [Synth 8-5545] ROM "Mem_reg[85]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
-INFO: [Synth 8-5545] ROM "Mem_reg[86]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
-INFO: [Synth 8-5545] ROM "Mem_reg[87]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
-INFO: [Synth 8-5545] ROM "Mem_reg[88]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
-INFO: [Synth 8-5545] ROM "Mem_reg[89]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
-INFO: [Synth 8-5545] ROM "Mem_reg[90]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
-INFO: [Synth 8-5545] ROM "Mem_reg[91]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
-INFO: [Synth 8-5545] ROM "Mem_reg[92]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
-INFO: [Synth 8-5545] ROM "Mem_reg[93]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
-INFO: [Synth 8-5545] ROM "Mem_reg[94]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
-INFO: [Synth 8-5545] ROM "Mem_reg[95]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
-INFO: [Synth 8-5545] ROM "Mem_reg[96]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
-INFO: [Synth 8-5545] ROM "Mem_reg[97]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
-INFO: [Synth 8-5545] ROM "Mem_reg[98]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
-INFO: [Synth 8-5545] ROM "Mem_reg[99]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "Mem_reg[49]" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
 INFO: [Common 17-14] Message 'Synth 8-5545' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ROM size is below threshold of ROM address width. It will be mapped to LUTs
-WARNING: [Synth 8-327] inferring latch for variable 'AluOp_reg' [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Controller.v:27]
+WARNING: [Synth 8-327] inferring latch for variable 'AluOp_reg' [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Controller.v:29]
 WARNING: [Synth 8-327] inferring latch for variable 'result2_reg' [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Alu.v:31]
 WARNING: [Synth 8-327] inferring latch for variable 'SEG_reg' [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Number2Seg.v:11]
 WARNING: [Synth 8-327] inferring latch for variable 'curData_reg' [D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/FindData.v:30]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 654.469 ; gain = 483.727
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:56 ; elapsed = 00:01:06 . Memory (MB): peak = 789.371 ; gain = 617.879
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
 +------+--------------+------------+----------+
 |      |RTL Partition |Replication |Instances |
 +------+--------------+------------+----------+
-|1     |Datapath__GB0 |           1|     36064|
-|2     |Datapath__GB1 |           1|     23249|
-|3     |Datapath__GB2 |           1|       194|
-|4     |CPU__GC0      |           1|       423|
-|5     |View__GC0     |           1|     14645|
+|1     |Mem_Data__GB0 |           1|     30133|
+|2     |Mem_Data__GB1 |           1|      8468|
+|3     |Mem_Data__GB2 |           1|     10465|
+|4     |Mem_Data__GB3 |           1|     12782|
+|5     |Mem_Data__GB4 |           1|     16751|
+|6     |Mem_Data__GB5 |           1|     19296|
+|7     |Mem_Data__GB6 |           1|     24110|
+|8     |Mem_Data__GB7 |           1|     29820|
+|9     |Datapath__GC0 |           1|     25368|
+|10    |CPU__GC0      |           1|       310|
+|11    |View__GC0     |           1|     14645|
 +------+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -532,34 +441,36 @@ Detailed RTL Component Info :
 	   2 Input     64 Bit       Adders := 1     
 	   3 Input     32 Bit       Adders := 2     
 	   2 Input     32 Bit       Adders := 2     
-	   2 Input     28 Bit       Adders := 1     
 	   2 Input      4 Bit       Adders := 1     
 +---XORs : 
 	   2 Input     32 Bit         XORs := 1     
 +---Registers : 
-	               32 Bit    Registers := 291   
+	               32 Bit    Registers := 292   
 	                8 Bit    Registers := 2     
 	                4 Bit    Registers := 1     
 	                1 Bit    Registers := 7     
 +---Muxes : 
-	   2 Input     32 Bit        Muxes := 72    
+	   5 Input     32 Bit        Muxes := 257   
+	   2 Input     32 Bit        Muxes := 330   
+	   6 Input     32 Bit        Muxes := 257   
+	 281 Input     32 Bit        Muxes := 1     
 	  14 Input     32 Bit        Muxes := 2     
-	  37 Input     32 Bit        Muxes := 1     
-	   2 Input     26 Bit        Muxes := 1     
+	   4 Input      8 Bit        Muxes := 1     
 	   2 Input      8 Bit        Muxes := 13    
 	  16 Input      8 Bit        Muxes := 1     
 	   8 Input      8 Bit        Muxes := 2     
 	   2 Input      5 Bit        Muxes := 4     
 	  18 Input      4 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 7     
+	   5 Input      4 Bit        Muxes := 1     
+	   6 Input      3 Bit        Muxes := 257   
 	  12 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 92    
-	  14 Input      1 Bit        Muxes := 1     
 	  11 Input      1 Bit        Muxes := 1     
-	  12 Input      1 Bit        Muxes := 1     
-	   3 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 94    
+	   3 Input      1 Bit        Muxes := 2     
 	   4 Input      1 Bit        Muxes := 1     
 	   5 Input      1 Bit        Muxes := 1     
+	  14 Input      1 Bit        Muxes := 1     
 	   6 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -571,7 +482,27 @@ Hierarchical RTL Component report
 Module Mem_Data 
 Detailed RTL Component Info : 
 +---Registers : 
-	               32 Bit    Registers := 256   
+	               32 Bit    Registers := 257   
++---Muxes : 
+	   5 Input     32 Bit        Muxes := 257   
+	   2 Input     32 Bit        Muxes := 257   
+	   6 Input     32 Bit        Muxes := 257   
+	   6 Input      3 Bit        Muxes := 257   
+Module Mem_Ins 
+Detailed RTL Component Info : 
++---Muxes : 
+	 281 Input     32 Bit        Muxes := 1     
+Module Controller 
+Detailed RTL Component Info : 
++---Muxes : 
+	  18 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 7     
+	  12 Input      2 Bit        Muxes := 1     
+	  11 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 28    
+	   3 Input      1 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 1     
 Module Reg_File 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -590,42 +521,24 @@ Detailed RTL Component Info :
 	   2 Input     32 Bit        Muxes := 4     
 	  14 Input     32 Bit        Muxes := 2     
 	  14 Input      1 Bit        Muxes := 1     
-Module Controller 
-Detailed RTL Component Info : 
-+---Muxes : 
-	  18 Input      4 Bit        Muxes := 1     
-	   2 Input      4 Bit        Muxes := 7     
-	  12 Input      2 Bit        Muxes := 1     
-	  11 Input      1 Bit        Muxes := 1     
-	  12 Input      1 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 26    
-	   3 Input      1 Bit        Muxes := 1     
-	   4 Input      1 Bit        Muxes := 1     
-	   5 Input      1 Bit        Muxes := 1     
-Module Mem_Ins 
-Detailed RTL Component Info : 
-+---Muxes : 
-	  37 Input     32 Bit        Muxes := 1     
 Module Datapath 
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     32 Bit       Adders := 1     
 	   3 Input     32 Bit       Adders := 1     
+	   2 Input     32 Bit       Adders := 1     
 +---Registers : 
 	               32 Bit    Registers := 2     
 	                1 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input     32 Bit        Muxes := 4     
+	   2 Input     32 Bit        Muxes := 5     
+	   4 Input      8 Bit        Muxes := 1     
 	   2 Input      5 Bit        Muxes := 4     
+	   5 Input      4 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 2     
 Module Divider 
 Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     28 Bit       Adders := 1     
 +---Registers : 
 	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input     26 Bit        Muxes := 1     
 Module Button_Signal__1 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -669,10 +582,13 @@ BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 654.469 ; gain = 483.727
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:01:03 ; elapsed = 00:01:13 . Memory (MB): peak = 789.371 ; gain = 617.879
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
+WARNING: [Synth 8-3331] design View has unconnected port memshownum[9]
+INFO: [Common 17-14] Message 'Synth 8-5545' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Common 17-14] Message 'Synth 8-5545' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 DSP Report: Generating DSP result20, operation Mode is: A*B.
 DSP Report: operator result20 is absorbed into DSP result20.
 DSP Report: operator result20 is absorbed into DSP result20.
@@ -686,19 +602,25 @@ DSP Report: Generating DSP result20, operation Mode is: (PCIN>>17)+A*B.
 DSP Report: operator result20 is absorbed into DSP result20.
 DSP Report: operator result20 is absorbed into DSP result20.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:35 . Memory (MB): peak = 654.469 ; gain = 483.727
+Finished Cross Boundary Optimization : Time (s): cpu = 00:01:10 ; elapsed = 00:02:09 . Memory (MB): peak = 789.371 ; gain = 617.879
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:00:30 ; elapsed = 00:00:35 . Memory (MB): peak = 654.469 ; gain = 483.727
+Finished Parallel Reinference  : Time (s): cpu = 00:01:10 ; elapsed = 00:02:09 . Memory (MB): peak = 789.371 ; gain = 617.879
 
 Report RTL Partitions: 
 +------+--------------+------------+----------+
 |      |RTL Partition |Replication |Instances |
 +------+--------------+------------+----------+
-|1     |Datapath__GB0 |           1|     36064|
-|2     |Datapath__GB1 |           1|     23265|
-|3     |Datapath__GB2 |           1|       194|
-|4     |CPU__GC0      |           1|       746|
-|5     |View__GC0     |           1|     30877|
+|1     |Mem_Data__GB0 |           1|     32869|
+|2     |Mem_Data__GB1 |           1|     11452|
+|3     |Mem_Data__GB2 |           1|     14105|
+|4     |Mem_Data__GB3 |           1|     17222|
+|5     |Mem_Data__GB4 |           1|     23647|
+|6     |Mem_Data__GB5 |           1|     22312|
+|7     |Mem_Data__GB6 |           1|     27126|
+|8     |Mem_Data__GB7 |           1|     29820|
+|9     |Datapath__GC0 |           1|     25453|
+|10    |CPU__GC0      |           1|       499|
+|11    |View__GC0     |           1|     30877|
 +------+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -721,12 +643,6 @@ Finished ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
 Start Area Optimization
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_4/finddata/\data_reg[5] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (i_4/\num/SEG_reg[7] )
-WARNING: [Synth 8-3332] Sequential element (\data_reg[7] ) is unused and will be removed from module FindData.
-WARNING: [Synth 8-3332] Sequential element (\data_reg[6] ) is unused and will be removed from module FindData.
-WARNING: [Synth 8-3332] Sequential element (\data_reg[5] ) is unused and will be removed from module FindData.
-WARNING: [Synth 8-3332] Sequential element (\data_reg[4] ) is unused and will be removed from module FindData.
 WARNING: [Synth 8-3332] Sequential element (\result2_reg[31] ) is unused and will be removed from module Alu.
 WARNING: [Synth 8-3332] Sequential element (\result2_reg[30] ) is unused and will be removed from module Alu.
 WARNING: [Synth 8-3332] Sequential element (\result2_reg[29] ) is unused and will be removed from module Alu.
@@ -759,119 +675,34 @@ WARNING: [Synth 8-3332] Sequential element (\result2_reg[3] ) is unused and will
 WARNING: [Synth 8-3332] Sequential element (\result2_reg[2] ) is unused and will be removed from module Alu.
 WARNING: [Synth 8-3332] Sequential element (\result2_reg[1] ) is unused and will be removed from module Alu.
 WARNING: [Synth 8-3332] Sequential element (\result2_reg[0] ) is unused and will be removed from module Alu.
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (datapathi_0/A5/\Mem_reg[20][0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (datapathi_0/A5/\Mem_reg[148][1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (datapathi_0/A5/\Mem_reg[20][2] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (datapathi_0/A5/\Mem_reg[148][3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (datapathi_0/A5/\Mem_reg[20][4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (datapathi_0/A5/\Mem_reg[20][5] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (datapathi_0/A5/\Mem_reg[212][6] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (datapathi_0/A5/\Mem_reg[148][7] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (datapathi_0/A5/\Mem_reg[20][8] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (datapathi_0/A5/\Mem_reg[216][9] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (datapathi_0/A5/\Mem_reg[24][10] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (datapathi_0/A5/\Mem_reg[164][11] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (datapathi_0/A5/\Mem_reg[36][12] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (datapathi_0/A5/\Mem_reg[20][13] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (datapathi_0/A5/\Mem_reg[20][14] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (datapathi_0/A5/\Mem_reg[20][15] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (datapathi_0/A5/\Mem_reg[236][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (datapathi_0/A5/\Mem_reg[172][17] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (datapathi_0/A5/\Mem_reg[24][18] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (datapathi_0/A5/\Mem_reg[24][19] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (datapathi_0/A5/\Mem_reg[20][20] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (datapathi_0/A5/\Mem_reg[20][21] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (datapathi_0/A5/\Mem_reg[20][22] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (datapathi_0/A5/\Mem_reg[40][23] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (datapathi_0/A5/\Mem_reg[20][24] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (datapathi_0/A5/\Mem_reg[216][25] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (datapathi_0/A5/\Mem_reg[20][26] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (datapathi_0/A5/\Mem_reg[164][27] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (datapathi_0/A5/\Mem_reg[36][28] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (datapathi_0/A5/\Mem_reg[20][29] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (datapathi_0/A5/\Mem_reg[164][30] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (datapathi_0/A5/\Mem_reg[36][31] )
-WARNING: [Synth 8-3332] Sequential element (\Mem_reg[254][0] ) is unused and will be removed from module Mem_Data.
-WARNING: [Synth 8-3332] Sequential element (\Mem_reg[143][0] ) is unused and will be removed from module Mem_Data.
-WARNING: [Synth 8-3332] Sequential element (\Mem_reg[142][0] ) is unused and will be removed from module Mem_Data.
-WARNING: [Synth 8-3332] Sequential element (\Mem_reg[141][0] ) is unused and will be removed from module Mem_Data.
-WARNING: [Synth 8-3332] Sequential element (\Mem_reg[140][0] ) is unused and will be removed from module Mem_Data.
-WARNING: [Synth 8-3332] Sequential element (\Mem_reg[139][0] ) is unused and will be removed from module Mem_Data.
-WARNING: [Synth 8-3332] Sequential element (\Mem_reg[138][0] ) is unused and will be removed from module Mem_Data.
-WARNING: [Synth 8-3332] Sequential element (\Mem_reg[137][0] ) is unused and will be removed from module Mem_Data.
-WARNING: [Synth 8-3332] Sequential element (\Mem_reg[136][0] ) is unused and will be removed from module Mem_Data.
-WARNING: [Synth 8-3332] Sequential element (\Mem_reg[131][0] ) is unused and will be removed from module Mem_Data.
-WARNING: [Synth 8-3332] Sequential element (\Mem_reg[130][0] ) is unused and will be removed from module Mem_Data.
-WARNING: [Synth 8-3332] Sequential element (\Mem_reg[129][0] ) is unused and will be removed from module Mem_Data.
-WARNING: [Synth 8-3332] Sequential element (\Mem_reg[128][0] ) is unused and will be removed from module Mem_Data.
-WARNING: [Synth 8-3332] Sequential element (\Mem_reg[135][0] ) is unused and will be removed from module Mem_Data.
-WARNING: [Synth 8-3332] Sequential element (\Mem_reg[134][0] ) is unused and will be removed from module Mem_Data.
-WARNING: [Synth 8-3332] Sequential element (\Mem_reg[133][0] ) is unused and will be removed from module Mem_Data.
-WARNING: [Synth 8-3332] Sequential element (\Mem_reg[132][0] ) is unused and will be removed from module Mem_Data.
-WARNING: [Synth 8-3332] Sequential element (\Mem_reg[159][0] ) is unused and will be removed from module Mem_Data.
-WARNING: [Synth 8-3332] Sequential element (\Mem_reg[158][0] ) is unused and will be removed from module Mem_Data.
-WARNING: [Synth 8-3332] Sequential element (\Mem_reg[157][0] ) is unused and will be removed from module Mem_Data.
-WARNING: [Synth 8-3332] Sequential element (\Mem_reg[156][0] ) is unused and will be removed from module Mem_Data.
-WARNING: [Synth 8-3332] Sequential element (\Mem_reg[155][0] ) is unused and will be removed from module Mem_Data.
-WARNING: [Synth 8-3332] Sequential element (\Mem_reg[154][0] ) is unused and will be removed from module Mem_Data.
-WARNING: [Synth 8-3332] Sequential element (\Mem_reg[153][0] ) is unused and will be removed from module Mem_Data.
-WARNING: [Synth 8-3332] Sequential element (\Mem_reg[152][0] ) is unused and will be removed from module Mem_Data.
-WARNING: [Synth 8-3332] Sequential element (\Mem_reg[147][0] ) is unused and will be removed from module Mem_Data.
-WARNING: [Synth 8-3332] Sequential element (\Mem_reg[146][0] ) is unused and will be removed from module Mem_Data.
-WARNING: [Synth 8-3332] Sequential element (\Mem_reg[145][0] ) is unused and will be removed from module Mem_Data.
-WARNING: [Synth 8-3332] Sequential element (\Mem_reg[144][0] ) is unused and will be removed from module Mem_Data.
-WARNING: [Synth 8-3332] Sequential element (\Mem_reg[151][0] ) is unused and will be removed from module Mem_Data.
-WARNING: [Synth 8-3332] Sequential element (\Mem_reg[150][0] ) is unused and will be removed from module Mem_Data.
-WARNING: [Synth 8-3332] Sequential element (\Mem_reg[149][0] ) is unused and will be removed from module Mem_Data.
-WARNING: [Synth 8-3332] Sequential element (\Mem_reg[148][0] ) is unused and will be removed from module Mem_Data.
-WARNING: [Synth 8-3332] Sequential element (\Mem_reg[191][0] ) is unused and will be removed from module Mem_Data.
-WARNING: [Synth 8-3332] Sequential element (\Mem_reg[190][0] ) is unused and will be removed from module Mem_Data.
-WARNING: [Synth 8-3332] Sequential element (\Mem_reg[189][0] ) is unused and will be removed from module Mem_Data.
-WARNING: [Synth 8-3332] Sequential element (\Mem_reg[188][0] ) is unused and will be removed from module Mem_Data.
-WARNING: [Synth 8-3332] Sequential element (\Mem_reg[187][0] ) is unused and will be removed from module Mem_Data.
-WARNING: [Synth 8-3332] Sequential element (\Mem_reg[186][0] ) is unused and will be removed from module Mem_Data.
-WARNING: [Synth 8-3332] Sequential element (\Mem_reg[185][0] ) is unused and will be removed from module Mem_Data.
-WARNING: [Synth 8-3332] Sequential element (\Mem_reg[184][0] ) is unused and will be removed from module Mem_Data.
-WARNING: [Synth 8-3332] Sequential element (\Mem_reg[179][0] ) is unused and will be removed from module Mem_Data.
-WARNING: [Synth 8-3332] Sequential element (\Mem_reg[178][0] ) is unused and will be removed from module Mem_Data.
-WARNING: [Synth 8-3332] Sequential element (\Mem_reg[177][0] ) is unused and will be removed from module Mem_Data.
-WARNING: [Synth 8-3332] Sequential element (\Mem_reg[176][0] ) is unused and will be removed from module Mem_Data.
-WARNING: [Synth 8-3332] Sequential element (\Mem_reg[183][0] ) is unused and will be removed from module Mem_Data.
-WARNING: [Synth 8-3332] Sequential element (\Mem_reg[182][0] ) is unused and will be removed from module Mem_Data.
-WARNING: [Synth 8-3332] Sequential element (\Mem_reg[181][0] ) is unused and will be removed from module Mem_Data.
-WARNING: [Synth 8-3332] Sequential element (\Mem_reg[180][0] ) is unused and will be removed from module Mem_Data.
-WARNING: [Synth 8-3332] Sequential element (\Mem_reg[175][0] ) is unused and will be removed from module Mem_Data.
-WARNING: [Synth 8-3332] Sequential element (\Mem_reg[174][0] ) is unused and will be removed from module Mem_Data.
-WARNING: [Synth 8-3332] Sequential element (\Mem_reg[173][0] ) is unused and will be removed from module Mem_Data.
-WARNING: [Synth 8-3332] Sequential element (\Mem_reg[172][0] ) is unused and will be removed from module Mem_Data.
-WARNING: [Synth 8-3332] Sequential element (\Mem_reg[171][0] ) is unused and will be removed from module Mem_Data.
-WARNING: [Synth 8-3332] Sequential element (\Mem_reg[170][0] ) is unused and will be removed from module Mem_Data.
-WARNING: [Synth 8-3332] Sequential element (\Mem_reg[169][0] ) is unused and will be removed from module Mem_Data.
-WARNING: [Synth 8-3332] Sequential element (\Mem_reg[168][0] ) is unused and will be removed from module Mem_Data.
-WARNING: [Synth 8-3332] Sequential element (\Mem_reg[167][0] ) is unused and will be removed from module Mem_Data.
-WARNING: [Synth 8-3332] Sequential element (\Mem_reg[166][0] ) is unused and will be removed from module Mem_Data.
-WARNING: [Synth 8-3332] Sequential element (\Mem_reg[165][0] ) is unused and will be removed from module Mem_Data.
-WARNING: [Synth 8-3332] Sequential element (\Mem_reg[164][0] ) is unused and will be removed from module Mem_Data.
-WARNING: [Synth 8-3332] Sequential element (\Mem_reg[163][0] ) is unused and will be removed from module Mem_Data.
-WARNING: [Synth 8-3332] Sequential element (\Mem_reg[162][0] ) is unused and will be removed from module Mem_Data.
-WARNING: [Synth 8-3332] Sequential element (\Mem_reg[161][0] ) is unused and will be removed from module Mem_Data.
-INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (finddata/\data_reg[5] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\num/SEG_reg[7] )
+WARNING: [Synth 8-3332] Sequential element (\data_reg[7] ) is unused and will be removed from module FindData.
+WARNING: [Synth 8-3332] Sequential element (\data_reg[6] ) is unused and will be removed from module FindData.
+WARNING: [Synth 8-3332] Sequential element (\data_reg[5] ) is unused and will be removed from module FindData.
+WARNING: [Synth 8-3332] Sequential element (\data_reg[4] ) is unused and will be removed from module FindData.
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:01:20 ; elapsed = 00:01:28 . Memory (MB): peak = 800.938 ; gain = 630.195
+Finished Area Optimization : Time (s): cpu = 00:01:15 ; elapsed = 00:02:56 . Memory (MB): peak = 789.371 ; gain = 617.879
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:01:20 ; elapsed = 00:01:28 . Memory (MB): peak = 800.938 ; gain = 630.195
+Finished Parallel Area Optimization  : Time (s): cpu = 00:01:15 ; elapsed = 00:02:56 . Memory (MB): peak = 789.371 ; gain = 617.879
 
 Report RTL Partitions: 
 +------+--------------+------------+----------+
 |      |RTL Partition |Replication |Instances |
 +------+--------------+------------+----------+
-|1     |Datapath__GB0 |           1|        32|
-|2     |Datapath__GB1 |           1|      8327|
-|3     |Datapath__GB2 |           1|       146|
-|4     |CPU__GC0      |           1|       360|
-|5     |View__GC0     |           1|     14429|
+|1     |Mem_Data__GB0 |           1|     29670|
+|2     |Mem_Data__GB1 |           1|      3720|
+|3     |Mem_Data__GB2 |           1|      7434|
+|4     |Mem_Data__GB3 |           1|      7223|
+|5     |Mem_Data__GB4 |           1|      4510|
+|6     |Mem_Data__GB5 |           1|      2559|
+|7     |Mem_Data__GB6 |           1|      2583|
+|8     |Mem_Data__GB7 |           1|       324|
+|9     |Datapath__GC0 |           1|      9962|
+|10    |CPU__GC0      |           1|       283|
+|11    |View__GC0     |           1|     18404|
 +------+--------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:01:20 ; elapsed = 00:01:28 . Memory (MB): peak = 800.938 ; gain = 630.195
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:01:15 ; elapsed = 00:02:56 . Memory (MB): peak = 789.371 ; gain = 617.879
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
@@ -1071,59 +902,33 @@ Usage:
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:37 ; elapsed = 00:01:45 . Memory (MB): peak = 836.258 ; gain = 665.516
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:33 ; elapsed = 00:03:14 . Memory (MB): peak = 885.809 ; gain = 714.316
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:37 ; elapsed = 00:01:46 . Memory (MB): peak = 836.258 ; gain = 665.516
+Finished Timing Optimization : Time (s): cpu = 00:01:35 ; elapsed = 00:03:16 . Memory (MB): peak = 891.590 ; gain = 720.098
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
 +------+--------------+------------+----------+
 |      |RTL Partition |Replication |Instances |
 +------+--------------+------------+----------+
-|1     |Datapath__GB0 |           1|        32|
-|2     |Datapath__GB1 |           1|      8327|
-|3     |Datapath__GB2 |           1|       146|
-|4     |CPU__GC0      |           1|       360|
-|5     |View__GC0     |           1|     14429|
+|1     |Mem_Data__GB0 |           1|     21672|
+|2     |Mem_Data__GB1 |           1|      2152|
+|3     |Mem_Data__GB2 |           1|      2996|
+|4     |Mem_Data__GB3 |           1|      3354|
+|5     |Mem_Data__GB4 |           1|      2607|
+|6     |Mem_Data__GB5 |           1|      2335|
+|7     |Mem_Data__GB6 |           1|      2359|
+|8     |Mem_Data__GB7 |           1|       324|
+|9     |Datapath__GC0 |           1|      9962|
+|10    |CPU__GC0      |           1|       283|
+|11    |View__GC0     |           1|     18404|
 +------+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cpu/datapath/A3/Regfile_reg[18][1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cpu/datapath/A3/Regfile_reg[18][3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cpu/datapath/A3/Regfile_reg[18][5] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cpu/datapath/A3/Regfile_reg[18][25] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cpu/datapath/A3/Regfile_reg[18][26] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cpu/datapath/A3/Regfile_reg[18][27] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cpu/datapath/A3/Regfile_reg[18][7] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cpu/datapath/A3/Regfile_reg[18][6] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cpu/datapath/A3/Regfile_reg[18][29] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cpu/datapath/A3/Regfile_reg[18][9] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cpu/datapath/A3/Regfile_reg[18][2] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cpu/datapath/A3/Regfile_reg[27][10] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cpu/datapath/A3/Regfile_reg[27][14] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cpu/datapath/A3/Regfile_reg[27][18] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cpu/datapath/A3/Regfile_reg[27][22] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cpu/datapath/A3/Regfile_reg[27][30] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cpu/datapath/A3/Regfile_reg[27][24] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cpu/datapath/A3/Regfile_reg[27][20] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cpu/datapath/A3/Regfile_reg[27][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cpu/datapath/A3/Regfile_reg[27][4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cpu/datapath/A3/Regfile_reg[27][0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cpu/datapath/A3/Regfile_reg[27][12] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cpu/datapath/A3/Regfile_reg[27][8] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cpu/datapath/A3/Regfile_reg[27][11] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cpu/datapath/A3/Regfile_reg[27][15] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cpu/datapath/A3/Regfile_reg[27][19] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cpu/datapath/A3/Regfile_reg[27][23] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cpu/datapath/A3/Regfile_reg[27][21] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cpu/datapath/A3/Regfile_reg[27][17] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cpu/datapath/A3/Regfile_reg[27][28] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cpu/datapath/A3/Regfile_reg[27][31] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cpu/datapath/A3/Regfile_reg[27][13] )
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:54 ; elapsed = 00:02:06 . Memory (MB): peak = 850.793 ; gain = 680.051
+Finished Technology Mapping : Time (s): cpu = 00:02:03 ; elapsed = 00:03:48 . Memory (MB): peak = 1086.375 ; gain = 914.883
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1141,7 +946,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:55 ; elapsed = 00:02:07 . Memory (MB): peak = 850.793 ; gain = 680.051
+Finished IO Insertion : Time (s): cpu = 00:02:06 ; elapsed = 00:03:51 . Memory (MB): peak = 1086.375 ; gain = 914.883
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1154,7 +959,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:56 ; elapsed = 00:02:07 . Memory (MB): peak = 850.793 ; gain = 680.051
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:06 ; elapsed = 00:03:52 . Memory (MB): peak = 1086.375 ; gain = 914.883
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1166,13 +971,13 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:56 ; elapsed = 00:02:08 . Memory (MB): peak = 850.793 ; gain = 680.051
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:08 ; elapsed = 00:03:53 . Memory (MB): peak = 1086.375 ; gain = 914.883
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Start Renaming Generated Ports : Time (s): cpu = 00:01:56 ; elapsed = 00:02:08 . Memory (MB): peak = 850.793 ; gain = 680.051
+Start Renaming Generated Ports : Time (s): cpu = 00:02:08 ; elapsed = 00:03:53 . Memory (MB): peak = 1086.375 ; gain = 914.883
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:56 ; elapsed = 00:02:08 . Memory (MB): peak = 850.793 ; gain = 680.051
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:09 ; elapsed = 00:03:54 . Memory (MB): peak = 1086.375 ; gain = 914.883
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -1188,60 +993,62 @@ Report Cell Usage:
 +------+--------+------+
 |      |Cell    |Count |
 +------+--------+------+
-|1     |BUFG    |     3|
-|2     |CARRY4  |  1025|
+|1     |BUFG    |     4|
+|2     |CARRY4  |  1022|
 |3     |DSP48E1 |     3|
-|4     |LUT1    |   479|
-|5     |LUT2    |   919|
-|6     |LUT3    |  1232|
-|7     |LUT4    |  1022|
-|8     |LUT5    |  1594|
-|9     |LUT6    |  1595|
+|4     |LUT1    |   481|
+|5     |LUT2    |   979|
+|6     |LUT3    |  1343|
+|7     |LUT4    |  1232|
+|8     |LUT5    |  3832|
+|9     |LUT6    |  7163|
 |10    |MUXCY_L |    76|
-|11    |MUXF7   |   128|
-|12    |XORCY   |    80|
-|13    |FDRE    |   674|
-|14    |FDSE    |     4|
-|15    |LD      |    49|
-|16    |IBUF    |     8|
-|17    |OBUF    |    16|
+|11    |MUXF7   |  1991|
+|12    |MUXF8   |   461|
+|13    |XORCY   |    80|
+|14    |FDRE    |  9443|
+|15    |FDSE    |     4|
+|16    |LD      |    44|
+|17    |IBUF    |    17|
+|18    |OBUF    |    16|
 +------+--------+------+
 
 Report Instance Areas: 
 +------+----------------+----------------+------+
 |      |Instance        |Module          |Cells |
 +------+----------------+----------------+------+
-|1     |top             |                |  8907|
-|2     |  cpu           |CPU             |  3664|
+|1     |top             |                | 28191|
+|2     |  cpu           |CPU             | 22992|
 |3     |    GOBS        |Button_Signal   |     3|
 |4     |    RSTBS       |Button_Signal_0 |     4|
-|5     |    datapath    |Datapath        |  3523|
-|6     |      A2        |Controller      |   314|
-|7     |      A3        |Reg_File        |  2814|
-|8     |      A4        |Alu             |    23|
-|9     |    divider     |Divider         |   134|
-|10    |  finddata      |FindData        |  4889|
-|11    |    showDivider |DividerShow     |    82|
+|5     |    datapath    |Datapath        | 22850|
+|6     |      A2        |Controller      |  2059|
+|7     |      A3        |Reg_File        |  4298|
+|8     |      A4        |Alu             |    24|
+|9     |      A5        |Mem_Data        | 16148|
+|10    |    divider     |Divider         |   135|
+|11    |  finddata      |FindData        |  4871|
+|12    |    showDivider |DividerShow     |    82|
 +------+----------------+----------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:56 ; elapsed = 00:02:08 . Memory (MB): peak = 850.793 ; gain = 680.051
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:10 ; elapsed = 00:03:55 . Memory (MB): peak = 1086.375 ; gain = 914.883
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 8777 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:41 ; elapsed = 00:01:58 . Memory (MB): peak = 850.793 ; gain = 316.223
-Synthesis Optimization Complete : Time (s): cpu = 00:01:57 ; elapsed = 00:02:08 . Memory (MB): peak = 850.793 ; gain = 680.051
+Synthesis finished with 0 errors, 0 critical warnings and 41 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:43 ; elapsed = 00:03:38 . Memory (MB): peak = 1086.375 ; gain = 521.887
+Synthesis Optimization Complete : Time (s): cpu = 00:02:10 ; elapsed = 00:03:56 . Memory (MB): peak = 1086.375 ; gain = 914.883
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 1241 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 1242 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 69 instances were transformed.
+  A total of 64 instances were transformed.
   (MUXCY,XORCY) => CARRY4: 20 instances
-  LD => LDCE: 49 instances
+  LD => LDCE: 44 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-224 Infos, 208 Warnings, 0 Critical Warnings and 0 Errors encountered.
+160 Infos, 49 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:58 ; elapsed = 00:02:08 . Memory (MB): peak = 850.793 ; gain = 641.617
-report_utilization: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.157 . Memory (MB): peak = 850.793 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Sat Feb 23 10:39:44 2019...
+synth_design: Time (s): cpu = 00:02:14 ; elapsed = 00:03:59 . Memory (MB): peak = 1086.375 ; gain = 877.383
+report_utilization: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.562 . Memory (MB): peak = 1086.375 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sat Feb 23 12:36:44 2019...

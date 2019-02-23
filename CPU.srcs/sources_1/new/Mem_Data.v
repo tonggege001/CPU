@@ -19,7 +19,7 @@ module Mem_Data(Clk,Rst,MemShowNum,Addr,Datain,MemWrite,Sel,Dataout,MemShow);
     output wire[31:0]MemShow;
     
     reg[20:0] count;
-    parameter MEMLEN = 255;
+    parameter MEMLEN = 256;
     reg[31:0]Mem[0:MEMLEN];
     assign Dataout = Mem[Addr];
     
@@ -32,13 +32,22 @@ module Mem_Data(Clk,Rst,MemShowNum,Addr,Datain,MemWrite,Sel,Dataout,MemShow);
     always @(posedge Clk)begin
         
         if(MemWrite) begin
-            Mem[Addr] <= Datain;
-            //$display("____MEM____CHANGE____\n");
-            //$display("Addr = %d, Data=%d\n",Addr,Mem[Addr]);
+            if(Sel == 15)
+                Mem[Addr] <= Datain;
+            else if(Sel == 1)
+                Mem[Addr][7:0] <= Datain[7:0];
+            else if(Sel == 2) 
+                Mem[Addr][15:8] <= Datain[7:0];
+            else if(Sel == 4)
+                Mem[Addr][23:16] <= Datain[7:0];
+            else if(Sel == 8)
+                Mem[Addr][31:24] <= Datain[7:0];
+            else
+                Mem[Addr] <= Datain;
         end
         else ;
         if(Rst==1'b1)begin
-            for(count=0;count<1023;count=count+1)
+            for(count=0;count<MEMLEN;count=count+1)
                 Mem[count] <= 0;
         end
         else ;

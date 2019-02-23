@@ -17,7 +17,7 @@ module Datapath(Clk_ms, Rst, Go,MemShowNum, LedData, TotalCirc, NobranchCirc, Br
     wire Clk;   //时钟信号，在最后有状态改变，通过G0和系统调用控制
     //控制信号声明
     wire[3:0] AluOp; wire MemtoReg; wire MemWrite; wire AluSrc; wire RegWrite; wire Syscall;
-    wire SignedExt; wire RegDst; wire BEQ; wire BNE; wire JR; wire JMP; wire JAL;wire BGEZ;
+    wire SignedExt; wire RegDst; wire BEQ; wire BNE; wire JR; wire JMP; wire JAL;wire BGEZ;wire MemSlt;
     
     
     //获取指令,并进行指令解析
@@ -47,11 +47,13 @@ module Datapath(Clk_ms, Rst, Go,MemShowNum, LedData, TotalCirc, NobranchCirc, Br
         NobranchCirc = 0;
         BranchCirc = 0;
         LedData = 0;
+        Mem_Data_In = 0;
+        Sel = 15;
     end
 
 
     //控制器连接部分
-    Controller A2(OP, Func, AluOp,  MemtoReg , MemWrite, AluSrc, RegWrite, Syscall, SignedExt, RegDst , BEQ, BNE, JR, JMP, JAL, BGEZ);
+    Controller A2(OP, Func, AluOp,  MemtoReg , MemWrite, AluSrc, RegWrite, Syscall, SignedExt, RegDst , BEQ, BNE, JR, JMP, JAL, BGEZ, MemSlt);
     
     //寄存器端口信号声明
     reg[4:0]rA; reg[4:0]rB;reg[4:0]rW; reg[31:0]wData; //寄存器输入口
@@ -109,13 +111,38 @@ module Datapath(Clk_ms, Rst, Go,MemShowNum, LedData, TotalCirc, NobranchCirc, Br
     end
     
 	//数据存储器连接部分
-    wire[31:0]Mem_Data_In;
-    wire[3:0]Sel;    //片选信号1000 0100 0010 0001
+    reg[31:0]Mem_Data_In;
+    reg[3:0]Sel;    //片选信号1000 0100 0010 0001
+    
     wire[31:0]Mem_Data_Out;
     wire[19:0] MemAddr; //存储器地址
     
-    assign Sel = 15;    //24条指令片选是1111
-    assign Mem_Data_In = RegOutB;   //24条指令
+    always @(MemSlt, RegOutB, Alu_Out) begin
+        if(!MemSlt) begin  //不是SB指令
+            Mem_Data_In = RegOutB;
+            Sel = 15;
+        end
+        else begin  //是SB指令
+            if(Alu_Out[1:0] == 0) begin
+                Mem_Data_In = {{16{0}},RegOutB[7:0]};
+                Sel = 1;
+            end
+            else if(Alu_Out[1:0] == 1) begin
+                Mem_Data_In = {{16{0}},RegOutB[15:8]};
+                Sel = 2;
+            end
+            else if(Alu_Out[1:0]==2) begin
+                Mem_Data_In = {{16{0}},RegOutB[23:16]};
+                Sel = 4;
+            end
+            else begin
+                Mem_Data_In = {{16{0}},RegOutB[31:24]};
+                Sel = 8;
+            end
+        end
+        
+    end
+
     assign MemAddr = Alu_Out[21:2];
     Mem_Data A5(Clk,Rst,MemShowNum,MemAddr,Mem_Data_In, MemWrite,Sel, Mem_Data_Out, MemShow);
     reg[31:0] Result;  //输出结果，来源是ALU或者数据存储器

@@ -17,9 +17,9 @@ set_property target_language Verilog [current_project]
 read_verilog -library xil_defaultlib {
   D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Reg_File.v
   D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Ins.v
-  D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v
   D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Controller.v
   D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Alu.v
+  D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Mem_Data.v
   D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/DividerShow.v
   D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Datapath.v
   D:/ARCHIVE/CPU/CPU.srcs/sources_1/new/Divider.v

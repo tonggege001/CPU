@@ -5,7 +5,7 @@ module Divider(clk,CLK,Freq);
     output reg CLK;
     input [1:0] Freq;
     
-    reg[32:0] N = 50_000_00;      // 1Hz的时钟,N=fclk/fclk_N
+    reg[32:0] N = 20_000_00;      // 1Hz的时钟,N=fclk/fclk_N
     reg [31:0] counter;             /* 计数器变量，通过计数实现分频。当计数器从0计数到(N/2-1)时，输出时钟翻转，计数器清零 */
     
     initial begin
