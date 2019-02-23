@@ -186,6 +186,19 @@ module Controller(OP, Func, AluOp,  MemtoReg , MemWrite,
 			MemtoReg = 0;RegWrite = 0;RegDst = 0;Syscall = 0;
 			BEQ = 0;BNE = 0;JR = 0;JMP = 0;JAL = 0;
 		end
+		else if(OP==0 && Func == 38) begin
+		    AluOp = 9;
+            RegWrite = 1;RegDst = 1;
+            AluSrc = 0;SignedExt = 0;MemWrite = 0;MemtoReg = 0;Syscall = 0;
+            BEQ = 0;BNE = 0;JR = 0;JMP = 0;JAL = 0;
+		end
+		else if(OP == 14) begin
+		    AluOp = 9;
+		    RegWrite = 1;AluSrc = 1;
+            MemWrite = 0;RegDst = 0; SignedExt = 0;MemtoReg = 0;Syscall = 0;
+            BEQ = 0;BNE = 0;JR = 0;JMP = 0;JAL = 0;
+		
+		end
 		else begin	//¿Õ×´Ì¬
 			MemWrite = 0; AluSrc =0; SignedExt = 0;
 			MemtoReg = 0;RegWrite = 0;RegDst = 0;Syscall = 0;
